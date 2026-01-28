@@ -9,7 +9,8 @@ export default defineConfig({
   },
   preview: {
     host: '0.0.0.0',
-    port: 4173
+    port: 4173,
+    allowedHosts: ['shalo.onrender.com', 'localhost', '127.0.0.1']
   },
   plugins: [
     react(),
