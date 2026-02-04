@@ -1,4 +1,4 @@
-package com.indozim.legalguard;
+package com.cyberguard.pro;
 
 import com.getcapacitor.BridgeActivity;
 

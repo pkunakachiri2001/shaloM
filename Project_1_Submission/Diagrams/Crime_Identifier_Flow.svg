@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <style>
+    .box { fill:#fef3c7; stroke:#92400e; stroke-width:2; rx:10; }
+    .text { font:600 14px Segoe UI, Arial; fill:#78350f; }
+    .small { font:400 12px Segoe UI, Arial; fill:#92400e; }
+    .line { stroke:#92400e; stroke-width:2; }
+  </style>
+  <text x="600" y="40" text-anchor="middle" class="text">Crime Identifier Flow</text>
+
+  <rect x="80" y="120" width="260" height="70" class="box"/>
+  <text x="210" y="150" text-anchor="middle" class="text">User describes incident</text>
+  <text x="210" y="170" text-anchor="middle" class="small">Free-text situation</text>
+
+  <rect x="380" y="120" width="260" height="70" class="box"/>
+  <text x="510" y="150" text-anchor="middle" class="text">Local keyword matching</text>
+  <text x="510" y="170" text-anchor="middle" class="small">No external data sharing</text>
+
+  <rect x="680" y="120" width="260" height="70" class="box"/>
+  <text x="810" y="150" text-anchor="middle" class="text">Crime category</text>
+  <text x="810" y="170" text-anchor="middle" class="small">IT Act / IPC sections</text>
+
+  <rect x="980" y="120" width="180" height="70" class="box"/>
+  <text x="1070" y="150" text-anchor="middle" class="text">Severity level</text>
+
+  <rect x="380" y="260" width="420" height="90" class="box"/>
+  <text x="590" y="295" text-anchor="middle" class="text">Action Guidance</text>
+  <text x="590" y="315" text-anchor="middle" class="small">Evidence tips, steps, helplines</text>
+
+  <rect x="820" y="260" width="300" height="90" class="box"/>
+  <text x="970" y="295" text-anchor="middle" class="text">Report Options</text>
+  <text x="970" y="315" text-anchor="middle" class="small">1930 • cybercrime.gov.in</text>
+
+  <line x1="340" y1="155" x2="380" y2="155" class="line"/>
+  <line x1="640" y1="155" x2="680" y2="155" class="line"/>
+  <line x1="940" y1="155" x2="980" y2="155" class="line"/>
+  <line x1="810" y1="190" x2="590" y2="260" class="line"/>
+  <line x1="1070" y1="190" x2="970" y2="260" class="line"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1400" viewBox="0 0 900 1400">
+  <style>
+    .box { fill:#f9fafb; stroke:#111827; stroke-width:2; rx:8; }
+    .title { font:700 16px Segoe UI, Arial; fill:#111827; }
+    .text { font:500 12px Segoe UI, Arial; fill:#374151; }
+    .muted { font:400 11px Segoe UI, Arial; fill:#6b7280; }
+  </style>
+  <rect x="40" y="40" width="820" height="1320" class="box"/>
+  <text x="70" y="80" class="title">Crime Identifier</text>
+
+  <rect x="70" y="100" width="760" height="90" class="box"/>
+  <text x="90" y="130" class="text">Header + Description</text>
+
+  <rect x="70" y="210" width="760" height="260" class="box"/>
+  <text x="90" y="240" class="text">Situation Input (Textarea)</text>
+  <text x="90" y="265" class="muted">Examples tags</text>
+
+  <rect x="70" y="490" width="760" height="90" class="box"/>
+  <text x="90" y="520" class="text">Analyze Button</text>
+
+  <rect x="70" y="600" width="760" height="280" class="box"/>
+  <text x="90" y="630" class="text">Result Card</text>
+  <text x="90" y="655" class="muted">Crime • Section • Severity • Actions</text>
+
+  <rect x="70" y="900" width="760" height="140" class="box"/>
+  <text x="90" y="930" class="text">Important Contacts</text>
+</svg>

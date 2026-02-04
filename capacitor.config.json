@@ -1,6 +1,6 @@
 {
-  "appId": "com.indozim.legalguard",
-  "appName": "IndoZim Legal Guard",
+  "appId": "com.cyberguard.pro",
+  "appName": "CyberGuard Pro",
   "webDir": "dist",
   "server": {
     "androidScheme": "https"

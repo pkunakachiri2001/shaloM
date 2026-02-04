@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="page about-page">
       <div className="page-header">
-        <h1>ℹ️ About IndoZim Legal Guard</h1>
+        <h1>ℹ️ About CyberGuard Pro</h1>
         <p>Your trusted companion for cyber law education and digital protection</p>
       </div>
 
@@ -11,10 +11,10 @@ export default function About() {
         <div className="about-card">
           <h2>🎯 Our Mission</h2>
           <p>
-            IndoZim Legal Guard was created to bridge the gap between complex cyber laws and everyday citizens, 
-            while connecting legal frameworks between Zimbabwe and India. We believe that understanding your digital 
-            rights shouldn't require a law degree. Our mission is to empower people with knowledge, tools, and resources 
-            to navigate the digital world safely and confidently across different legal jurisdictions.
+            CyberGuard Pro was created to bridge the gap between complex cyber laws and everyday citizens worldwide. 
+            We believe that understanding your digital rights shouldn't require a law degree. Our mission is to empower 
+            people with knowledge, tools, and resources to navigate the digital world safely and confidently, regardless 
+            of their location or legal jurisdiction.
           </p>
         </div>
       </section>
@@ -56,7 +56,7 @@ export default function About() {
           <div className="about-feature-card">
             <div className="feature-icon">🌍</div>
             <h3>Global Perspective</h3>
-            <p>International legal comparisons between India, Zimbabwe, and global cyber law frameworks.</p>
+            <p>International legal frameworks and comparisons from cyber law systems worldwide.</p>
           </div>
         </div>
       </section>
@@ -65,11 +65,10 @@ export default function About() {
       <section className="about-section creator-section">
         <div className="creator-showcase">
           <div className="creator-badge">
-            <span className="creator-flag">🇿🇼</span>
-            <span className="creator-flag">🇮🇳</span>
+            <span className="creator-flag">🛡️</span>
             <div className="creator-info-main">
-              <h2>Project Origin</h2>
-              <h3 className="creator-name-large">Zimbabwe ↔️ India Bridge</h3>
+              <h2>Innovative Project</h2>
+              <h3 className="creator-name-large">Global Legal Protection</h3>
               <p className="creator-title">Law & Technology Educational Initiative</p>
             </div>
           </div>
@@ -77,29 +76,29 @@ export default function About() {
           <div className="creator-story">
             <h3>About the Project</h3>
             <p>
-              IndoZim Legal Guard represents a unique collaboration bridging <strong>Zimbabwe</strong> and 
-              <strong> India</strong> legal frameworks. This project addresses the challenges of navigating 
-              different legal systems and the critical need for accessible legal education in the digital age.
+              CyberGuard Pro represents an innovative approach to making cyber law accessible to everyone, 
+              regardless of their location or background. This project addresses the universal challenges of 
+              navigating digital security and the critical need for accessible legal education in the internet age.
             </p>
             <p>
               Developed as part of a <strong>Law & Technology</strong> initiative, this platform combines 
               legal expertise with technical innovation to create a practical solution for cyber law education 
-              and digital protection across international boundaries.
+              and digital protection that transcends borders.
             </p>
             
             <div className="creator-highlights">
               <div className="highlight-item">
                 <span className="highlight-icon">🌐</span>
                 <div>
-                  <strong>Cross-Cultural</strong>
-                  <p>Bridging Zimbabwe & India legal systems</p>
+                  <strong>Universal Access</strong>
+                  <p>Designed for global use across jurisdictions</p>
                 </div>
               </div>
               <div className="highlight-item">
                 <span className="highlight-icon">🔗</span>
                 <div>
-                  <strong>International Perspective</strong>
-                  <p>Zimbabwe 🇿🇼 ↔️ India 🇮🇳</p>
+                  <strong>International Standards</strong>
+                  <p>Based on global cyber law principles</p>
                 </div>
               </div>
               <div className="highlight-item">
@@ -144,10 +143,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why IndoZim Legal Guard */}
+      {/* Why CyberGuard Pro */}
       <section className="about-section">
         <div className="about-card highlight-card">
-          <h2>Why Choose IndoZim Legal Guard?</h2>
+          <h2>Why Choose CyberGuard Pro?</h2>
           <div className="why-list">
             <div className="why-item">
               <span className="why-icon">✅</span>

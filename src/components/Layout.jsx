@@ -22,8 +22,8 @@ export default function Layout({ children }) {
       <header className="header">
         <div className="header-content">
           <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <span className="logo-icon">⚖️</span>
-            <span className="logo-text">IndoZim Legal Guard</span>
+            <span className="logo-icon">🛡️</span>
+            <span className="logo-text">CyberGuard Pro</span>
           </Link>
           <button 
             className="menu-toggle"
@@ -85,10 +85,10 @@ export default function Layout({ children }) {
         <div className="footer-container">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="footer-logo-icon">⚖️</span>
-              <span className="footer-logo-text">IndoZim Legal Guard</span>
+              <span className="footer-logo-icon">🛡️</span>
+              <span className="footer-logo-text">CyberGuard Pro</span>
             </div>
-            <p className="footer-tagline">Zimbabwe & India Digital Legal Companion</p>
+            <p className="footer-tagline">Your Global Digital Legal Companion</p>
           </div>
 
           <div className="footer-links">
@@ -119,14 +119,14 @@ export default function Layout({ children }) {
         <div className="footer-bottom">
           <div className="footer-creator">
             <p className="creator-text">
-              <strong>IndoZim Legal Guard</strong> 🇿🇼 ↔️ 🇮🇳
+              <strong>CyberGuard Pro</strong> 🛡️
             </p>
             <p className="creator-details">
-              Bridging Zimbabwe & India Legal Frameworks | Law & Technology Initiative
+              Global Cyber Law Education & Protection | Law & Technology Initiative
             </p>
           </div>
           <div className="footer-copyright">
-            <p>&copy; {new Date().getFullYear()} IndoZim Legal Guard. Educational Project.</p>
+            <p>&copy; {new Date().getFullYear()} CyberGuard Pro. Educational Project.</p>
             <p className="footer-disclaimer">For educational purposes. Consult legal professionals for advice.</p>
           </div>
         </div>

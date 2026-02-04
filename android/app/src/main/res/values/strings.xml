@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">IndoZim Legal Guard</string>
-    <string name="title_activity_main">IndoZim Legal Guard</string>
-    <string name="package_name">com.indozim.legalguard</string>
-    <string name="custom_url_scheme">com.indozim.legalguard</string>
+    <string name="app_name">CyberGuard Pro</string>
+    <string name="title_activity_main">CyberGuard Pro</string>
+    <string name="package_name">com.cyberguard.pro</string>
+    <string name="custom_url_scheme">com.cyberguard.pro</string>
 </resources>

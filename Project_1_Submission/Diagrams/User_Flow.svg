@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <style>
+    .box { fill:#f1f5f9; stroke:#0f172a; stroke-width:2; rx:10; }
+    .text { font:600 14px Segoe UI, Arial; fill:#0f172a; }
+    .small { font:400 12px Segoe UI, Arial; fill:#475569; }
+    .line { stroke:#334155; stroke-width:2; }
+  </style>
+  <text x="600" y="40" text-anchor="middle" class="text">Primary User Flow (LexGuard)</text>
+
+  <rect x="60" y="100" width="200" height="70" class="box"/>
+  <text x="160" y="140" text-anchor="middle" class="text">Open App</text>
+
+  <rect x="300" y="100" width="260" height="70" class="box"/>
+  <text x="430" y="130" text-anchor="middle" class="text">Home Dashboard</text>
+  <text x="430" y="150" text-anchor="middle" class="small">Feature Cards + Quick Actions</text>
+
+  <line x1="260" y1="135" x2="300" y2="135" class="line"/>
+
+  <rect x="80" y="230" width="240" height="80" class="box"/>
+  <text x="200" y="265" text-anchor="middle" class="text">Academy</text>
+  <text x="200" y="285" text-anchor="middle" class="small">Learn → Quiz → Badge</text>
+
+  <rect x="360" y="230" width="240" height="80" class="box"/>
+  <text x="480" y="265" text-anchor="middle" class="text">Crime Identifier</text>
+  <text x="480" y="285" text-anchor="middle" class="small">Describe → Result → Actions</text>
+
+  <rect x="640" y="230" width="240" height="80" class="box"/>
+  <text x="760" y="265" text-anchor="middle" class="text">Emergency Tools</text>
+  <text x="760" y="285" text-anchor="middle" class="small">Report • Templates • Contacts</text>
+
+  <rect x="920" y="230" width="240" height="80" class="box"/>
+  <text x="1040" y="265" text-anchor="middle" class="text">News & Updates</text>
+  <text x="1040" y="285" text-anchor="middle" class="small">Legal changes & alerts</text>
+
+  <rect x="320" y="360" width="240" height="80" class="box"/>
+  <text x="440" y="395" text-anchor="middle" class="text">Career Hub</text>
+  <text x="440" y="415" text-anchor="middle" class="small">Internships • Resources</text>
+
+  <rect x="600" y="360" width="240" height="80" class="box"/>
+  <text x="720" y="395" text-anchor="middle" class="text">About & Disclaimer</text>
+  <text x="720" y="415" text-anchor="middle" class="small">Ethics • Scope • Contacts</text>
+
+  <line x1="430" y1="170" x2="200" y2="230" class="line"/>
+  <line x1="430" y1="170" x2="480" y2="230" class="line"/>
+  <line x1="430" y1="170" x2="760" y2="230" class="line"/>
+  <line x1="430" y1="170" x2="1040" y2="230" class="line"/>
+  <line x1="430" y1="170" x2="440" y2="360" class="line"/>
+  <line x1="430" y1="170" x2="720" y2="360" class="line"/>
+</svg>

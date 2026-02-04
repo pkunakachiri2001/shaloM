@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project 1 Report - LexGuard (Cyber Law Education App)</title>
+  <style>
+    :root {
+      --ink: #111827;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      margin: 0;
+      background: #fff;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 18mm 18mm 22mm;
+    }
+    h1, h2, h3 { margin: 0 0 10px; }
+    h1 { font-size: 26px; text-align: center; }
+    h2 { font-size: 18px; border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-top: 22px; }
+    h3 { font-size: 14px; margin-top: 14px; }
+    p, li { font-size: 12px; line-height: 1.5; }
+    .muted { color: var(--muted); }
+    .cover {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border: 1px solid var(--border);
+      padding: 20px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 18px;
+      font-size: 12px;
+    }
+    .tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      margin-right: 6px;
+    }
+    .section-box {
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    .table th, .table td {
+      border: 1px solid var(--border);
+      padding: 6px;
+      font-size: 11px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .list-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .diagram-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .footer {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+    @media print {
+      .page { margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="cover">
+      <h1>Project 1 Report</h1>
+      <p style="text-align:center; font-size: 14px; margin: 0;">
+        <strong>LexGuard:</strong> Cyber Law Education & Guidance App
+      </p>
+      <div class="meta-grid">
+        <div><strong>University:</strong> Vishwakarma University, Pune</div>
+        <div><strong>Faculty:</strong> Law</div>
+        <div><strong>Programme:</strong> BBALLB (Semester IV)</div>
+        <div><strong>Course:</strong> Law and Technology (BBAL24405)</div>
+        <div><strong>Academic Year:</strong> 2025-2026 (Pattern 2024)</div>
+        <div><strong>Division:</strong> A</div>
+        <div><strong>Course Teacher:</strong> Prof. Rahi Ajabe-Alhat</div>
+        <div><strong>Project Type:</strong> Conceptual (Project 1)</div>
+        <div><strong>Student Name:</strong> Shalom Chikaka</div>
+        <div><strong>SRN No.:</strong> [SRN]</div>
+        <div><strong>Project Start:</strong> 05/03/2026</div>
+        <div><strong>Project End:</strong> 15/03/2026</div>
+      </div>
+      <div>
+        <span class="tag">Cyber Law</span>
+        <span class="tag">Legal Education</span>
+        <span class="tag">Access to Justice</span>
+        <span class="tag">Legal Tech</span>
+      </div>
+    </div>
+
+    <h2>1. Problem Definition / Identification</h2>
+    <div class="section-box">
+      <p><strong>Identified Problem:</strong> Lack of accessible, practical, and legally accurate cyber law education and guidance for citizens and law students leads to under-reporting of cyber crimes, loss of evidence, and delayed legal remedies.</p>
+      <p><strong>Area of Law:</strong> Information Technology Act, 2000; IPC provisions (e.g., Sections 354D, 420, 506); Digital Personal Data Protection Act, 2023; Evidence Act (Section 65B).</p>
+      <p><strong>Who is Affected:</strong> Students, victims of cyber fraud/harassment, and the general public who need immediate legal direction.</p>
+      <p><strong>Limitations of Current Solutions:</strong> Official resources are scattered, text-heavy, and difficult for non-law users; there is minimal step-by-step guidance; no integrated learning + reporting flow.</p>
+      <p><strong>Tech-Based Justification:</strong> A legal-tech app can simplify cyber law learning, guide users to identify crimes, preserve evidence, and connect to official reporting channels quickly.</p>
+    </div>
+
+    <h2>2. Methodology</h2>
+    <div class="section-box">
+      <ol>
+        <li>Identify real-world cyber law problems (fraud, harassment, identity theft, privacy breaches).</li>
+        <li>Review existing legal provisions (IT Act 2000, DPDP Act 2023, IPC, Evidence Act).</li>
+        <li>Analyze gaps in accessibility and reporting outcomes.</li>
+        <li>Conceptualize LexGuard modules: Academy, Crime Identifier, Emergency Tools, News, Career Hub.</li>
+        <li>Define user flow, safeguards, and realistic app blueprint for Project 2 prototype.</li>
+      </ol>
+    </div>
+
+    <h2>3. Implementation (Conceptual Blueprint)</h2>
+    <h3>3.1 Functional Requirements</h3>
+    <div class="section-box">
+      <ul>
+        <li>Interactive learning modules with quizzes (IT Act, cyber crimes, data protection).</li>
+        <li>Crime Identifier that maps user descriptions to legal categories and relevant sections.</li>
+        <li>Emergency toolkit: incident reporting checklist, evidence tips, complaint templates.</li>
+        <li>Legal news updates (cyber law, judgments, policy changes).</li>
+        <li>Career hub for legal-tech learning and internships.</li>
+      </ul>
+    </div>
+
+    <h3>3.2 Non-Functional Requirements</h3>
+    <div class="section-box list-columns">
+      <ul>
+        <li>Privacy-first (local analysis, minimal data collection).</li>
+        <li>Accessibility for non-law users (simple language).</li>
+        <li>Mobile-first UI for quick access.</li>
+        <li>Offline-friendly learning modules.</li>
+      </ul>
+      <ul>
+        <li>Accuracy: legal references cited per module.</li>
+        <li>Ethical safeguards: clear disclaimers (not legal advice).</li>
+        <li>Security: no sensitive data storage by default.</li>
+        <li>Scalability for future prototype expansion.</li>
+      </ul>
+    </div>
+
+    <h3>3.3 Screen & User Flow (Based on App)</h3>
+    <div class="section-box">
+      <ul>
+        <li>Home → Academy → Lesson → Quiz → Completion Badge</li>
+        <li>Home → Crime Identifier → Result → Actions → Report / Reset</li>
+        <li>Home → Emergency Tools → Report Form / Templates / Contacts</li>
+        <li>Home → News → Read Updates</li>
+        <li>Home → Career → Resources / Internships</li>
+      </ul>
+      <div class="diagram-note">Diagrams and wireframes are included in the Diagrams and Wireframes folders.</div>
+    </div>
+
+    <h3>3.4 Legal Safeguards & Compliance</h3>
+    <div class="section-box">
+      <ul>
+        <li>In-app disclaimer: educational only; consult legal professionals for advice.</li>
+        <li>Guidance to official reporting channels (cybercrime.gov.in, helpline 1930).</li>
+        <li>Data minimization and local-only processing for crime identification.</li>
+        <li>Evidence handling tips aligned with Section 65B Evidence Act.</li>
+        <li>Privacy rights and DPDP Act 2023 principles integrated into lessons.</li>
+      </ul>
+    </div>
+
+    <h2>4. Project Outcomes</h2>
+    <div class="section-box">
+      <ol>
+        <li>Identify and analyze cyber law problems suited to tech solutions.</li>
+        <li>Demonstrate integration of law with product design thinking.</li>
+        <li>Produce a structured, realistic blueprint for Project 2 prototype.</li>
+        <li>Promote legal awareness and responsible digital citizenship.</li>
+      </ol>
+    </div>
+
+    <h2>5. Scope & Future Work (Project 2)</h2>
+    <div class="section-box">
+      <p>The Project 1 blueprint is designed to be converted into a prototype in Project 2. Key next steps include building core screens, interactive quizzes, and a secure reporting workflow while maintaining legal compliance and privacy safeguards.</p>
+    </div>
+
+    <h2>6. References (Summary)</h2>
+    <div class="section-box">
+      <ul>
+        <li>Information Technology Act, 2000 (India)</li>
+        <li>Digital Personal Data Protection Act, 2023 (India)</li>
+        <li>Indian Penal Code (selected sections)</li>
+        <li>Indian Evidence Act, Section 65B</li>
+        <li>National Cyber Crime Reporting Portal: cybercrime.gov.in</li>
+      </ul>
+      <div class="diagram-note">Full reference list available in References/References.txt</div>
+    </div>
+
+    <div class="footer">
+      This document is a conceptual academic submission for Project 1 (Law & Technology). It is intended for educational purposes only.
+    </div>
+  </div>
+</body>
+</html>
