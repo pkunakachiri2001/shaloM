@@ -14,7 +14,7 @@ const knowledgeBase = [
   {
     match: ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening'],
     response:
-      'Hello! I'm the LexGuard Assistant. Ask me about any feature or cyber incident - phone hacking, account theft, online fraud, harassment, etc.'
+      "Hello! I'm the LexGuard Assistant. Ask me about any feature or cyber incident - phone hacking, account theft, online fraud, harassment, etc."
   },
   {
     match: ['what is lexguard', 'what can i do', 'features', 'app do', 'about app', 'lexguard'],
@@ -31,7 +31,7 @@ const knowledgeBase = [
   {
     match: ['strange apps', 'unknown apps', 'apps i didnt install', 'suspicious app'],
     response:
-      'Unknown apps may be malware. Immediately: 1) Don't open the app 2) Uninstall it 3) Run antivirus 4) Change passwords 5) Check bank accounts 6) Report to 1930 if financial data was accessed'
+      "Unknown apps may be malware. Immediately: 1) Don't open the app 2) Uninstall it 3) Run antivirus 4) Change passwords 5) Check bank accounts 6) Report to 1930 if financial data was accessed"
   },
   {
     match: ['phone slow', 'phone acting weird', 'phone behaving strange', 'battery draining'],
@@ -43,12 +43,12 @@ const knowledgeBase = [
   {
     match: ['account hacked', 'instagram hacked', 'facebook hacked', 'whatsapp hacked', 'social media hacked', 'email hacked', 'gmail hacked', 'twitter hacked', 'linkedin hacked'],
     response:
-      'Account hacked? Act fast: 1) Try "Forgot Password" to recover 2) Check recovery email/phone 3) Enable 2FA immediately 4) Review recent activity & revoke suspicious sessions 5) Alert friends not to click links from your account 6) Report to platform & file complaint at cybercrime.gov.in'
+      "Account hacked? Act fast: 1) Try 'Forgot Password' to recover 2) Check recovery email/phone 3) Enable 2FA immediately 4) Review recent activity & revoke suspicious sessions 5) Alert friends not to click links from your account 6) Report to platform & file complaint at cybercrime.gov.in"
   },
   {
     match: ['cant login', 'password changed', 'locked out', 'account locked'],
     response:
-      'If locked out: 1) Use "Forgot Password" or account recovery 2) Check recovery email for alerts 3) Contact platform support immediately 4) If hacker changed recovery details, file complaint at cybercrime.gov.in with proof of ownership 5) Call 1930 for guidance'
+      "If locked out: 1) Use 'Forgot Password' or account recovery 2) Check recovery email for alerts 3) Contact platform support immediately 4) If hacker changed recovery details, file complaint at cybercrime.gov.in with proof of ownership 5) Call 1930 for guidance"
   },
   {
     match: ['two factor', '2fa', 'otp', 'verification code'],
@@ -72,24 +72,24 @@ const knowledgeBase = [
   {
     match: ['money stolen', 'bank account hacked', 'unauthorized transaction', 'fraud payment', 'upi fraud', 'credit card fraud', 'lost money', 'paytm fraud', 'gpay fraud', 'phonepe fraud'],
     response:
-      'Financial fraud? Act within minutes: 1) Call bank immediately to freeze account/card 2) Note transaction ID & time 3) File complaint at cybercrime.gov.in within 24hrs 4) Call 1930 (cyber helpline) 5) Email bank's fraud team 6) DO NOT wait - quick action can recover money'
+      "Financial fraud? Act within minutes: 1) Call bank immediately to freeze account/card 2) Note transaction ID & time 3) File complaint at cybercrime.gov.in within 24hrs 4) Call 1930 (cyber helpline) 5) Email bank's fraud team 6) DO NOT wait - quick action can recover money"
   },
   {
     match: ['lottery scam', 'prize scam', 'won lottery', 'kbc lottery', 'tax scam', 'won prize'],
     response:
-      'This is a scam. No real lottery/prize requires advance payment. Never pay "processing fees" or "taxes". If you already paid: 1) File complaint at cybercrime.gov.in immediately 2) Call 1930 3) Inform your bank 4) Block contact 5) Save all messages as evidence'
+      `This is a scam. No real lottery/prize requires advance payment. Never pay "processing fees" or "taxes". If you already paid: 1) File complaint at cybercrime.gov.in immediately 2) Call 1930 3) Inform your bank 4) Block contact 5) Save all messages as evidence`
   },
   {
     match: ['qr code scam', 'payment qr', 'scanner app', 'scan to receive'],
     response:
-      'Beware QR code scams! Never scan QR codes sent by strangers to "receive" money - QR codes are only for PAYING, not receiving. If scammed: 1) Contact bank 2) File complaint at cybercrime.gov.in 3) Call 1930 4) Note transaction details'
+      `Beware QR code scams! Never scan QR codes sent by strangers to "receive" money - QR codes are only for PAYING, not receiving. If scammed: 1) Contact bank 2) File complaint at cybercrime.gov.in 3) Call 1930 4) Note transaction details`
   },
   
   // PHISHING & SCAMS
   {
     match: ['phishing', 'suspicious link', 'fake website', 'fake email', 'spam message', 'suspicious sms', 'suspicious email'],
     response:
-      'Phishing attempt! Do NOT click links or share info. Signs: urgent tone, spelling errors, suspicious sender. If you clicked: 1) Don't enter any details 2) Change passwords immediately 3) Run antivirus 4) Monitor bank accounts 5) Report to cybercrime.gov.in'
+      "Phishing attempt! Do NOT click links or share info. Signs: urgent tone, spelling errors, suspicious sender. If you clicked: 1) Don't enter any details 2) Change passwords immediately 3) Run antivirus 4) Monitor bank accounts 5) Report to cybercrime.gov.in"
   },
   {
     match: ['job scam', 'fake job', 'work from home scam', 'job offer scam', 'recruitment fraud'],
@@ -106,12 +106,12 @@ const knowledgeBase = [
   {
     match: ['cyberbullying', 'online harassment', 'threatening messages', 'blackmail', 'sextortion', 'revenge porn', 'harassing me'],
     response:
-      'This is serious. Safety first: 1) Do NOT engage or pay 2) Screenshot everything as evidence 3) Block immediately 4) File complaint at cybercrime.gov.in 5) Call 1930 or 181 (women) 6) Contact police if threatened 7) Covered under IT Act Sec 66A, 67, 354C, 509 IPC'
+      "This is serious. Safety first: 1) Do NOT engage or pay 2) Screenshot everything as evidence 3) Block immediately 4) File complaint at cybercrime.gov.in 5) Call 1930 or 181 (women) 6) Contact police if threatened 7) Covered under IT Act Sec 66A, 67, 354C, 509 IPC"
   },
   {
     match: ['stalking', 'cyber stalking', 'following me online', 'tracking me'],
     response:
-      'Cyber stalking is illegal. Protect yourself: 1) Don't respond to stalker 2) Block on all platforms 3) Make profiles private 4) Screenshot evidence 5) File police complaint (IPC 354D) 6) Report at cybercrime.gov.in 7) Call 181 (women helpline) 8) Inform family/employer if serious'
+      "Cyber stalking is illegal. Protect yourself: 1) Don't respond to stalker 2) Block on all platforms 3) Make profiles private 4) Screenshot evidence 5) File police complaint (IPC 354D) 6) Report at cybercrime.gov.in 7) Call 181 (women helpline) 8) Inform family/employer if serious"
   },
   
   // RANSOMWARE & MALWARE
@@ -132,19 +132,19 @@ const knowledgeBase = [
   {
     match: ['password security', 'strong password', 'password tips', 'secure password', 'create password'],
     response:
-      'Password best practices: 1) Use 12+ characters with mix of letters, numbers, symbols 2) Never reuse passwords 3) Use password manager 4) Enable 2FA everywhere 5) Change if compromised 6) Never share passwords 7) Use passphrases like "MyDog@te3Bones!" instead of "password123"'
+      `Password best practices: 1) Use 12+ characters with mix of letters, numbers, symbols 2) Never reuse passwords 3) Use password manager 4) Enable 2FA everywhere 5) Change if compromised 6) Never share passwords 7) Use passphrases like "MyDog@te3Bones!" instead of "password123"`
   },
   {
     match: ['how to secure', 'protect account', 'security tips', 'stay safe online', 'cyber safety', 'protect myself'],
     response:
-      'Cyber safety tips: 1) Enable 2FA on all accounts 2) Use strong unique passwords 3) Don't click suspicious links 4) Verify sender before sharing info 5) Keep software updated 6) Use antivirus 7) Back up important data 8) Be cautious on public WiFi 9) Check app permissions'
+      "Cyber safety tips: 1) Enable 2FA on all accounts 2) Use strong unique passwords 3) Don't click suspicious links 4) Verify sender before sharing info 5) Keep software updated 6) Use antivirus 7) Back up important data 8) Be cautious on public WiFi 9) Check app permissions"
   },
   
   // EVIDENCE & LEGAL
   {
     match: ['evidence', 'proof', 'how to collect evidence', 'screenshots', 'save proof'],
     response:
-      'Collecting evidence: 1) Take screenshots with date/time visible 2) Save all messages, emails, transaction records 3) Note URLs & usernames 4) Record phone calls (if legal) 5) Keep original files untouched 6) Get witness statements 7) Submit to cybercrime.gov.in 8) Don't delete anything'
+      "Collecting evidence: 1) Take screenshots with date/time visible 2) Save all messages, emails, transaction records 3) Note URLs & usernames 4) Record phone calls (if legal) 5) Keep original files untouched 6) Get witness statements 7) Submit to cybercrime.gov.in 8) Don't delete anything"
   },
   {
     match: ['legal action', 'file case', 'lawyer', 'court', 'fir', 'police complaint'],
@@ -176,7 +176,7 @@ const knowledgeBase = [
   {
     match: ['how to use identifier', 'use crime identifier'],
     response:
-      'Open Identifier, type your situation in detail, then select "Analyze Situation". You'll receive a category, legal context, and immediate actions.'
+      'Open Identifier, type your situation in detail, then select "Analyze Situation". You will receive a category, legal context, and immediate actions.'
   },
   {
     match: ['emergency', 'contacts', 'helpline'],
@@ -186,7 +186,7 @@ const knowledgeBase = [
   {
     match: ['report', 'file complaint', 'complaint template', 'how to report', 'incident report'],
     response:
-      'Use Emergency Tools → "Report Incident" to draft a complaint and capture evidence details. For official filing, visit cybercrime.gov.in or call 1930 for guidance.'
+      'Use Emergency Tools then "Report Incident" to draft a complaint and capture evidence details. For official filing, visit cybercrime.gov.in or call 1930 for guidance.'
   },
   {
     match: ['cybercrime.gov.in', 'cyber crime portal', 'national cyber crime portal'],
@@ -261,7 +261,7 @@ const knowledgeBase = [
   {
     match: ['thanks', 'thank you', 'thx', 'great'],
     response:
-      'You're welcome! Ask me anything else about LexGuard or cyber safety. Stay safe online!'
+      'You are welcome! Ask me anything else about LexGuard or cyber safety. Stay safe online!'
   }
 ];
 
@@ -300,7 +300,7 @@ export default function ChatbotWidget() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      text: 'Hi! I'm LexGuard Assistant. Ask me about cyber incidents (phone hacked, account theft, fraud) or app features.',
+      text: "Hi! I'm LexGuard Assistant. Ask me about cyber incidents (phone hacked, account theft, fraud) or app features.",
       time: getTimeStamp()
     }
   ]);
