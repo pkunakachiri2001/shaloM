@@ -1,6 +1,6 @@
 {
-  "appId": "com.shalom.lexguard",
-  "appName": "LexGuard",
+  "appId": "com.indozim.legalguard",
+  "appName": "IndoZim Legal Guard",
   "webDir": "dist",
   "server": {
     "androidScheme": "https"
