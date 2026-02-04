@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 const quickPrompts = [
-  'What can I do in IndoZim Legal Guard?',
+  'What can I do in CyberGuard Pro?',
   'My phone was hacked',
   'Show emergency contacts',
   'Account hacked - what to do?',
@@ -17,12 +17,12 @@ const knowledgeBase = [
   {
     match: ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening'],
     response:
-      "Hello! I'm the IndoZim Legal Guard Assistant. Ask me about any feature or cyber incident - phone hacking, account theft, online fraud, harassment, etc."
+      "Hello! I'm the CyberGuard Pro Assistant. Ask me about any feature or cyber incident - phone hacking, account theft, online fraud, harassment, etc."
   },
   {
-    match: ['what is indozim', 'what is legal guard', 'what can i do', 'features', 'app do', 'about app', 'lexguard', 'indozim'],
+    match: ['what is cyberguard', 'what can i do', 'features', 'app do', 'about app', 'cyberguard pro'],
     response:
-      'IndoZim Legal Guard is your digital legal companion connecting Zimbabwe and India legal frameworks. It offers Cyber Law Academy lessons, a Crime Identifier to classify incidents, Emergency Tools with reporting templates and contacts, Legal News updates, and a Career hub.'
+      'CyberGuard Pro is your comprehensive digital legal companion. It offers Cyber Law Academy lessons, a Crime Identifier to classify incidents, Emergency Tools with reporting templates and contacts, Legal News updates, and a Career hub.'
   },
   
   // PHONE & DEVICE HACKING
@@ -63,7 +63,7 @@ const knowledgeBase = [
   {
     match: ['fake profile', 'fake account', 'someone using my photo', 'impersonation', 'identity theft', 'using my name', 'duplicate account'],
     response:
-      'For fake profiles: 1) Screenshot the fake profile as evidence 2) Report to the platform directly 3) Alert friends/family not to interact 4) File complaint at cybercrime.gov.in 5) Call 1930 for serious cases 6) Use Crime Identifier in IndoZim Legal Guard for legal info 7) May fall under IT Act Sec 66C/66D'
+      'For fake profiles: 1) Screenshot the fake profile as evidence 2) Report to the platform directly 3) Alert friends/family not to interact 4) File complaint with authorities 5) Call your local cyber helpline for serious cases 6) Use Crime Identifier in CyberGuard Pro for legal info 7) Check applicable laws in your jurisdiction'
   },
   {
     match: ['deepfake', 'morphed photo', 'fake video', 'edited photo'],
@@ -169,7 +169,7 @@ const knowledgeBase = [
   {
     match: ['crime types', 'types of cyber crime', 'examples', 'what counts as', 'cyber crime list'],
     response:
-      'IndoZim Legal Guard covers common cyber crime scenarios like identity theft, phishing, harassment, fake profiles, account hacking, and online fraud. Use Crime Identifier to classify your situation.'
+      'CyberGuard Pro covers common cyber crime scenarios like identity theft, phishing, harassment, fake profiles, account hacking, and online fraud. Use Crime Identifier to classify your situation.'
   },
   {
     match: ['identifier', 'crime identifier', 'analyze', 'classify', 'situation'],
@@ -192,24 +192,24 @@ const knowledgeBase = [
       'Use Emergency Tools then "Report Incident" to draft a complaint and capture evidence details. For official filing, visit cybercrime.gov.in or call 1930 for guidance.'
   },
   {
-    match: ['cybercrime.gov.in', 'cyber crime portal', 'national cyber crime portal'],
+    match: ['cybercrime portal', 'cyber crime portal', 'national portal', 'reporting portal'],
     response:
-      'The National Cyber Crime Portal (cybercrime.gov.in) is the official site to file and track complaints in India.'
+      'Use your local cyber crime reporting portal to file and track complaints. Contact local authorities for jurisdiction-specific guidance.'
   },
   {
-    match: ['1930', 'cyber helpline', 'cybercrime helpline'],
+    match: ['cyber helpline', 'cybercrime helpline', 'helpline number'],
     response:
-      'The Cyber Crime Helpline number is 1930 (India). Use it for urgent guidance on cyber incidents. Available 24/7.'
+      'Contact your local cyber crime helpline for urgent guidance on cyber incidents. Check Emergency Tools for contacts.'
   },
   {
-    match: ['100', 'police', 'emergency police'],
+    match: ['police', 'emergency police', 'law enforcement'],
     response:
-      'Police emergency number is 100 (India). Use it for immediate danger situations.'
+      'Contact local law enforcement for immediate danger situations. Use emergency services available in your region.'
   },
   {
-    match: ['181', 'women helpline', 'women safety'],
+    match: ['women helpline', 'women safety', 'harassment support'],
     response:
-      'Women Helpline number is 181 (India). Available 24/7 for support in harassment or safety concerns.'
+      'Reach out to local women support helplines for assistance with harassment or safety concerns.'
   },
   {
     match: ['news', 'latest', 'updates'],
@@ -222,14 +222,14 @@ const knowledgeBase = [
       'CERT-In provides cybersecurity advisories and alerts. You can access it from the News or Resources links.'
   },
   {
-    match: ['it act', 'information technology act', 'it act 2000'],
+    match: ['it act', 'information technology act', 'cyber law', 'laws'],
     response:
-      'The IT Act 2000 is a core cyber law framework in India. IndoZim Legal Guard links to official resources in the footer.'
+      'CyberGuard Pro provides information on cyber law frameworks and legal references. Check the Academy section for learning resources.'
   },
   {
-    match: ['dpdp', 'data protection', 'privacy law'],
+    match: ['dpdp', 'data protection', 'privacy law', 'gdpr'],
     response:
-      'IndoZim Legal Guard references data protection topics including the DPDP Act 2023 in the About and learning sections.'
+      'CyberGuard Pro references data protection and privacy topics in the About and learning sections. Check applicable laws in your jurisdiction.'
   },
   {
     match: ['career', 'jobs', 'internship'],
@@ -249,28 +249,28 @@ const knowledgeBase = [
   {
     match: ['offline', 'pwa', 'install app', 'add to home screen', 'app on phone'],
     response:
-      'IndoZim Legal Guard is built as a PWA, so you can add it to your home screen and use some features offline.'
+      'CyberGuard Pro is built as a PWA, so you can add it to your home screen and use some features offline.'
   },
   {
-    match: ['about', 'project', 'why lexguard', 'why indozim'],
+    match: ['about', 'project', 'why cyberguard', 'mission'],
     response:
-      'The About page explains the mission, tech stack, and how IndoZim Legal Guard bridges Zimbabwe and India legal frameworks to help students and citizens navigate cyber law.'
+      'The About page explains the mission, tech stack, and how CyberGuard Pro helps students and citizens navigate cyber law and digital safety.'
   },
   {
     match: ['developer', 'creator', 'who made', 'author'],
     response:
-      'IndoZim Legal Guard is a collaborative Law & Technology educational project bridging Zimbabwe and India legal systems to empower digital citizens.'
+      'CyberGuard Pro is an innovative Law & Technology educational project designed to empower digital citizens with cyber law knowledge and protection tools.'
   },
   {
     match: ['thanks', 'thank you', 'thx', 'great'],
     response:
-      'You are welcome! Ask me anything else about IndoZim Legal Guard or cyber safety. Stay safe online!'
+      'You are welcome! Ask me anything else about CyberGuard Pro or cyber safety. Stay safe online!'
   }
 ];
 
 const defaultReplies = [
-  "I can help with cyber incidents like phone hacking, account theft, fraud, harassment. I also guide you through IndoZim Legal Guard features. What do you need help with?",
-  "Ask me about cyber safety, reporting incidents, or navigating IndoZim Legal Guard features.",
+  "I can help with cyber incidents like phone hacking, account theft, fraud, harassment. I also guide you through CyberGuard Pro features. What do you need help with?",
+  "Ask me about cyber safety, reporting incidents, or navigating CyberGuard Pro features.",
   "Not sure? Try: 'My phone was hacked' or 'How to report cyber crime?'"
 ];
 
@@ -286,9 +286,9 @@ const pageHints = [
 const appFaqs = [
   {
     id: 'features',
-    patterns: [/\bfeatures?\b/i, /what can i do/i, /what does (the )?app do/i, /about (lexguard|indozim|app)/i],
+    patterns: [/\bfeatures?\b/i, /what can i do/i, /what does (the )?app do/i, /about (cyberguard|app)/i],
     reply:
-      'IndoZim Legal Guard offers: Cyber Law Academy lessons, Crime Identifier for incident classification, Emergency Tools for reporting and helplines, Legal News updates, and a Career Hub.'
+      'CyberGuard Pro offers: Cyber Law Academy lessons, Crime Identifier for incident classification, Emergency Tools for reporting and helplines, Legal News updates, and a Career Hub.'
   },
   {
     id: 'navigation',
@@ -330,13 +330,13 @@ const appFaqs = [
     id: 'offline',
     patterns: [/\boffline\b/i, /pwa|install/i, /add to home screen/i],
     reply:
-      'IndoZim Legal Guard supports PWA install. Open the app in your browser and choose "Add to Home Screen" for quick access.'
+      'CyberGuard Pro supports PWA install. Open the app in your browser and choose "Add to Home Screen" for quick access.'
   },
   {
     id: 'privacy',
-    patterns: [/privacy|data protection|dpdp/i],
+    patterns: [/privacy|data protection|dpdp|gdpr/i],
     reply:
-      'IndoZim Legal Guard references privacy and data protection topics (DPDP Act 2023). Check About and Academy for details.'
+      'CyberGuard Pro references privacy and data protection topics. Check About and Academy for details on data protection laws.'
   }
 ];
 
@@ -543,7 +543,7 @@ export default function ChatbotWidget() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      text: "Hi! I'm IndoZim Legal Guard Assistant. Ask me about cyber incidents (phone hacked, account theft, fraud) or app features.",
+      text: "Hi! I'm CyberGuard Pro Assistant. Ask me about cyber incidents (phone hacked, account theft, fraud) or app features.",
       time: getTimeStamp()
     }
   ]);
@@ -605,14 +605,14 @@ export default function ChatbotWidget() {
     <div className={`chatbot ${open ? 'open' : ''}`} aria-live="polite">
       <button className="chatbot-toggle" onClick={() => setOpen(!open)}>
         <span className="chatbot-toggle-icon">💬</span>
-        <span className="chatbot-toggle-label">Ask IndoZim</span>
+        <span className="chatbot-toggle-label">Ask CyberGuard</span>
       </button>
 
-      <div className="chatbot-panel" role="dialog" aria-label="IndoZim Legal Guard Assistant">
+      <div className="chatbot-panel" role="dialog" aria-label="CyberGuard Pro Assistant">
         <div className="chatbot-header">
           <div>
-            <h3>IndoZim Legal Assistant</h3>
-            <p>Cyber safety & app guidance</p>
+            <h3>CyberGuard Pro Assistant</h3>
+            <p>Cyber safety & legal guidance</p>
           </div>
           <span className="chatbot-time">Updated {lastUpdated}</span>
         </div>

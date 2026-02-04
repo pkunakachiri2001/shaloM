@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <style>
+    .box { fill:#f8fafc; stroke:#0f172a; stroke-width:2; rx:10; }
+    .title { font:700 20px Segoe UI, Arial; fill:#0f172a; }
+    .text { font:500 14px Segoe UI, Arial; fill:#1f2937; }
+    .muted { font:400 12px Segoe UI, Arial; fill:#6b7280; }
+    .line { stroke:#334155; stroke-width:2; }
+  </style>
+
+  <text x="600" y="40" text-anchor="middle" class="title">LexGuard - Conceptual System Architecture</text>
+
+  <rect x="60" y="90" width="220" height="90" class="box"/>
+  <text x="170" y="130" text-anchor="middle" class="text">Users</text>
+  <text x="170" y="155" text-anchor="middle" class="muted">Students • Citizens</text>
+
+  <rect x="360" y="90" width="480" height="120" class="box"/>
+  <text x="600" y="130" text-anchor="middle" class="text">LexGuard App (UI Layer)</text>
+  <text x="600" y="155" text-anchor="middle" class="muted">Web / PWA / Mobile (Capacitor)</text>
+
+  <line x1="280" y1="135" x2="360" y2="135" class="line"/>
+
+  <rect x="120" y="260" width="300" height="110" class="box"/>
+  <text x="270" y="300" text-anchor="middle" class="text">Cyber Law Academy</text>
+  <text x="270" y="325" text-anchor="middle" class="muted">Lessons • Quizzes • Case Studies</text>
+
+  <rect x="450" y="260" width="300" height="110" class="box"/>
+  <text x="600" y="300" text-anchor="middle" class="text">Crime Identifier</text>
+  <text x="600" y="325" text-anchor="middle" class="muted">Situation → Legal Category</text>
+
+  <rect x="780" y="260" width="300" height="110" class="box"/>
+  <text x="930" y="300" text-anchor="middle" class="text">Emergency Tools</text>
+  <text x="930" y="325" text-anchor="middle" class="muted">Reporting • Templates • Contacts</text>
+
+  <rect x="200" y="430" width="250" height="90" class="box"/>
+  <text x="325" y="465" text-anchor="middle" class="text">Legal News</text>
+  <text x="325" y="490" text-anchor="middle" class="muted">Updates • Judgments</text>
+
+  <rect x="520" y="430" width="250" height="90" class="box"/>
+  <text x="645" y="465" text-anchor="middle" class="text">Career Hub</text>
+  <text x="645" y="490" text-anchor="middle" class="muted">Internships • Resources</text>
+
+  <rect x="840" y="430" width="250" height="90" class="box"/>
+  <text x="965" y="465" text-anchor="middle" class="text">About & Disclaimers</text>
+  <text x="965" y="490" text-anchor="middle" class="muted">Ethics • Scope</text>
+
+  <line x1="600" y1="210" x2="270" y2="260" class="line"/>
+  <line x1="600" y1="210" x2="600" y2="260" class="line"/>
+  <line x1="600" y1="210" x2="930" y2="260" class="line"/>
+  <line x1="600" y1="210" x2="325" y2="430" class="line"/>
+  <line x1="600" y1="210" x2="645" y2="430" class="line"/>
+  <line x1="600" y1="210" x2="965" y2="430" class="line"/>
+
+  <rect x="60" y="610" width="520" height="120" class="box"/>
+  <text x="320" y="645" text-anchor="middle" class="text">External Legal Resources</text>
+  <text x="320" y="670" text-anchor="middle" class="muted">IT Act 2000 • DPDP Act 2023 • IPC • Evidence Act</text>
+  <text x="320" y="695" text-anchor="middle" class="muted">cybercrime.gov.in • CERT-In • Courts</text>
+
+  <rect x="620" y="610" width="520" height="120" class="box"/>
+  <text x="880" y="645" text-anchor="middle" class="text">Emergency & Reporting</text>
+  <text x="880" y="670" text-anchor="middle" class="muted">Helpline 1930 • Police • Cyber Cell</text>
+  <text x="880" y="695" text-anchor="middle" class="muted">Complaint Templates • Evidence Guidance</text>
+
+  <line x1="600" y1="520" x2="320" y2="610" class="line"/>
+  <line x1="600" y1="520" x2="880" y2="610" class="line"/>
+</svg>

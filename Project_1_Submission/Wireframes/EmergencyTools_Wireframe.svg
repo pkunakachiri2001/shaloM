@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1400" viewBox="0 0 900 1400">
+  <style>
+    .box { fill:#f9fafb; stroke:#111827; stroke-width:2; rx:8; }
+    .title { font:700 16px Segoe UI, Arial; fill:#111827; }
+    .text { font:500 12px Segoe UI, Arial; fill:#374151; }
+    .muted { font:400 11px Segoe UI, Arial; fill:#6b7280; }
+  </style>
+  <rect x="40" y="40" width="820" height="1320" class="box"/>
+  <text x="70" y="80" class="title">Emergency Tools</text>
+
+  <rect x="70" y="100" width="760" height="90" class="box"/>
+  <text x="90" y="130" class="text">Tabs: Report • Templates • Contacts</text>
+
+  <rect x="70" y="210" width="760" height="340" class="box"/>
+  <text x="90" y="240" class="text">Incident Report Form</text>
+  <text x="90" y="265" class="muted">Type • Urgency • Description • Evidence</text>
+
+  <rect x="70" y="570" width="760" height="200" class="box"/>
+  <text x="90" y="600" class="text">Evidence Tips + Next Steps</text>
+
+  <rect x="70" y="790" width="760" height="200" class="box"/>
+  <text x="90" y="820" class="text">Emergency Contacts</text>
+</svg>

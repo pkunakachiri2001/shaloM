@@ -1,7 +1,7 @@
 {
-  "name": "indozim-legal-guard",
-  "version": "1.0.0",
-  "description": "IndoZim Legal Guard - Zimbabwe & India Legal Companion for Cyber Law Education & Protection",
+  "name": "cyberguard-pro",
+  "version": "2.0.0",
+  "description": "CyberGuard Pro - Global Digital Legal Companion for Cyber Law Education & Protection",
   "main": "index.html",
   "scripts": {
     "dev": "vite",
@@ -16,7 +16,7 @@
     "pwa",
     "cyber-crime"
   ],
-  "author": "IndoZim Legal Guard Team",
+  "author": "CyberGuard Pro Team",
   "license": "MIT",
   "dependencies": {
     "@capacitor/android": "^8.0.1",

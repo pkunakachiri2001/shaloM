@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1400" viewBox="0 0 900 1400">
+  <style>
+    .box { fill:#f9fafb; stroke:#111827; stroke-width:2; rx:8; }
+    .title { font:700 16px Segoe UI, Arial; fill:#111827; }
+    .text { font:500 12px Segoe UI, Arial; fill:#374151; }
+    .muted { font:400 11px Segoe UI, Arial; fill:#6b7280; }
+  </style>
+  <rect x="40" y="40" width="820" height="1320" class="box"/>
+  <text x="70" y="80" class="title">About & Disclaimer</text>
+
+  <rect x="70" y="100" width="760" height="120" class="box"/>
+  <text x="90" y="130" class="text">Mission & Overview</text>
+
+  <rect x="70" y="240" width="760" height="220" class="box"/>
+  <text x="90" y="270" class="text">Feature Highlights Grid</text>
+
+  <rect x="70" y="480" width="760" height="200" class="box"/>
+  <text x="90" y="510" class="text">Creator Section</text>
+
+  <rect x="70" y="700" width="760" height="150" class="box"/>
+  <text x="90" y="730" class="text">Technology Stack</text>
+
+  <rect x="70" y="870" width="760" height="200" class="box"/>
+  <text x="90" y="900" class="text">Disclaimer + Contacts</text>
+</svg>
