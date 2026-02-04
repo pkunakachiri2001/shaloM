@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ChatbotWidget from './ChatbotWidget';
+import Search from './Search';
+import ThemeToggle from './ThemeToggle';
+import Breadcrumbs from './Breadcrumbs';
 
 export default function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,8 +15,11 @@ export default function Layout({ children }) {
     { path: '/identifier', label: 'Identifier', icon: '🔍' },
     { path: '/emergency', label: 'Emergency', icon: '🚨' },
     { path: '/news', label: 'News', icon: '📰' },
-    { path: '/career', label: 'Career', icon: '🎓' },
-    { path: '/about', label: 'About', icon: 'ℹ️' }
+    { path: '/dashboard', label: 'Dashboard', icon: '📊' },
+    { path: '/case-studies', label: 'Cases', icon: '📋' },
+    { path: '/simulator', label: 'Simulator', icon: '🎯' },
+    { path: '/timeline', label: 'Timeline', icon: '📅' },
+    { path: '/resources', label: 'Resources', icon: '📚' },
   ];
 
   return (
@@ -25,15 +31,23 @@ export default function Layout({ children }) {
             <span className="logo-icon">🛡️</span>
             <span className="logo-text">CyberGuard Pro</span>
           </Link>
-          <button 
-            className="menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? '✕' : '☰'}
-          </button>
+          
+          <div className="header-right">
+            <Search />
+            <ThemeToggle />
+            <button 
+              className="menu-toggle"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? '✕' : '☰'}
+            </button>
+          </div>
         </div>
       </header>
+
+      {/* Breadcrumbs Navigation */}
+      {location.pathname !== '/' && <Breadcrumbs />}
 
       {/* Overlay for mobile menu */}
       {menuOpen && (
@@ -57,6 +71,24 @@ export default function Layout({ children }) {
             <span className="nav-label">{item.label}</span>
           </Link>
         ))}
+        
+        <div className="nav-divider"></div>
+        
+        <div className="nav-section">
+          <h4>More</h4>
+          <Link to="/bookmarks" className="nav-item" onClick={() => setMenuOpen(false)}>
+            <span className="nav-icon">⭐</span>
+            <span className="nav-label">Bookmarks</span>
+          </Link>
+          <Link to="/about" className="nav-item" onClick={() => setMenuOpen(false)}>
+            <span className="nav-icon">ℹ️</span>
+            <span className="nav-label">About</span>
+          </Link>
+          <Link to="/career" className="nav-item" onClick={() => setMenuOpen(false)}>
+            <span className="nav-icon">🎓</span>
+            <span className="nav-label">Career</span>
+          </Link>
+        </div>
       </nav>
 
       {/* Main Content */}
@@ -101,17 +133,19 @@ export default function Layout({ children }) {
             </div>
 
             <div className="footer-column">
-              <h4>Legal</h4>
-              <Link to="/about">About</Link>
-              <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">Cyber Crime Portal</a>
-              <a href="tel:1930">Emergency: 1930</a>
+              <h4>Learn</h4>
+              <Link to="/case-studies">Case Studies</Link>
+              <Link to="/simulator">Incident Simulator</Link>
+              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/bookmarks">Bookmarks</Link>
             </div>
 
             <div className="footer-column">
               <h4>Resources</h4>
               <Link to="/news">Latest News</Link>
-              <a href="https://meity.gov.in" target="_blank" rel="noopener noreferrer">IT Act 2000</a>
-              <a href="https://www.cert-in.org.in" target="_blank" rel="noopener noreferrer">CERT-In</a>
+              <a href="https://www.itu.int/en/ITU-D/Cybersecurity/Pages/Legal-Measures.aspx" target="_blank" rel="noopener noreferrer">Global Cyber Law</a>
+              <a href="https://www.unodc.org/unodc/en/cybercrime/" target="_blank" rel="noopener noreferrer">UN Cybercrime</a>
+              <a href="https://www.interpol.int" target="_blank" rel="noopener noreferrer">INTERPOL</a>
             </div>
           </div>
         </div>

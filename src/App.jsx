@@ -7,6 +7,12 @@ import EmergencyTools from './pages/EmergencyTools';
 import News from './pages/News';
 import Career from './pages/Career';
 import About from './pages/About';
+import Dashboard from './pages/Dashboard';
+import Bookmarks from './pages/Bookmarks';
+import CaseStudies from './pages/CaseStudies';
+import IncidentSimulator from './pages/IncidentSimulator';
+import Timeline from './pages/Timeline';
+import ResourceLibrary from './pages/ResourceLibrary';
 
 function App() {
   return (
@@ -19,6 +25,12 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/career" element={<Career />} />
         <Route path="/about" element={<About />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/simulator" element={<IncidentSimulator />} />
+        <Route path="/timeline" element={<Timeline />} />
+        <Route path="/resources" element={<ResourceLibrary />} />
       </Routes>
     </Layout>
   );
