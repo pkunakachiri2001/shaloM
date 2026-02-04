@@ -23,7 +23,7 @@ export default function Layout({ children }) {
         <div className="header-content">
           <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>
             <span className="logo-icon">⚖️</span>
-            <span className="logo-text">LexGuard</span>
+            <span className="logo-text">IndoZim Legal Guard</span>
           </Link>
           <button 
             className="menu-toggle"
@@ -86,9 +86,9 @@ export default function Layout({ children }) {
           <div className="footer-brand">
             <div className="footer-logo">
               <span className="footer-logo-icon">⚖️</span>
-              <span className="footer-logo-text">LexGuard</span>
+              <span className="footer-logo-text">IndoZim Legal Guard</span>
             </div>
-            <p className="footer-tagline">Your Digital Legal Companion</p>
+            <p className="footer-tagline">Zimbabwe & India Digital Legal Companion</p>
           </div>
 
           <div className="footer-links">
@@ -119,14 +119,14 @@ export default function Layout({ children }) {
         <div className="footer-bottom">
           <div className="footer-creator">
             <p className="creator-text">
-              <strong>Created by:</strong> <span className="creator-name">Shalom Chikaka</span> 🇿🇼
+              <strong>IndoZim Legal Guard</strong> 🇿🇼 ↔️ 🇮🇳
             </p>
             <p className="creator-details">
-              BBALLB Student | Vishwakarma University Pune | Law & Technology Project
+              Bridging Zimbabwe & India Legal Frameworks | Law & Technology Initiative
             </p>
           </div>
           <div className="footer-copyright">
-            <p>&copy; {new Date().getFullYear()} LexGuard. Educational Project.</p>
+            <p>&copy; {new Date().getFullYear()} IndoZim Legal Guard. Educational Project.</p>
             <p className="footer-disclaimer">For educational purposes. Consult legal professionals for advice.</p>
           </div>
         </div>

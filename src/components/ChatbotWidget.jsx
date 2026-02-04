@@ -1,25 +1,28 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 const quickPrompts = [
-  'What can I do in LexGuard?',
+  'What can I do in IndoZim Legal Guard?',
   'My phone was hacked',
   'Show emergency contacts',
   'Account hacked - what to do?',
   'How to report cyber crime?',
   'Money stolen from account',
-  'Fake profile using my photo'
+  'Fake profile using my photo',
+  'Suspicious link received',
+  'Online shopping fraud',
+  'Harassment or blackmail'
 ];
 
 const knowledgeBase = [
   {
     match: ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening'],
     response:
-      "Hello! I'm the LexGuard Assistant. Ask me about any feature or cyber incident - phone hacking, account theft, online fraud, harassment, etc."
+      "Hello! I'm the IndoZim Legal Guard Assistant. Ask me about any feature or cyber incident - phone hacking, account theft, online fraud, harassment, etc."
   },
   {
-    match: ['what is lexguard', 'what can i do', 'features', 'app do', 'about app', 'lexguard'],
+    match: ['what is indozim', 'what is legal guard', 'what can i do', 'features', 'app do', 'about app', 'lexguard', 'indozim'],
     response:
-      'LexGuard is your digital legal companion. It offers Cyber Law Academy lessons, a Crime Identifier to classify incidents, Emergency Tools with reporting templates and contacts, Legal News updates, and a Career hub.'
+      'IndoZim Legal Guard is your digital legal companion connecting Zimbabwe and India legal frameworks. It offers Cyber Law Academy lessons, a Crime Identifier to classify incidents, Emergency Tools with reporting templates and contacts, Legal News updates, and a Career hub.'
   },
   
   // PHONE & DEVICE HACKING
@@ -60,7 +63,7 @@ const knowledgeBase = [
   {
     match: ['fake profile', 'fake account', 'someone using my photo', 'impersonation', 'identity theft', 'using my name', 'duplicate account'],
     response:
-      'For fake profiles: 1) Screenshot the fake profile as evidence 2) Report to the platform directly 3) Alert friends/family not to interact 4) File complaint at cybercrime.gov.in 5) Call 1930 for serious cases 6) Use Crime Identifier in LexGuard for legal info 7) May fall under IT Act Sec 66C/66D'
+      'For fake profiles: 1) Screenshot the fake profile as evidence 2) Report to the platform directly 3) Alert friends/family not to interact 4) File complaint at cybercrime.gov.in 5) Call 1930 for serious cases 6) Use Crime Identifier in IndoZim Legal Guard for legal info 7) May fall under IT Act Sec 66C/66D'
   },
   {
     match: ['deepfake', 'morphed photo', 'fake video', 'edited photo'],
@@ -166,7 +169,7 @@ const knowledgeBase = [
   {
     match: ['crime types', 'types of cyber crime', 'examples', 'what counts as', 'cyber crime list'],
     response:
-      'LexGuard covers common cyber crime scenarios like identity theft, phishing, harassment, fake profiles, account hacking, and online fraud. Use Crime Identifier to classify your situation.'
+      'IndoZim Legal Guard covers common cyber crime scenarios like identity theft, phishing, harassment, fake profiles, account hacking, and online fraud. Use Crime Identifier to classify your situation.'
   },
   {
     match: ['identifier', 'crime identifier', 'analyze', 'classify', 'situation'],
@@ -221,12 +224,12 @@ const knowledgeBase = [
   {
     match: ['it act', 'information technology act', 'it act 2000'],
     response:
-      'The IT Act 2000 is a core cyber law framework in India. LexGuard links to official resources in the footer.'
+      'The IT Act 2000 is a core cyber law framework in India. IndoZim Legal Guard links to official resources in the footer.'
   },
   {
     match: ['dpdp', 'data protection', 'privacy law'],
     response:
-      'LexGuard references data protection topics including the DPDP Act 2023 in the About and learning sections.'
+      'IndoZim Legal Guard references data protection topics including the DPDP Act 2023 in the About and learning sections.'
   },
   {
     match: ['career', 'jobs', 'internship'],
@@ -246,28 +249,28 @@ const knowledgeBase = [
   {
     match: ['offline', 'pwa', 'install app', 'add to home screen', 'app on phone'],
     response:
-      'LexGuard is built as a PWA, so you can add it to your home screen and use some features offline.'
+      'IndoZim Legal Guard is built as a PWA, so you can add it to your home screen and use some features offline.'
   },
   {
-    match: ['about', 'project', 'why lexguard'],
+    match: ['about', 'project', 'why lexguard', 'why indozim'],
     response:
-      'The About page explains the mission, tech stack, and why LexGuard helps students and citizens navigate cyber law.'
+      'The About page explains the mission, tech stack, and how IndoZim Legal Guard bridges Zimbabwe and India legal frameworks to help students and citizens navigate cyber law.'
   },
   {
     match: ['developer', 'creator', 'who made', 'author'],
     response:
-      'LexGuard was created by Shalom Chikaka, a BBALLB student at Vishwakarma University Pune, as a Law & Technology educational project.'
+      'IndoZim Legal Guard is a collaborative Law & Technology educational project bridging Zimbabwe and India legal systems to empower digital citizens.'
   },
   {
     match: ['thanks', 'thank you', 'thx', 'great'],
     response:
-      'You are welcome! Ask me anything else about LexGuard or cyber safety. Stay safe online!'
+      'You are welcome! Ask me anything else about IndoZim Legal Guard or cyber safety. Stay safe online!'
   }
 ];
 
 const defaultReplies = [
-  "I can help with cyber incidents like phone hacking, account theft, fraud, harassment. I also guide you through LexGuard features. What do you need help with?",
-  "Ask me about cyber safety, reporting incidents, or navigating LexGuard features.",
+  "I can help with cyber incidents like phone hacking, account theft, fraud, harassment. I also guide you through IndoZim Legal Guard features. What do you need help with?",
+  "Ask me about cyber safety, reporting incidents, or navigating IndoZim Legal Guard features.",
   "Not sure? Try: 'My phone was hacked' or 'How to report cyber crime?'"
 ];
 
@@ -280,13 +283,252 @@ const pageHints = [
   { keywords: ['about'], reply: 'Open "About" from the menu or bottom navigation.' }
 ];
 
-function getSmartReply(userText) {
-  const normalized = userText.toLowerCase();
+const appFaqs = [
+  {
+    id: 'features',
+    patterns: [/\bfeatures?\b/i, /what can i do/i, /what does (the )?app do/i, /about (lexguard|indozim|app)/i],
+    reply:
+      'IndoZim Legal Guard offers: Cyber Law Academy lessons, Crime Identifier for incident classification, Emergency Tools for reporting and helplines, Legal News updates, and a Career Hub.'
+  },
+  {
+    id: 'navigation',
+    patterns: [/\bwhere\b.*\b(open|find|go)\b/i, /how do i open/i, /navigate/i],
+    reply:
+      'Use the top menu or bottom navigation to open Academy, Identifier, Emergency Tools, News, Career, and About.'
+  },
+  {
+    id: 'academy',
+    patterns: [/\bacademy\b/i, /learn|course|lesson|module/i],
+    reply:
+      'The Cyber Law Academy has bite-sized lessons on cyber laws, offences, and reporting steps. Open Academy from the menu or bottom navigation.'
+  },
+  {
+    id: 'identifier',
+    patterns: [/\bidentifier\b/i, /classify|analyze|diagnose/i],
+    reply:
+      'Crime Identifier helps you describe an incident and returns the likely category, legal references, and immediate steps. Open Identifier and paste your situation.'
+  },
+  {
+    id: 'emergency',
+    patterns: [/\bemergency\b/i, /helpline|contacts?/i],
+    reply:
+      'Emergency Tools includes helplines like 1930 (cyber), 100 (police), and 181 (women), plus reporting templates.'
+  },
+  {
+    id: 'news',
+    patterns: [/\bnews\b/i, /updates?|alerts?/i],
+    reply:
+      'The News section shows legal and cybersecurity updates from trusted sources such as CERT-In and official portals.'
+  },
+  {
+    id: 'career',
+    patterns: [/\bcareer\b/i, /jobs?|internships?|skills?/i],
+    reply:
+      'The Career Hub provides skill paths, resources, and opportunities for law and tech careers.'
+  },
+  {
+    id: 'offline',
+    patterns: [/\boffline\b/i, /pwa|install/i, /add to home screen/i],
+    reply:
+      'IndoZim Legal Guard supports PWA install. Open the app in your browser and choose "Add to Home Screen" for quick access.'
+  },
+  {
+    id: 'privacy',
+    patterns: [/privacy|data protection|dpdp/i],
+    reply:
+      'IndoZim Legal Guard references privacy and data protection topics (DPDP Act 2023). Check About and Academy for details.'
+  }
+];
+
+const STOPWORDS = new Set([
+  'the', 'a', 'an', 'to', 'of', 'in', 'on', 'for', 'and', 'or', 'is', 'are', 'am', 'was', 'were',
+  'do', 'does', 'did', 'what', 'which', 'where', 'when', 'why', 'how', 'can', 'could', 'should',
+  'i', 'me', 'my', 'mine', 'we', 'our', 'you', 'your', 'yours', 'it', 'this', 'that', 'these', 'those',
+  'please', 'plz', 'help', 'need', 'want', 'urgent', 'now', 'asap'
+]);
+
+const TEXT_REPLACEMENTS = [
+  { pattern: /\bpaise\b|\bpaisa\b|\brupees\b/gi, replace: 'money' },
+  { pattern: /\bdhokha\b|\bthagi\b|\bthag\b|\bcheating\b/gi, replace: 'fraud' },
+  { pattern: /\bchori\b|\bstolen\b/gi, replace: 'stolen' },
+  { pattern: /\bmobile\b|\bcell\b|\bhandset\b/gi, replace: 'phone' },
+  { pattern: /\bhacked\b|\bhack\b|\bhacker\b|\bcompromised\b/gi, replace: 'hacked' },
+  { pattern: /\bupi\b|\bgpay\b|\bpaytm\b|\bphonepe\b/gi, replace: 'upi' },
+  { pattern: /\bwhatsapp\b/gi, replace: 'whatsapp' },
+  { pattern: /\binsta\b|\binstagram\b/gi, replace: 'instagram' },
+  { pattern: /\bfb\b|\bfacebook\b/gi, replace: 'facebook' },
+  { pattern: /\btwitter\b|\bx\b/gi, replace: 'twitter' },
+  { pattern: /\botp\b|\bverification\b|\bcode\b/gi, replace: 'otp' }
+];
+
+const SYNONYMS = {
+  hacked: ['hacked', 'compromised', 'breach', 'breached'],
+  phone: ['phone', 'mobile', 'device', 'handset'],
+  account: ['account', 'profile', 'id', 'login', 'credential'],
+  fraud: ['fraud', 'scam', 'thagi', 'dhokha', 'cheating'],
+  money: ['money', 'funds', 'balance', 'cash', 'rupees'],
+  harassment: ['harassment', 'abuse', 'bully', 'bullying', 'troll', 'trolling', 'threat', 'threats'],
+  blackmail: ['blackmail', 'sextortion'],
+  phishing: ['phishing', 'phish', 'fake', 'spoof'],
+  link: ['link', 'url', 'website'],
+  otp: ['otp', 'verification', 'code', 'pin'],
+  report: ['report', 'complaint', 'file', 'fir'],
+  emergency: ['emergency', 'urgent', 'immediately', 'asap'],
+  shop: ['shopping', 'seller', 'product', 'order', 'delivery'],
+  fake: ['fake', 'impersonation', 'duplicate'],
+  deepfake: ['deepfake', 'morphed', 'edited']
+};
+
+const SYNONYM_INDEX = Object.entries(SYNONYMS).reduce((acc, [canonical, words]) => {
+  words.forEach(word => {
+    acc[word] = canonical;
+  });
+  acc[canonical] = canonical;
+  return acc;
+}, {});
+
+function normalizeText(text) {
+  let normalized = text.toLowerCase();
+  TEXT_REPLACEMENTS.forEach(({ pattern, replace }) => {
+    normalized = normalized.replace(pattern, replace);
+  });
+  normalized = normalized
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return normalized;
+}
+
+function tokenize(text) {
+  return text
+    .split(' ')
+    .map(token => SYNONYM_INDEX[token] || token)
+    .filter(token => token && !STOPWORDS.has(token));
+}
+
+function editDistance(a, b) {
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  const matrix = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
+  for (let i = 0; i <= a.length; i += 1) matrix[i][0] = i;
+  for (let j = 0; j <= b.length; j += 1) matrix[0][j] = j;
+  for (let i = 1; i <= a.length; i += 1) {
+    for (let j = 1; j <= b.length; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
+    }
+  }
+  return matrix[a.length][b.length];
+}
+
+function isFuzzyMatch(token, keyword) {
+  if (token.length < 4 || keyword.length < 4) return false;
+  const distance = editDistance(token, keyword);
+  return distance <= 1;
+}
+
+function detectFaqReply(text) {
+  for (const faq of appFaqs) {
+    if (faq.patterns.some(pattern => pattern.test(text))) {
+      return faq.reply;
+    }
+  }
+  return null;
+}
+
+function detectIntent(tokens, normalized) {
+  const has = (list) => list.some(item => tokens.includes(item));
+  if (normalized.includes('1930') || normalized.includes('helpline')) return 'helpline';
+  if (has(['report', 'complaint', 'fir'])) return 'report';
+  if (has(['hacked', 'account', 'phone'])) return 'hack';
+  if (has(['fraud', 'upi', 'money'])) return 'fraud';
+  if (has(['phishing', 'link', 'fake'])) return 'phishing';
+  if (has(['harassment', 'blackmail'])) return 'harassment';
+  if (has(['deepfake'])) return 'deepfake';
+  if (has(['password', 'otp'])) return 'security';
+  if (has(['privacy', 'dpdp'])) return 'privacy';
+  return 'general';
+}
+
+function buildFollowUp(intent) {
+  const followUps = {
+    hack: 'Which account or device is affected (phone, email, Instagram, WhatsApp)?',
+    fraud: 'Was it UPI, card, or netbanking? Do you have transaction ID/time?',
+    phishing: 'Did you click the link or share any OTP/password?',
+    harassment: 'Is the threat ongoing or do you have screenshots/evidence?',
+    report: 'Do you want the online complaint steps or a report template?',
+    security: 'Do you want steps for 2FA setup or password recovery?',
+    general: 'Can you describe the issue in one or two sentences?'
+  };
+  return followUps[intent] || followUps.general;
+}
+
+function scoreEntry(entry, normalizedText, tokens) {
+  let score = 0;
+  entry.match.forEach(rawKey => {
+    const key = normalizeText(rawKey);
+    if (!key) return;
+    if (key.includes(' ')) {
+      if (normalizedText.includes(key)) score += 6;
+      return;
+    }
+    const canonical = SYNONYM_INDEX[key] || key;
+    if (tokens.includes(canonical)) {
+      score += 2;
+      return;
+    }
+    if (tokens.some(token => isFuzzyMatch(token, canonical))) {
+      score += 1;
+    }
+  });
+  return score;
+}
+
+function getSmartReply(userText, lastTopic) {
+  const normalized = normalizeText(userText);
+  const tokens = tokenize(normalized);
+
+  const faqReply = detectFaqReply(userText);
+  if (faqReply) return { text: faqReply, topic: 'app' };
+
   const pageHint = pageHints.find(item => item.keywords.some(key => normalized.includes(key)));
-  if (pageHint && normalized.includes('where')) return pageHint.reply;
-  const entry = knowledgeBase.find(item => item.match.some(key => normalized.includes(key)));
-  if (entry) return entry.response;
-  return defaultReplies[Math.floor(Math.random() * defaultReplies.length)];
+  if (pageHint && normalized.includes('where')) return { text: pageHint.reply, topic: 'navigation' };
+
+  const scored = knowledgeBase
+    .map(entry => ({ entry, score: scoreEntry(entry, normalized, tokens) }))
+    .sort((a, b) => b.score - a.score);
+
+  if (scored.length && scored[0].score >= 4) {
+    const urgent = tokens.includes('emergency') || normalized.includes('urgent') || normalized.includes('immediately');
+    const base = scored[0].entry.response;
+    if (urgent) {
+      return { text: `${base} If this is urgent or involves financial loss, call 1930 immediately.`, topic: 'urgent' };
+    }
+    return { text: base, topic: 'kb' };
+  }
+
+  const intent = detectIntent(tokens, normalized);
+  if (lastTopic && intent === 'general') {
+    const followUp = buildFollowUp(lastTopic);
+    return { text: followUp, topic: lastTopic };
+  }
+
+  if (normalized.length <= 4 || tokens.length === 0) {
+    return { text: 'Tell me what happened in 1-2 sentences (e.g., "UPI fraud", "fake Instagram profile", "phone hacked").', topic: 'clarify' };
+  }
+
+  const fallback = defaultReplies[Math.floor(Math.random() * defaultReplies.length)];
+  return {
+    text: `${fallback} You can mention keywords like hacked, fraud, phishing, harassment, fake profile, or report.`,
+    topic: intent
+  };
 }
 
 function getTimeStamp() {
@@ -297,10 +539,11 @@ function getTimeStamp() {
 export default function ChatbotWidget() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState('');
+  const [lastTopic, setLastTopic] = useState(null);
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      text: "Hi! I'm LexGuard Assistant. Ask me about cyber incidents (phone hacked, account theft, fraud) or app features.",
+      text: "Hi! I'm IndoZim Legal Guard Assistant. Ask me about cyber incidents (phone hacked, account theft, fraud) or app features.",
       time: getTimeStamp()
     }
   ]);
@@ -325,13 +568,19 @@ export default function ChatbotWidget() {
     if (!trimmed) return;
 
     const userMessage = { role: 'user', text: trimmed, time: getTimeStamp() };
+    const replyPayload = getSmartReply(trimmed, lastTopic);
     const assistantReply = {
       role: 'assistant',
-      text: getSmartReply(trimmed),
+      text: replyPayload.text,
       time: getTimeStamp()
     };
 
     setMessages(prev => [...prev, userMessage, assistantReply]);
+    if (replyPayload.topic && replyPayload.topic !== 'kb' && replyPayload.topic !== 'app') {
+      setLastTopic(replyPayload.topic);
+    } else if (replyPayload.topic === 'app') {
+      setLastTopic('app');
+    }
     setInput('');
   };
 
@@ -356,13 +605,13 @@ export default function ChatbotWidget() {
     <div className={`chatbot ${open ? 'open' : ''}`} aria-live="polite">
       <button className="chatbot-toggle" onClick={() => setOpen(!open)}>
         <span className="chatbot-toggle-icon">💬</span>
-        <span className="chatbot-toggle-label">Ask LexGuard</span>
+        <span className="chatbot-toggle-label">Ask IndoZim</span>
       </button>
 
-      <div className="chatbot-panel" role="dialog" aria-label="LexGuard Assistant">
+      <div className="chatbot-panel" role="dialog" aria-label="IndoZim Legal Guard Assistant">
         <div className="chatbot-header">
           <div>
-            <h3>LexGuard Assistant</h3>
+            <h3>IndoZim Legal Assistant</h3>
             <p>Cyber safety & app guidance</p>
           </div>
           <span className="chatbot-time">Updated {lastUpdated}</span>

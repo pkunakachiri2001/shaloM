@@ -1,7 +1,7 @@
 {
-  "name": "lexguard",
+  "name": "indozim-legal-guard",
   "version": "1.0.0",
-  "description": "LexGuard - Your Legal Companion for Cyber Law Education & Protection",
+  "description": "IndoZim Legal Guard - Zimbabwe & India Legal Companion for Cyber Law Education & Protection",
   "main": "index.html",
   "scripts": {
     "dev": "vite",
@@ -16,7 +16,7 @@
     "pwa",
     "cyber-crime"
   ],
-  "author": "Shalom Chikaka",
+  "author": "IndoZim Legal Guard Team",
   "license": "MIT",
   "dependencies": {
     "@capacitor/android": "^8.0.1",

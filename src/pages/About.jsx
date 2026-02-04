@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="page about-page">
       <div className="page-header">
-        <h1>ℹ️ About LexGuard</h1>
+        <h1>ℹ️ About IndoZim Legal Guard</h1>
         <p>Your trusted companion for cyber law education and digital protection</p>
       </div>
 
@@ -11,10 +11,10 @@ export default function About() {
         <div className="about-card">
           <h2>🎯 Our Mission</h2>
           <p>
-            LexGuard was created to bridge the gap between complex cyber laws and everyday citizens. 
-            We believe that understanding your digital rights shouldn't require a law degree. 
-            Our mission is to empower people with knowledge, tools, and resources to navigate 
-            the digital world safely and confidently.
+            IndoZim Legal Guard was created to bridge the gap between complex cyber laws and everyday citizens, 
+            while connecting legal frameworks between Zimbabwe and India. We believe that understanding your digital 
+            rights shouldn't require a law degree. Our mission is to empower people with knowledge, tools, and resources 
+            to navigate the digital world safely and confidently across different legal jurisdictions.
           </p>
         </div>
       </section>
@@ -61,45 +61,45 @@ export default function About() {
         </div>
       </section>
 
-      {/* Creator Section */}
+      {/* Project Origin Section */}
       <section className="about-section creator-section">
         <div className="creator-showcase">
           <div className="creator-badge">
             <span className="creator-flag">🇿🇼</span>
+            <span className="creator-flag">🇮🇳</span>
             <div className="creator-info-main">
-              <h2>Created By</h2>
-              <h3 className="creator-name-large">Shalom Chikaka</h3>
-              <p className="creator-title">BBALLB Student | Legal Tech Enthusiast</p>
+              <h2>Project Origin</h2>
+              <h3 className="creator-name-large">Zimbabwe ↔️ India Bridge</h3>
+              <p className="creator-title">Law & Technology Educational Initiative</p>
             </div>
           </div>
 
           <div className="creator-story">
-            <h3>About the Creator</h3>
+            <h3>About the Project</h3>
             <p>
-              Shalom Chikaka is a BBALLB student at <strong>Vishwakarma University Pune</strong>, 
-              bringing a unique international perspective to legal technology. As a Zimbabwean 
-              student studying law in India, Shalom understands the challenges of navigating 
-              different legal systems and the critical need for accessible legal education.
+              IndoZim Legal Guard represents a unique collaboration bridging <strong>Zimbabwe</strong> and 
+              <strong> India</strong> legal frameworks. This project addresses the challenges of navigating 
+              different legal systems and the critical need for accessible legal education in the digital age.
             </p>
             <p>
-              This project was developed as part of the <strong>Law & Technology</strong> course, 
-              combining legal expertise with technical innovation to create a practical solution 
-              for cyber law education and digital protection.
+              Developed as part of a <strong>Law & Technology</strong> initiative, this platform combines 
+              legal expertise with technical innovation to create a practical solution for cyber law education 
+              and digital protection across international boundaries.
             </p>
             
             <div className="creator-highlights">
               <div className="highlight-item">
-                <span className="highlight-icon">🎓</span>
+                <span className="highlight-icon">🌐</span>
                 <div>
-                  <strong>Education</strong>
-                  <p>BBALLB Program, Vishwakarma University Pune</p>
+                  <strong>Cross-Cultural</strong>
+                  <p>Bridging Zimbabwe & India legal systems</p>
                 </div>
               </div>
               <div className="highlight-item">
-                <span className="highlight-icon">🌍</span>
+                <span className="highlight-icon">🔗</span>
                 <div>
-                  <strong>Background</strong>
-                  <p>Zimbabwe 🇿🇼 → India 🇮🇳</p>
+                  <strong>International Perspective</strong>
+                  <p>Zimbabwe 🇿🇼 ↔️ India 🇮🇳</p>
                 </div>
               </div>
               <div className="highlight-item">
@@ -144,10 +144,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why LexGuard */}
+      {/* Why IndoZim Legal Guard */}
       <section className="about-section">
         <div className="about-card highlight-card">
-          <h2>Why Choose LexGuard?</h2>
+          <h2>Why Choose IndoZim Legal Guard?</h2>
           <div className="why-list">
             <div className="why-item">
               <span className="why-icon">✅</span>
@@ -224,10 +224,9 @@ export default function About() {
         <div className="disclaimer-box">
           <h3>⚠️ Disclaimer</h3>
           <p>
-            LexGuard is an educational project created for the Law & Technology course at 
-            Vishwakarma University Pune. While we strive for accuracy, this app does not 
-            constitute legal advice. For specific legal matters, please consult qualified 
-            legal professionals.
+            IndoZim Legal Guard is an educational platform for Law & Technology learning. 
+            While we strive for accuracy, this app does not constitute legal advice. For specific 
+            legal matters, please consult qualified legal professionals.
           </p>
           <p>
             All information is provided for educational purposes only. Users are encouraged 
