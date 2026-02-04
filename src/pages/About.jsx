@@ -1,4 +1,15 @@
+import { Link } from 'react-router-dom';
+
 export default function About() {
+  const features = [
+    { icon: '📚', title: 'Legal Education', desc: 'Comprehensive lessons on cyber law, IT Act 2000, DPDP Act 2023, and digital rights with interactive quizzes.', path: '/academy' },
+    { icon: '🔍', title: 'Crime Analysis', desc: 'AI-powered tool to identify cyber crimes and provide instant legal guidance and action steps.', path: '/identifier' },
+    { icon: '🚨', title: 'Emergency Support', desc: 'Quick access to incident reporting, complaint templates, and emergency contacts.', path: '/emergency' },
+    { icon: '📰', title: 'Latest Updates', desc: 'Stay informed about new laws, court verdicts, cyber crime trends, and legal developments.', path: '/news' },
+    { icon: '🎓', title: 'Career Guidance', desc: 'Resources for law students pursuing careers in legal tech and cyber law specialization.', path: '/career' },
+    { icon: '🌍', title: 'Global Perspective', desc: 'International legal frameworks and comparisons from cyber law systems worldwide.', path: '/about' }
+  ];
+
   return (
     <div className="page about-page">
       <div className="page-header">
@@ -23,41 +34,15 @@ export default function About() {
       <section className="about-section">
         <h2 className="section-title">What We Offer</h2>
         <div className="feature-grid">
-          <div className="about-feature-card">
-            <div className="feature-icon">📚</div>
-            <h3>Legal Education</h3>
-            <p>Comprehensive lessons on cyber law, IT Act 2000, DPDP Act 2023, and digital rights with interactive quizzes.</p>
-          </div>
-
-          <div className="about-feature-card">
-            <div className="feature-icon">🔍</div>
-            <h3>Crime Analysis</h3>
-            <p>AI-powered tool to identify cyber crimes and provide instant legal guidance and action steps.</p>
-          </div>
-
-          <div className="about-feature-card">
-            <div className="feature-icon">🚨</div>
-            <h3>Emergency Support</h3>
-            <p>Quick access to incident reporting, complaint templates, and emergency contacts.</p>
-          </div>
-
-          <div className="about-feature-card">
-            <div className="feature-icon">📰</div>
-            <h3>Latest Updates</h3>
-            <p>Stay informed about new laws, court verdicts, cyber crime trends, and legal developments.</p>
-          </div>
-
-          <div className="about-feature-card">
-            <div className="feature-icon">🎓</div>
-            <h3>Career Guidance</h3>
-            <p>Resources for law students pursuing careers in legal tech and cyber law specialization.</p>
-          </div>
-
-          <div className="about-feature-card">
-            <div className="feature-icon">🌍</div>
-            <h3>Global Perspective</h3>
-            <p>International legal frameworks and comparisons from cyber law systems worldwide.</p>
-          </div>
+          {features.map((feature, idx) => (
+            <Link key={idx} to={feature.path} className="about-feature-card-link">
+              <div className="about-feature-card">
+                <div className="feature-icon">{feature.icon}</div>
+                <h3>{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
