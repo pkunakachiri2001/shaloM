@@ -9,11 +9,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve static files from the dist directory
+app.use('/assets', express.static(join(__dirname, 'dist', 'assets')));
 app.use(express.static(join(__dirname, 'dist')));
 
-// SPA fallback - serve index.html for all routes
+// SPA fallback - serve index.html for all non-asset routes
 app.get('*', (req, res) => {
-  res.sendFile(join(__dirname, 'dist', 'index.html'));
+  if (req.path.includes('.')) {
+    return res.status(404).end();
+  }
+  return res.sendFile(join(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(PORT, '0.0.0.0', () => {
