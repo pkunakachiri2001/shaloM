@@ -14,8 +14,7 @@
 .timeline-header h1 {
   font-size: 2.6rem;
   background: linear-gradient(135deg, #1e40af, #2563eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;  background-clip: text;  -webkit-text-fill-color: transparent;
   margin: 0 0 0.5rem 0;
   font-weight: 800;
 }

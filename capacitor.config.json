@@ -1,6 +1,7 @@
 {
   "appId": "com.cyberguard.pro",
   "appName": "CyberGuard Pro",
+  "description": "Your Global Digital Legal Companion",
   "webDir": "dist",
   "server": {
     "androidScheme": "https"

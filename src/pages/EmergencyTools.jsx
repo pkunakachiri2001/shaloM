@@ -8,10 +8,36 @@ export default function EmergencyTools() {
     evidence: '',
     urgency: 'medium'
   });
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!reportData.type.trim()) newErrors.type = 'Incident type is required';
+    if (!reportData.description.trim()) newErrors.description = 'Description is required (minimum 20 characters)';
+    if (reportData.description.trim().length < 20) newErrors.description = 'Description must be at least 20 characters';
+    return newErrors;
+  };
 
   const handleReportSubmit = (e) => {
     e.preventDefault();
-    alert('In a real app, this would submit to authorities. For now, save all evidence and visit cybercrime.gov.in to file your complaint.');
+    const newErrors = validateForm();
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
+    setSubmitted(true);
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+      setReportData({ type: '', description: '', evidence: '', urgency: 'medium' });
+    }, 3000);
+    
+    alert('✓ Report prepared! Visit cybercrime.gov.in to submit officially. Save this information for reference.');
   };
 
   const emergencyContacts = [
@@ -229,13 +255,25 @@ Date: [DD/MM/YYYY]`
               <strong>⚠️ Important:</strong> This form helps you organize information. For official reporting, visit <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a> or call 1930.
             </div>
 
-            <form onSubmit={handleReportSubmit} className="report-form">
+            <form onSubmit={handleReportSubmit} className="report-form" noValidate>
+              {submitted && (
+                <div style={{ background: '#d1fae5', color: '#065f46', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1.5rem', border: '1px solid #6ee7b7' }}>
+                  ✓ Report prepared successfully! Now visit cybercrime.gov.in to file officially.
+                </div>
+              )}
+              
               <div className="form-group">
-                <label>Type of Incident *</label>
+                <label htmlFor="incident-type">Type of Incident *</label>
                 <select 
+                  id="incident-type"
                   value={reportData.type}
-                  onChange={(e) => setReportData({...reportData, type: e.target.value})}
-                  required
+                  onChange={(e) => {
+                    setReportData({...reportData, type: e.target.value});
+                    if (errors.type) setErrors({...errors, type: ''});
+                  }}
+                  className={errors.type ? 'error' : ''}
+                  aria-invalid={!!errors.type}
+                  aria-describedby={errors.type ? 'incident-type-error' : undefined}
                 >
                   <option value="">Select incident type...</option>
                   <option value="hacking">Hacking / Unauthorized Access</option>
@@ -247,11 +285,12 @@ Date: [DD/MM/YYYY]`
                   <option value="privacy">Privacy Violation</option>
                   <option value="other">Other</option>
                 </select>
+                {errors.type && <span id="incident-type-error" className="error-message">{errors.type}</span>}
               </div>
 
               <div className="form-group">
-                <label>Urgency Level *</label>
-                <div className="urgency-buttons">
+                <label htmlFor="urgency-level">Urgency Level *</label>
+                <div id="urgency-level" className="urgency-buttons">
                   <button
                     type="button"
                     className={`urgency-btn ${reportData.urgency === 'low' ? 'active' : ''}`}
@@ -284,23 +323,32 @@ Date: [DD/MM/YYYY]`
               </div>
 
               <div className="form-group">
-                <label>Description *</label>
+                <label htmlFor="description">Description * <span style={{ color: '#64748b', fontSize: '0.9rem' }}>(min 20 chars)</span></label>
                 <textarea
+                  id="description"
                   rows="6"
                   placeholder="Describe what happened in detail: date, time, how it occurred, who was involved (if known)..."
                   value={reportData.description}
-                  onChange={(e) => setReportData({...reportData, description: e.target.value})}
-                  required
+                  onChange={(e) => {
+                    setReportData({...reportData, description: e.target.value});
+                    if (errors.description) setErrors({...errors, description: ''});
+                  }}
+                  className={errors.description ? 'error' : ''}
+                  aria-invalid={!!errors.description}
+                  aria-describedby={errors.description ? 'description-error' : undefined}
                 />
+                {errors.description && <span id="description-error" className="error-message">{errors.description}</span>}
               </div>
 
               <div className="form-group">
-                <label>Evidence Details</label>
+                <label htmlFor="evidence">Evidence Details</label>
                 <textarea
+                  id="evidence"
                   rows="4"
                   placeholder="List evidence you have: screenshots (with timestamps), emails, messages, transaction IDs, URLs, phone numbers..."
                   value={reportData.evidence}
                   onChange={(e) => setReportData({...reportData, evidence: e.target.value})}
+                  aria-label="Evidence details (optional)"
                 />
               </div>
 
