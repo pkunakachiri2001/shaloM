@@ -32,6 +32,22 @@ export default function Layout({ children }) {
             <span className="logo-text">CyberGuard Pro</span>
           </Link>
           
+          {/* Quick Action Buttons - Desktop */}
+          <div className="header-actions">
+            <Link to="/academy" className="header-action-btn header-btn-primary">
+              <span>🎯</span>
+              <span>Learn</span>
+            </Link>
+            <Link to="/emergency" className="header-action-btn header-btn-danger">
+              <span>🚨</span>
+              <span>Report</span>
+            </Link>
+            <Link to="/identifier" className="header-action-btn header-btn-info">
+              <span>❓</span>
+              <span>Identify</span>
+            </Link>
+          </div>
+          
           <div className="header-right">
             <Search />
             <ThemeToggle />
