@@ -549,10 +549,8 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 190;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 .nav-header {
@@ -3213,4 +3211,82 @@ body::before {
   .page {
     box-shadow: none;
   }
+}
+
+/* Dark Mode Support */
+[data-theme='dark'] {
+  --gray-50: #1f2937;
+  --gray-100: #111827;
+  --gray-200: #0f172a;
+  --gray-700: #e5e7eb;
+  --gray-800: #f3f4f6;
+  --gray-900: #ffffff;
+}
+
+[data-theme='dark'] body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f3f4f6;
+}
+
+[data-theme='dark'] body::before {
+  background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+}
+
+[data-theme='dark'] .page-header {
+  background: rgba(30, 41, 59, 0.95);
+  color: #f3f4f6;
+}
+
+[data-theme='dark'] .feature-card,
+[data-theme='dark'] .lesson-card,
+[data-theme='dark'] .nav,
+[data-theme='dark'] .home-footer {
+  background: #1e293b;
+  color: #f3f4f6;
+  border-color: rgba(100, 116, 139, 0.3);
+}
+
+[data-theme='dark'] .feature-card h3,
+[data-theme='dark'] .lesson-card h3 {
+  color: #e0e7ff;
+}
+
+[data-theme='dark'] .feature-card p,
+[data-theme='dark'] .lesson-card p,
+[data-theme='dark'] .nav-item {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .nav-item:hover {
+  background: rgba(99, 102, 241, 0.2);
+  color: #93c5fd;
+}
+
+[data-theme='dark'] .section-title {
+  color: #e0e7ff;
+}
+
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+[data-theme='dark'] .btn-primary,
+[data-theme='dark'] .action-btn.btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+[data-theme='dark'] .bottom-nav,
+[data-theme='dark'] .app-footer {
+  background: #1e293b;
+  border-color: rgba(100, 116, 139, 0.3);
+}
+
+[data-theme='dark'] .bottom-nav-item {
+  color: #cbd5e1;
+}
+
+[data-theme='dark'] .bottom-nav-item.active {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.2);
 }
