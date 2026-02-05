@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import InteractiveCard from '../components/InteractiveCard';
 import '../styles/IncidentSimulator.css';
 
 const INCIDENTS = [
@@ -140,35 +141,69 @@ export default function IncidentSimulator() {
         </div>
 
         {stats.total > 0 && (
-          <div className="simulator-stats">
-            <div className="stat-item">
+          <div className="simulator-stats-grid">
+            <div className="stat-card">
+              <span className="stat-number">{stats.total}</span>
               <span className="stat-label">Scenarios Completed</span>
-              <span className="stat-value">{stats.total}</span>
             </div>
-            <div className="stat-item">
+            <div className="stat-card">
+              <span className="stat-number">{stats.correct}</span>
               <span className="stat-label">Correct Decisions</span>
-              <span className="stat-value">{stats.correct}/{stats.total}</span>
             </div>
-            <div className="stat-item">
+            <div className="stat-card">
+              <span className="stat-number">{((stats.correct/stats.total)*100).toFixed(0)}%</span>
               <span className="stat-label">Success Rate</span>
-              <span className="stat-value">{Math.round(stats.correct / stats.total * 100)}%</span>
             </div>
           </div>
         )}
 
         <div className="incidents-grid">
-          {INCIDENTS.map((incident, idx) => (
-            <div
-              key={incident.id}
-              className="incident-card"
-              onClick={() => setSelectedIncident(idx)}
-            >
-              <div className="incident-icon">{incident.icon}</div>
-              <h3>{incident.title}</h3>
-              <p>{incident.description}</p>
-              <button className="start-btn">Start Scenario →</button>
-            </div>
-          ))}
+          {INCIDENTS.map((incident, idx) => {
+            const details = (
+              <div className="incident-modal-details">
+                <section className="detail-section">
+                  <h3>Scenario Overview</h3>
+                  <p>{incident.scenario}</p>
+                </section>
+
+                <section className="detail-section">
+                  <h3>Response Options</h3>
+                  <div className="choices-list-modal">
+                    {incident.choices.map((choice, cidx) => (
+                      <div key={cidx} className={`choice-item ${choice.correct ? 'correct-choice' : ''}`}>
+                        <div className="choice-label">{String.fromCharCode(65 + cidx)}</div>
+                        <div>
+                          <p className="choice-text-modal">{choice.text}</p>
+                          <p className="consequence-info">{choice.consequence}</p>
+                          <p className="impact-info"><strong>Impact:</strong> {choice.impact}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section className="detail-section">
+                  <h3>⚖️ Legal Implications</h3>
+                  <p>Proper incident response protocols are not just cybersecurity best practices—they're often legal requirements under data protection and cybercrime laws.</p>
+                </section>
+              </div>
+            );
+
+            return (
+              <InteractiveCard
+                key={incident.id}
+                title={incident.title}
+                description={incident.description}
+                icon={incident.icon}
+                badge="Interactive"
+                metadata={{
+                  'Type': 'Simulation',
+                  'Difficulty': 'High'
+                }}
+                details={details}
+              />
+            );
+          })}
         </div>
       </div>
     );

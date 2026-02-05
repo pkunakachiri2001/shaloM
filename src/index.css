@@ -1,16 +1,17 @@
 /* Global Styles & CSS Variables */
 :root {
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --secondary: #8b5cf6;
-  --accent: #f59e0b;
-  --success: #10b981;
-  --danger: #ef4444;
-  --warning: #f59e0b;
-  --info: #06b6d4;
-  --cyan: #06b6d4;
-  --purple: #a855f7;
-  --pink: #ec4899;
+  --primary: #1e40af;
+  --primary-dark: #1e3a8a;
+  --secondary: #2563eb;
+  --accent: #dc2626;
+  --success: #059669;
+  --danger: #dc2626;
+  --warning: #ea580c;
+  --info: #0891b2;
+  --cyan: #0891b2;
+  --purple: #7c3aed;
+  --pink: #db2777;
+  --gold: #b8860b;
   
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
@@ -52,8 +53,82 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
-  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(30, 64, 175, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(30, 64, 175, 0.6); }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleInCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes cardHover {
+  0% {
+    box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1);
+  }
+  50% {
+    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.2);
+  }
+  100% {
+    box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1);
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(30, 64, 175, 0.3);
+    box-shadow: 0 0 10px rgba(30, 64, 175, 0.2);
+  }
+  50% {
+    border-color: rgba(30, 64, 175, 0.6);
+    box-shadow: 0 0 20px rgba(30, 64, 175, 0.4);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 * {
@@ -68,7 +143,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
   color: var(--gray-900);
@@ -84,8 +159,8 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 50%, rgba(30, 64, 175, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
   pointer-events: none;
   z-index: 1;
 }
@@ -294,17 +369,18 @@ body::before {
 
 /* Header */
 .header {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
   background-size: 200% 200%;
   animation: gradient-shift 15s ease infinite;
   color: white;
-  padding: var(--spacing-md) var(--spacing-lg);
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.25);
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-content {
@@ -318,19 +394,32 @@ body::before {
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 0.5rem;
   font-size: 1.5rem;
-  font-weight: 700;
-  transition: transform 0.3s ease;
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo:hover {
   transform: scale(1.05);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .logo-icon {
   font-size: 2rem;
   animation: float 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.logo-text {
+  letter-spacing: -0.5px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .menu-toggle {

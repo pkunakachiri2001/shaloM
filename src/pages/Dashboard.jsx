@@ -1,4 +1,5 @@
 import { useData } from '../context/DataContext';
+import InteractiveCard from '../components/InteractiveCard';
 import '../styles/Dashboard.css';
 
 export default function Dashboard() {
@@ -80,15 +81,26 @@ export default function Dashboard() {
         <div className="modules-grid">
           {modules.map((module, idx) => {
             const moduleProgress = progress[module.name] || 0;
+            const progressStatus = moduleProgress === 0 ? 'Not Started' : 
+                                   moduleProgress < 50 ? 'In Progress' : 
+                                   moduleProgress < 100 ? 'Almost Done' : 'Completed';
+            
             return (
-              <div key={idx} className="module-card">
-                <div className="module-icon">{module.icon}</div>
-                <h3>{module.name}</h3>
+              <InteractiveCard
+                key={idx}
+                title={module.name}
+                description={`Progress: ${moduleProgress}%`}
+                icon={module.icon}
+                badge={progressStatus}
+                metadata={{
+                  'Status': progressStatus,
+                  'Progress': `${moduleProgress}%`
+                }}
+              >
                 <div className="progress-bar">
                   <div className="progress-fill" style={{width: `${moduleProgress}%`}}></div>
                 </div>
-                <p className="progress-text">{moduleProgress}% Complete</p>
-              </div>
+              </InteractiveCard>
             );
           })}
         </div>
@@ -99,22 +111,33 @@ export default function Dashboard() {
         <div className="recent-quizzes">
           <h2>📝 Recent Quiz Scores</h2>
           <div className="quiz-list">
-            {quizScores.slice(-5).reverse().map((quiz, idx) => (
-              <div key={idx} className="quiz-item">
-                <span className="quiz-date">
-                  {new Date(quiz.date).toLocaleDateString()}
-                </span>
-                <span className="quiz-score">
-                  {quiz.score}/{quiz.total} ({(quiz.score/quiz.total*100).toFixed(0)}%)
-                </span>
-                <div className="score-bar">
-                  <div 
-                    className="score-fill" 
-                    style={{width: `${quiz.score/quiz.total*100}%`}}
-                  ></div>
-                </div>
-              </div>
-            ))}
+            {quizScores.slice(-5).reverse().map((quiz, idx) => {
+              const percentage = (quiz.score/quiz.total*100).toFixed(0);
+              const scoreStatus = percentage >= 80 ? 'Excellent' : percentage >= 60 ? 'Good' : 'Needs Improvement';
+              
+              return (
+                <InteractiveCard
+                  key={idx}
+                  title={`Quiz ${quizScores.length - idx}`}
+                  description={`${quiz.score} out of ${quiz.total} correct`}
+                  icon="📊"
+                  badge={scoreStatus}
+                  severity={percentage >= 80 ? 'low' : percentage >= 60 ? 'medium' : 'high'}
+                  metadata={{
+                    'Date': new Date(quiz.date).toLocaleDateString(),
+                    'Score': `${percentage}%`,
+                    'Status': scoreStatus
+                  }}
+                >
+                  <div className="score-bar">
+                    <div 
+                      className="score-fill" 
+                      style={{width: `${percentage}%`}}
+                    ></div>
+                  </div>
+                </InteractiveCard>
+              );
+            })}
           </div>
         </div>
       )}
