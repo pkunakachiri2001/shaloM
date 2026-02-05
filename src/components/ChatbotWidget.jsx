@@ -558,6 +558,19 @@ export default function ChatbotWidget() {
   }, [open]);
 
   useEffect(() => {
+    if (!open) return;
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [open]);
+
+  useEffect(() => {
     if (bodyRef.current) {
       bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
     }
@@ -603,18 +616,40 @@ export default function ChatbotWidget() {
 
   return (
     <div className={`chatbot ${open ? 'open' : ''}`} aria-live="polite">
-      <button className="chatbot-toggle" onClick={() => setOpen(!open)}>
-        <span className="chatbot-toggle-icon">💬</span>
-        <span className="chatbot-toggle-label">Ask CyberGuard</span>
+      <button
+        className="chatbot-toggle"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls="chatbot-panel"
+      >
+        <span className="chatbot-toggle-icon">{open ? '✖️' : '💬'}</span>
+        <span className="chatbot-toggle-label">{open ? 'Close' : 'Ask CyberGuard'}</span>
       </button>
 
-      <div className="chatbot-panel" role="dialog" aria-label="CyberGuard Pro Assistant">
+      <div
+        id="chatbot-panel"
+        className="chatbot-panel"
+        role="dialog"
+        aria-label="CyberGuard Pro Assistant"
+        aria-modal="false"
+      >
         <div className="chatbot-header">
           <div>
             <h3>CyberGuard Pro Assistant</h3>
             <p>Cyber safety & legal guidance</p>
           </div>
-          <span className="chatbot-time">Updated {lastUpdated}</span>
+          <div className="chatbot-header-actions">
+            <span className="chatbot-time">Updated {lastUpdated}</span>
+            <button
+              type="button"
+              className="chatbot-close"
+              onClick={() => setOpen(false)}
+              aria-label="Close chatbot"
+              title="Close"
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
         <div className="chatbot-body" ref={bodyRef}>
