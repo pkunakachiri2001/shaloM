@@ -1,63 +1,90 @@
-# 🛡️ LexGuard - Your Legal Companion
+# 🛡️ CyberGuard Pro - Legal Education & Incident Response
 
-**A Progressive Web App for Cyber Law Education & Digital Protection**
+**A Professional Progressive Web App for Cyber Law Education, Case Analysis & Incident Simulation**
 
-Built for **Shalom Chikaka** 🇿🇼  
-BBALLB Student, Vishwakarma University Pune  
-Law & Technology Project
+Built for **Law Competitions** 🏆  
+Designed for **Lawyer Judges** ⚖️  
+Premium UI/UX with Interactive Features
 
 ---
 
-## 🌟 About LexGuard
+## 🌟 About CyberGuard Pro
 
-LexGuard is a comprehensive mobile-first web application that combines **cyber law education, legal awareness, practical tools, and community support**. It empowers law students and citizens to understand cyber crimes, know their rights, and take immediate action when facing digital threats.
+CyberGuard Pro is a professional, competition-winning web application that combines **cyber law education, real-world case studies, interactive incident simulation, and comprehensive legal resources**. Designed specifically for lawyer judges, it features a premium interface with interactive cards, smooth animations, and a professional blue aesthetic that conveys authority and trust.
 
-### ✨ Key Features
+### ✨ Core Features
 
-1. **📚 Cyber Law Academy**
-   - Interactive lessons on cyber crimes (hacking, cyberbullying, fraud, identity theft)
-   - Coverage of IT Act 2000, DPDP Act 2023
-   - International comparisons (India, Zimbabwe, global perspectives)
-   - Real case studies and court verdicts
-   - Gamified quizzes with instant feedback
+1. **📚 Cyber Law Academy** - Interactive legal education
+   - Comprehensive cyber crime coverage
+   - IT Act, GDPR, Data Protection Laws
+   - Global legal comparisons
+   - Real-world case studies with court verdicts
+   - Gamified quizzes with detailed feedback
 
-2. **🔍 Crime Identifier**
-   - AI-powered situation analyzer
-   - Instant legal classification of cyber crimes
-   - Step-by-step guidance on what to do
-   - Legal provisions and penalties information
+2. **📊 Learning Dashboard** - Progress tracking
+   - Circular progress indicators
+   - Module completion metrics
+   - Quiz performance analytics
+   - Personalized motivational messages
+   - Bookmark management
 
-3. **🚨 Emergency Tools**
-   - Quick incident reporter
-   - Auto-generated complaint templates
-   - Emergency contacts (Cyber Cell, Police, Helplines)
-   - Evidence collection tips
+3. **📋 Interactive Case Studies** - Real incidents
+   - 4 major real-world breaches (WannaCry, Equifax, Cambridge Analytica, Zoom)
+   - Detailed timeline of events
+   - Key lessons learned
+   - Applicable laws & regulations
+   - Interactive decision scenarios
+   - Modal-based detailed views
 
-4. **📰 News & Updates**
-   - Latest cyber crime trends
-   - New laws and amendments
-   - Court verdicts explained simply
-   - Legal tech developments
+4. **🎯 Incident Response Simulator** - Decision making
+   - 4 realistic security scenarios (Phishing, Ransomware, Social Engineering, Data Breach)
+   - Interactive consequence tracking
+   - Cyber law insights for each decision
+   - Performance metrics and scoring
+   - Professional consequence descriptions
 
-5. **🎓 Student Career Hub**
-   - Internship opportunities in cyber law
-   - Career paths in legal tech
-   - Learning resources and certifications
-   - Interview preparation
-   - Zimbabwe-India opportunities
+5. **⭐ Bookmarks & Resources** - Knowledge management
+   - Save favorite content
+   - Curated resource library
+   - Professional reference materials
+---
+
+## 🎨 Professional UI/UX Highlights
+
+### Premium Design System
+- **Legal Blue Color Scheme**: Professional #1e40af primary color conveying authority
+- **Interactive Cards**: Click to expand detailed modal views with smooth animations
+- **Glassmorphism**: Semi-transparent backgrounds with backdrop blur effects
+- **Smooth Animations**: Cubic-bezier easing for natural, polished transitions
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+
+### Interactive Components
+- **Case Study Modals**: Click any case study card to view detailed information
+- **Incident Scenarios**: Interactive decision-making with consequence tracking
+- **Dashboard Analytics**: Visual progress tracking with circular indicators
+- **Professional Badges**: Color-coded severity levels (critical, high, medium, low)
+
+### Judge-Focused Features
+✅ Professional aesthetic for legal competitions
+✅ Interactive case studies with real breach scenarios
+✅ Legal implications highlighted throughout
+✅ Performance metrics and progress tracking
+✅ Smooth, polished animations showing technical skill
+
+**See [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) for complete design documentation**
+**See [INTERACTIVE_FEATURES_GUIDE.md](INTERACTIVE_FEATURES_GUIDE.md) for visual feature guide**
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
 - Node.js (v16 or higher)
 - npm or yarn
 
 ### Installation
 
-1. **Clone or navigate to the project folder**
+1. **Navigate to project directory**
    ```powershell
    cd "c:\Users\DELL\OneDrive\Desktop\SHALO"
    ```
@@ -67,84 +94,78 @@ LexGuard is a comprehensive mobile-first web application that combines **cyber l
    npm install
    ```
 
-3. **Start the development server**
+3. **Start development server**
    ```powershell
    npm run dev
    ```
 
-4. **Open your browser**
-   - The app will open at `http://localhost:5173`
-   - Or manually visit the URL shown in the terminal
+4. **Open in browser**
+   - Navigate to `http://localhost:5173`
+   - The app will auto-reload as you make changes
 
 ---
 
-## 📱 Installing on Your Phone
+## 🌐 Accessing the App
 
-### Option 1: Install as PWA (Progressive Web App)
+### Local Development
+```powershell
+npm run dev
+```
+- Runs at `http://localhost:5173`
+- Hot module replacement enabled
+- Perfect for development and testing
 
-1. **Build the production version**
-   ```powershell
-   npm run build
-   ```
-
-2. **Preview the production build**
-   ```powershell
-   npm run preview
-   ```
-
-3. **On your phone's browser:**
-   - **Android (Chrome):** Visit the URL → Tap menu (⋮) → "Add to Home Screen"
-   - **iOS (Safari):** Visit the URL → Tap share (□) → "Add to Home Screen"
-
-4. The app will now appear on your phone's home screen like a native app!
-
-### Option 2: Deploy Online (Recommended)
-
-Deploy to a free hosting service so Shalom can access it anywhere:
-
-**Using Vercel (Easy & Free):**
-1. Install Vercel CLI:
-   ```powershell
-   npm install -g vercel
-   ```
-
-2. Deploy:
-   ```powershell
-   vercel
-   ```
-
-3. Follow the prompts (use default settings)
-4. You'll get a URL like `lexguard.vercel.app`
-5. Share this URL with Shalom - she can install it on her phone from anywhere!
-
-**Using Netlify:**
-1. Create account at [netlify.com](https://netlify.com)
-2. Drag and drop the `dist` folder (after running `npm run build`)
-3. Get your URL and share it!
+### Production Build
+```powershell
+npm run build
+npm run preview
+```
+- Optimized for performance
+- 92.40 KB gzip size
+- Ready for deployment
 
 ---
 
-## 🛠️ Project Structure
+## 📁 Project Structure
 
 ```
 SHALO/
 ├── src/
 │   ├── components/
-│   │   └── Layout.jsx          # App layout with navigation
+│   │   ├── Layout.jsx           # App navigation & layout
+│   │   ├── InteractiveCard.jsx  # Reusable modal card component
+│   │   ├── Search.jsx           # Global search functionality
+│   │   ├── ThemeToggle.jsx      # Dark/light mode
+│   │   ├── Breadcrumbs.jsx      # Navigation breadcrumbs
+│   │   └── Quiz.jsx             # Quiz component
+│   ├── context/
+│   │   ├── ThemeContext.jsx     # Dark mode state
+│   │   └── DataContext.jsx      # App data & progress
 │   ├── pages/
-│   │   ├── Home.jsx            # Landing page
-│   │   ├── Academy.jsx         # Learning modules
-│   │   ├── CrimeIdentifier.jsx # AI-powered identifier
-│   │   ├── EmergencyTools.jsx  # Reporting & templates
-│   │   ├── News.jsx            # Legal news feed
-│   │   └── Career.jsx          # Career resources
-│   ├── App.jsx                 # Main app component
-│   ├── main.jsx                # App entry point
-│   └── index.css               # All styling
-├── index.html                  # HTML template
-├── vite.config.js              # Vite & PWA configuration
-├── package.json                # Dependencies
-└── README.md                   # This file
+│   │   ├── Home.jsx             # Landing page
+│   │   ├── Dashboard.jsx        # Progress dashboard
+│   │   ├── CaseStudies.jsx      # Interactive case studies
+│   │   ├── IncidentSimulator.jsx# Decision scenarios
+│   │   ├── Bookmarks.jsx        # Saved bookmarks
+│   │   ├── Timeline.jsx         # Legal milestones
+│   │   ├── ResourceLibrary.jsx  # Reference materials
+│   │   └── ... (more pages)
+│   ├── styles/
+│   │   ├── Dashboard.css        # Dashboard styling
+│   │   ├── CaseStudies.css      # Case study styling
+│   │   ├── InteractiveCard.css  # Card component styles
+│   │   └── ... (more styles)
+│   ├── App.jsx                  # Main app component
+│   ├── main.jsx                 # App entry point
+│   └── index.css                # Global styling
+├── public/                       # Static assets
+├── index.html                   # HTML template
+├── vite.config.js               # Vite & PWA configuration
+├── capacitor.config.json        # Capacitor mobile config
+├── package.json                 # Dependencies
+├── DESIGN_SYSTEM.md             # Design documentation
+├── INTERACTIVE_FEATURES_GUIDE.md# Feature visual guide
+└── README.md                    # This file
 ```
 
 ---
