@@ -134,86 +134,25 @@ export default function CaseStudies() {
 
       {!selectedCase ? (
         <div className="cases-grid">
-          {CASE_STUDIES.map(caseStudy => {
-            const details = (
-              <div className="case-modal-details">
-                <section className="detail-section">
-                  <h3>Case Summary</h3>
-                  <p>{caseStudy.summary}</p>
-                </section>
-
-                <section className="detail-section">
-                  <h3>Timeline of Events</h3>
-                  <div className="timeline">
-                    {caseStudy.timeline.map((event, idx) => (
-                      <div key={idx} className="timeline-item">
-                        <div className="timeline-marker"></div>
-                        <div className="timeline-content">
-                          <h4>{event.date}</h4>
-                          <p><strong>{event.event}</strong></p>
-                          <p className="impact">Impact: {event.impact}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-
-                <section className="detail-section">
-                  <h3>Key Lessons Learned</h3>
-                  <div className="lessons">
-                    {caseStudy.lessons.map((lesson, idx) => (
-                      <div key={idx} className="lesson-item">
-                        {lesson}
-                      </div>
-                    ))}
-                  </div>
-                </section>
-
-                <section className="detail-section">
-                  <h3>Applicable Laws & Regulations</h3>
-                  <div className="laws-grid">
-                    {caseStudy.applicableLaws.map((law, idx) => (
-                      <div key={idx} className="law-badge">{law}</div>
-                    ))}
-                  </div>
-                </section>
-
-                <section className="detail-section scenario-section">
-                  <h3>What Would You Do?</h3>
-                  <p className="scenario-question">{caseStudy.question}</p>
-                  <div className="scenario-options">
-                    {caseStudy.answers.map((answer, idx) => (
-                      <button
-                        key={idx}
-                        className="scenario-btn"
-                        onClick={() => handleAnswer(idx, caseStudy)}
-                      >
-                        <span className="option-label">{String.fromCharCode(65 + idx)}</span>
-                        {answer}
-                      </button>
-                    ))}
-                  </div>
-                </section>
-              </div>
-            );
-
-            return (
-              <InteractiveCard
-                key={caseStudy.id}
-                title={caseStudy.title}
-                description={caseStudy.summary}
-                icon={caseStudy.icon}
-                severity={caseStudy.severity}
-                badge={caseStudy.year}
-                metadata={{
-                  'Year': caseStudy.year,
-                  'Impact Level': caseStudy.severity,
-                  'Affected': '100K+'
-                }}
-                details={details}
-              />
-            );
-          })}
+          {CASE_STUDIES.map(caseStudy => (
+            <InteractiveCard
+              key={caseStudy.id}
+              title={caseStudy.title}
+              description={caseStudy.summary}
+              icon={caseStudy.icon}
+              severity={caseStudy.severity}
+              badge={caseStudy.year}
+              metadata={{
+                'Year': caseStudy.year,
+                'Impact Level': caseStudy.severity,
+                'Affected': '100K+'
+              }}
+              onClick={() => {
+                setSelectedCase(caseStudy);
+                setUserAnswer(null);
+              }}
+            />
+          ))}
         </div>
       ) : (
         <div className="case-detail">

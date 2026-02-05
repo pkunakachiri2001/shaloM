@@ -158,52 +158,20 @@ export default function IncidentSimulator() {
         )}
 
         <div className="incidents-grid">
-          {INCIDENTS.map((incident, idx) => {
-            const details = (
-              <div className="incident-modal-details">
-                <section className="detail-section">
-                  <h3>Scenario Overview</h3>
-                  <p>{incident.scenario}</p>
-                </section>
-
-                <section className="detail-section">
-                  <h3>Response Options</h3>
-                  <div className="choices-list-modal">
-                    {incident.choices.map((choice, cidx) => (
-                      <div key={cidx} className={`choice-item ${choice.correct ? 'correct-choice' : ''}`}>
-                        <div className="choice-label">{String.fromCharCode(65 + cidx)}</div>
-                        <div>
-                          <p className="choice-text-modal">{choice.text}</p>
-                          <p className="consequence-info">{choice.consequence}</p>
-                          <p className="impact-info"><strong>Impact:</strong> {choice.impact}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-
-                <section className="detail-section">
-                  <h3>⚖️ Legal Implications</h3>
-                  <p>Proper incident response protocols are not just cybersecurity best practices—they're often legal requirements under data protection and cybercrime laws.</p>
-                </section>
-              </div>
-            );
-
-            return (
-              <InteractiveCard
-                key={incident.id}
-                title={incident.title}
-                description={incident.description}
-                icon={incident.icon}
-                badge="Interactive"
-                metadata={{
-                  'Type': 'Simulation',
-                  'Difficulty': 'High'
-                }}
-                details={details}
-              />
-            );
-          })}
+          {INCIDENTS.map((incident, idx) => (
+            <InteractiveCard
+              key={incident.id}
+              title={incident.title}
+              description={incident.description}
+              icon={incident.icon}
+              badge="Start Scenario"
+              metadata={{
+                'Type': 'Simulation',
+                'Difficulty': 'High'
+              }}
+              onClick={() => setSelectedIncident(idx)}
+            />
+          ))}
         </div>
       </div>
     );

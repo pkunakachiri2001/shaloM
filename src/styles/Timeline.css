@@ -3,7 +3,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  animation: fadeIn 0.6s ease;
+  animation: slideInDown 0.6s ease;
 }
 
 .timeline-header {
@@ -12,16 +12,18 @@
 }
 
 .timeline-header h1 {
-  font-size: 2.5rem;
-  background: linear-gradient(135deg, #6366f1, #a855f7);
+  font-size: 2.6rem;
+  background: linear-gradient(135deg, #1e40af, #2563eb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 0 0.5rem 0;
+  font-weight: 800;
 }
 
 .timeline-header p {
-  color: #999;
+  color: #64748b;
   font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .timeline-container {
@@ -35,7 +37,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #6366f1, #a855f7);
+  background: linear-gradient(180deg, #1e40af, #2563eb);
   transform: translateX(-50%);
 }
 
@@ -79,13 +81,13 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  background: #6366f1;
-  border: 3px solid #0f172a;
+  background: #1e40af;
+  border: 3px solid white;
   border-radius: 50%;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 15px rgba(30, 64, 175, 0.35);
 }
 
 @media (max-width: 768px) {
@@ -95,20 +97,21 @@
 }
 
 .timeline-card {
-  background: rgba(99, 102, 241, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(99, 102, 241, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 247, 250, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(30, 64, 175, 0.15);
   border-radius: 1.5rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
   display: inline-block;
   min-width: 250px;
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.08);
 }
 
 .timeline-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+  border-color: rgba(30, 64, 175, 0.3);
+  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.15);
 }
 
 .event-icon {
@@ -118,20 +121,21 @@
 }
 
 .event-year {
-  color: #a855f7;
+  color: #1e40af;
   margin: 0.5rem 0;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .event-title {
-  color: #fff;
+  color: #1e3a8a;
   margin: 0.5rem 0;
   font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .event-description {
-  color: #ccc;
+  color: #475569;
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -141,14 +145,14 @@
   text-align: center;
   margin-top: 3rem;
   padding: 2rem;
-  background: rgba(99, 102, 241, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(99, 102, 241, 0.1);
+  background: rgba(30, 64, 175, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(30, 64, 175, 0.12);
   border-radius: 1.5rem;
 }
 
 .timeline-footer p {
-  color: #999;
+  color: #64748b;
   margin: 0;
   font-size: 0.95rem;
 }

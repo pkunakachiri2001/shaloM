@@ -249,9 +249,9 @@
 }
 
 .back-btn-sim {
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  color: #a855f7;
+  background: rgba(30, 64, 175, 0.08);
+  border: 1px solid rgba(30, 64, 175, 0.2);
+  color: #1e40af;
   padding: 0.7rem 1.5rem;
   border-radius: 0.7rem;
   cursor: pointer;
@@ -287,7 +287,7 @@
 }
 
 .scenario-header h1 {
-  color: #fff;
+  color: #1e3a8a;
   margin: 0;
 }
 
@@ -303,12 +303,12 @@
 
 .scenario-panel h2,
 .choices-panel h2 {
-  color: #fff;
+  color: #1e3a8a;
   margin-bottom: 1.5rem;
 }
 
 .scenario-text {
-  color: #ccc;
+  color: #475569;
   font-size: 1.1rem;
   line-height: 1.8;
   margin: 0;
@@ -321,9 +321,9 @@
 }
 
 .choice-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  color: #ccc;
+  background: white;
+  border: 1px solid rgba(30, 64, 175, 0.2);
+  color: #475569;
   padding: 1.2rem;
   border-radius: 1rem;
   text-align: left;
@@ -336,9 +336,9 @@
 }
 
 .choice-btn:hover:not(:disabled) {
-  background: rgba(99, 102, 241, 0.1);
-  border-color: rgba(99, 102, 241, 0.4);
-  color: #fff;
+  background: rgba(30, 64, 175, 0.05);
+  border-color: rgba(30, 64, 175, 0.4);
+  color: #1e3a8a;
   transform: translateX(5px);
 }
 
@@ -347,9 +347,9 @@
 }
 
 .choice-btn.selected {
-  background: rgba(99, 102, 241, 0.2);
-  border-color: rgba(99, 102, 241, 0.5);
-  color: #fff;
+  background: rgba(30, 64, 175, 0.08);
+  border-color: rgba(30, 64, 175, 0.5);
+  color: #1e3a8a;
 }
 
 .choice-letter {
@@ -358,7 +358,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: #6366f1;
+  background: #1e40af;
   color: white;
   border-radius: 50%;
   font-weight: bold;
@@ -389,13 +389,13 @@
 }
 
 .consequence-panel h3 {
-  color: #fff;
+  color: #1e3a8a;
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
 
 .consequence-text {
-  color: #ccc;
+  color: #475569;
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -410,43 +410,43 @@
 }
 
 .impact-section {
-  background: rgba(255, 255, 255, 0.02);
-  border-left: 3px solid #a855f7;
+  background: rgba(30, 64, 175, 0.05);
+  border-left: 3px solid #1e40af;
   padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
 .impact-section h4 {
-  color: #fff;
+  color: #1e3a8a;
   margin: 0 0 0.5rem 0;
 }
 
 .impact-section p {
-  color: #ccc;
+  color: #475569;
   margin: 0;
 }
 
 .legal-info {
-  background: rgba(99, 102, 241, 0.1);
-  border-left: 3px solid #6366f1;
+  background: rgba(30, 64, 175, 0.08);
+  border-left: 3px solid #1e40af;
   padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
 .legal-info h4 {
-  color: #fff;
+  color: #1e3a8a;
   margin: 0 0 0.5rem 0;
 }
 
 .legal-info p {
-  color: #ccc;
+  color: #475569;
   margin: 0;
 }
 
 .next-btn {
-  background: linear-gradient(135deg, #6366f1, #a855f7);
+  background: linear-gradient(135deg, #1e40af, #2563eb);
   color: white;
   border: none;
   padding: 1rem 2rem;

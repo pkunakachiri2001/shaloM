@@ -1,13 +1,13 @@
 /* Quiz Styles */
 .quiz-container {
-  background: rgba(99, 102, 241, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(99, 102, 241, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 247, 250, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(30, 64, 175, 0.15);
   border-radius: 1.5rem;
   padding: 2.5rem;
   max-width: 700px;
   margin: 2rem auto;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 50px rgba(30, 64, 175, 0.12);
 }
 
 .quiz-header {
@@ -16,7 +16,7 @@
 
 .quiz-header h2 {
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #6366f1, #a855f7);
+  background: linear-gradient(135deg, #1e40af, #2563eb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -26,7 +26,7 @@
 }
 
 .quiz-progress span {
-  color: #999;
+  color: #64748b;
   font-size: 0.9rem;
   display: block;
   margin-bottom: 0.5rem;
@@ -34,14 +34,14 @@
 
 .progress-bar {
   height: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(30, 64, 175, 0.1);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #6366f1, #a855f7);
+  background: linear-gradient(90deg, #1e40af, #2563eb);
   transition: width 0.3s ease;
 }
 
@@ -50,10 +50,11 @@
 }
 
 .question-text {
-  color: #fff;
+  color: #1e3a8a;
   font-size: 1.3rem;
   margin-bottom: 2rem;
   line-height: 1.6;
+  font-weight: 600;
 }
 
 .options-grid {
@@ -63,11 +64,11 @@
 }
 
 .option-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: white;
+  border: 1px solid rgba(30, 64, 175, 0.2);
   border-radius: 1rem;
   padding: 1.5rem;
-  color: #fff;
+  color: #475569;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -77,8 +78,8 @@
 }
 
 .option-btn:hover {
-  background: rgba(99, 102, 241, 0.1);
-  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(30, 64, 175, 0.05);
+  border-color: rgba(30, 64, 175, 0.4);
   transform: translateX(5px);
 }
 
@@ -92,7 +93,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #6366f1, #a855f7);
+  background: linear-gradient(135deg, #1e40af, #2563eb);
   border-radius: 50%;
   font-weight: bold;
   flex-shrink: 0;
@@ -129,35 +130,35 @@
 
 .quiz-results h2 {
   margin-bottom: 1rem;
-  color: #fff;
+  color: #1e3a8a;
 }
 
 .result-message {
-  color: #ccc;
+  color: #475569;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
 
 .result-message strong {
-  color: #a855f7;
+  color: #1e40af;
 }
 
 .result-feedback {
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(30, 64, 175, 0.06);
+  border: 1px solid rgba(30, 64, 175, 0.2);
   border-radius: 1rem;
   padding: 1.5rem;
   margin: 2rem 0;
 }
 
 .result-feedback p {
-  color: #ccc;
+  color: #475569;
   font-size: 1rem;
   margin: 0;
 }
 
 .result-breakdown {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(30, 64, 175, 0.04);
   border-radius: 1rem;
   padding: 1.5rem;
   margin: 1.5rem 0;
@@ -165,15 +166,16 @@
 }
 
 .result-breakdown h4 {
-  color: #fff;
+  color: #1e3a8a;
   margin-bottom: 1rem;
 }
 
 .breakdown-item {
   padding: 0.8rem;
   margin: 0.5rem 0;
-  border-left: 3px solid #6366f1;
+  border-left: 3px solid #1e40af;
   padding-left: 1rem;
+  color: #475569;
 }
 
 .breakdown-item .correct {
@@ -187,7 +189,7 @@
 }
 
 .retry-btn {
-  background: linear-gradient(135deg, #6366f1, #a855f7);
+  background: linear-gradient(135deg, #1e40af, #2563eb);
   color: white;
   border: none;
   padding: 1rem 2.5rem;

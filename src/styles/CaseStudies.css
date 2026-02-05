@@ -368,13 +368,13 @@
 }
 
 .detail-header h1 {
-  color: #fff;
+  color: #1e3a8a;
   margin: 0 0 0.5rem 0;
   flex: 1;
 }
 
 .detail-year {
-  color: #999;
+  color: #64748b;
   margin: 0;
   font-size: 0.9rem;
 }
@@ -407,13 +407,13 @@
 }
 
 .detail-section h2 {
-  color: #fff;
+  color: #1e3a8a;
   margin-bottom: 1.5rem;
   font-size: 1.3rem;
 }
 
 .detail-section > p {
-  color: #ccc;
+  color: #475569;
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -450,18 +450,18 @@
 }
 
 .timeline-content h4 {
-  color: #a855f7;
+  color: #1e3a8a;
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
 }
 
 .timeline-content p {
-  color: #ccc;
+  color: #475569;
   margin: 0.3rem 0;
 }
 
 .impact {
-  color: #999;
+  color: #64748b;
   font-size: 0.9rem;
 }
 
@@ -471,11 +471,11 @@
 }
 
 .lesson-item {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(30, 64, 175, 0.05);
   padding: 1rem;
-  border-left: 3px solid #a855f7;
+  border-left: 3px solid #1e40af;
   border-radius: 0.5rem;
-  color: #ccc;
+  color: #475569;
 }
 
 .laws-grid {
@@ -485,7 +485,7 @@
 }
 
 .law-badge {
-  background: linear-gradient(135deg, #6366f1, #a855f7);
+  background: linear-gradient(135deg, #1e40af, #2563eb);
   color: white;
   padding: 0.7rem 1.2rem;
   border-radius: 1rem;
@@ -500,8 +500,8 @@
 
 .scenario-question {
   font-size: 1.1rem;
-  color: #fff;
-  font-weight: 500;
+  color: #1e3a8a;
+  font-weight: 600;
   margin-bottom: 1.5rem !important;
 }
 
@@ -512,9 +512,9 @@
 }
 
 .scenario-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  color: #ccc;
+  background: white;
+  border: 1px solid rgba(30, 64, 175, 0.2);
+  color: #475569;
   padding: 1rem;
   border-radius: 1rem;
   text-align: left;
@@ -532,9 +532,9 @@
 }
 
 .scenario-btn.selected {
-  background: rgba(99, 102, 241, 0.2);
-  border-color: rgba(99, 102, 241, 0.5);
-  color: #fff;
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.5);
+  color: #1e3a8a;
 }
 
 .scenario-btn.correct {
