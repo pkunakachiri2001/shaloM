@@ -640,13 +640,14 @@ body::before {
 /* Section Titles */
 .section-title {
   font-size: 1.85rem;
-  color: var(--primary-dark);
+  color: white;
   margin-bottom: var(--spacing-xl);
   text-align: center;
   position: relative;
   padding-bottom: var(--spacing-md);
   font-weight: 800;
   letter-spacing: -0.3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .section-title::after {
@@ -657,8 +658,9 @@ body::before {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, var(--primary), var(--secondary));
+  background: linear-gradient(to right, #facc15, #f59e0b);
   border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(250, 204, 21, 0.4);
 }
 
 /* Feature Grid (Home Page) */
