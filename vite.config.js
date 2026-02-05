@@ -18,8 +18,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'LexGuard - Legal Companion',
-        short_name: 'LexGuard',
+        name: 'CyberGuard Pro - Legal Companion',
+        short_name: 'CyberGuard',
         description: 'Your comprehensive guide to cyber law, legal education, and digital protection',
         theme_color: '#2563eb',
         background_color: '#ffffff',

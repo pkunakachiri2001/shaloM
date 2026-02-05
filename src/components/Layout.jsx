@@ -54,7 +54,10 @@ export default function Layout({ children }) {
             <button 
               className="menu-toggle"
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
+              aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={menuOpen}
+              aria-controls="navigation-menu"
+              title={menuOpen ? 'Close menu' : 'Open menu'}
             >
               {menuOpen ? '✕' : '☰'}
             </button>
@@ -67,14 +70,29 @@ export default function Layout({ children }) {
 
       {/* Overlay for mobile menu */}
       {menuOpen && (
-        <div className="menu-overlay" onClick={() => setMenuOpen(false)}></div>
+        <div 
+          className="menu-overlay" 
+          onClick={() => setMenuOpen(false)}
+          role="presentation"
+          aria-hidden="true"
+        ></div>
       )}
 
       {/* Navigation */}
-      <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
+      <nav 
+        className={`nav ${menuOpen ? 'nav-open' : ''}`}
+        id="navigation-menu"
+        role="navigation"
+        aria-label="Main navigation"
+      >
         <div className="nav-header">
-          <h3>Menu</h3>
-          <button className="nav-close" onClick={() => setMenuOpen(false)}>✕</button>
+          <h3>Navigation Menu</h3>
+          <button 
+            className="nav-close" 
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close navigation menu"
+            title="Close menu"
+          >✕</button>
         </div>
         {navItems.map(item => (
           <Link
@@ -115,7 +133,11 @@ export default function Layout({ children }) {
       <ChatbotWidget />
 
       {/* Bottom Navigation for Mobile */}
-      <nav className="bottom-nav">
+      <nav 
+        className="bottom-nav"
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
         {navItems.slice(0, 5).map(item => (
           <Link
             key={item.path}
