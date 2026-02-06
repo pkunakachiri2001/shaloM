@@ -1,5 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useData } from '../context/DataContext';
+
+const COMPLETION_STORAGE_KEY = 'academy-completed-lessons';
+const LAST_POSITION_KEY = 'academy-last-position';
 
 const courses = [
   {
@@ -758,9 +761,24 @@ export default function EnhancedAcademy() {
   const [quizMode, setQuizMode] = useState(false);
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizScore, setQuizScore] = useState(null);
-  const [completedLessons, setCompletedLessons] = useState({});
+  const [completedLessons, setCompletedLessons] = useState(() => (
+    JSON.parse(localStorage.getItem(COMPLETION_STORAGE_KEY) || '{}')
+  ));
   const [completionPrompt, setCompletionPrompt] = useState(null);
+  const [lastPosition, setLastPosition] = useState(() => (
+    JSON.parse(localStorage.getItem(LAST_POSITION_KEY) || 'null')
+  ));
   const { updateProgress } = useData();
+
+  useEffect(() => {
+    localStorage.setItem(COMPLETION_STORAGE_KEY, JSON.stringify(completedLessons));
+  }, [completedLessons]);
+
+  useEffect(() => {
+    if (lastPosition) {
+      localStorage.setItem(LAST_POSITION_KEY, JSON.stringify(lastPosition));
+    }
+  }, [lastPosition]);
 
   const getLessonKey = (courseId, moduleId, lessonId) => `${courseId}-${moduleId}-${lessonId}`;
 
@@ -783,6 +801,7 @@ export default function EnhancedAcademy() {
     const key = getLessonKey(courseId, moduleId, lesson.id);
     setCompletedLessons(prev => ({ ...prev, [key]: true }));
     updateProgress(courseId, moduleId, lesson.id);
+    setLastPosition({ courseId, moduleId, lessonId: lesson.id });
     const nextStep = getNextStep(selectedCourse, selectedModule, lesson);
     setCompletionPrompt({ key, nextStep });
   };
@@ -802,6 +821,26 @@ export default function EnhancedAcademy() {
     }
 
     setSelectedModule(null);
+  };
+
+  const resumeData = useMemo(() => {
+    if (!lastPosition) return null;
+    const course = courses.find(item => item.id === lastPosition.courseId);
+    if (!course) return null;
+    const module = course.syllabus?.find(item => item.moduleId === lastPosition.moduleId);
+    if (!module) return null;
+    const lesson = module.lessons?.find(item => item.id === lastPosition.lessonId);
+    if (!lesson) return null;
+    return { course, module, lesson };
+  }, [lastPosition]);
+
+  const getModuleProgress = (course, module) => {
+    const total = module.lessons.length;
+    const completed = module.lessons.filter((lesson) =>
+      completedLessons[getLessonKey(course.id, module.moduleId, lesson.id)]
+    ).length;
+    const percentage = total ? Math.round((completed / total) * 100) : 0;
+    return { completed, total, percentage };
   };
 
   const handleQuizSubmit = () => {
@@ -843,6 +882,27 @@ export default function EnhancedAcademy() {
         </div>
 
         <div className="courses-container">
+          {resumeData && (
+            <div className="resume-card">
+              <div>
+                <h3>Continue learning</h3>
+                <p>
+                  {resumeData.course.title} · {resumeData.module.title} · {resumeData.lesson.title}
+                </p>
+              </div>
+              <button
+                className="btn-primary"
+                onClick={() => {
+                  setSelectedCourse(resumeData.course);
+                  setSelectedModule(resumeData.module);
+                  setSelectedLesson(resumeData.lesson);
+                  setQuizMode(false);
+                }}
+              >
+                Resume →
+              </button>
+            </div>
+          )}
           <div className="courses-grid-enhanced">
             {courses.map(course => (
               <div key={course.id} className="course-card-enhanced" onClick={() => setSelectedCourse(course)}>
@@ -922,8 +982,11 @@ export default function EnhancedAcademy() {
         <div className="modules-container">
           <h2>📚 Course Modules</h2>
           <div className="modules-list">
-            {selectedCourse.syllabus.map((module, idx) => (
-              <div key={module.moduleId} className="module-card" onClick={() => setSelectedModule(module)}>
+            {selectedCourse.syllabus.map((module, idx) => {
+              const progress = getModuleProgress(selectedCourse, module);
+
+              return (
+                <div key={module.moduleId} className="module-card" onClick={() => setSelectedModule(module)}>
                 <div className="module-number">{idx + 1}</div>
                 <div className="module-content">
                   <h3>{module.title}</h3>
@@ -932,10 +995,17 @@ export default function EnhancedAcademy() {
                     <span>📖 {module.lessons.length} lessons</span>
                     {module.quiz && <span>✅ Quiz included</span>}
                   </div>
+                  <div className="module-progress">
+                    <div className="progress-label">Progress: {progress.completed}/{progress.total}</div>
+                    <div className="progress-track">
+                      <div className="progress-fill" style={{ width: `${progress.percentage}%` }} />
+                    </div>
+                  </div>
                 </div>
                 <div className="module-arrow">→</div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -947,6 +1017,7 @@ export default function EnhancedAcademy() {
     const allLessonsCompleted = selectedModule.lessons.every((lesson) =>
       completedLessons[getLessonKey(selectedCourse.id, selectedModule.moduleId, lesson.id)]
     );
+    const moduleProgress = getModuleProgress(selectedCourse, selectedModule);
     if (quizMode && selectedModule.quiz) {
       return (
         <div className="page academy-page-enhanced">
@@ -1094,6 +1165,17 @@ export default function EnhancedAcademy() {
           <button className="btn-back" onClick={() => setSelectedModule(null)}>← Back to Modules</button>
           <h2>{selectedModule.title}</h2>
           <p>⏱️ {selectedModule.duration}</p>
+          <div className="module-progress-header">
+            <span>
+              Progress: {moduleProgress.completed}/{moduleProgress.total}
+            </span>
+            <div className="progress-track">
+              <div
+                className="progress-fill"
+                style={{ width: `${moduleProgress.percentage}%` }}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="lessons-container">
@@ -1104,7 +1186,14 @@ export default function EnhancedAcademy() {
               const done = Boolean(completedLessons[lessonKey]);
 
               return (
-                <div key={lesson.id} className={`lesson-item ${done ? 'completed' : ''}`} onClick={() => setSelectedLesson(lesson)}>
+                <div
+                  key={lesson.id}
+                  className={`lesson-item ${done ? 'completed' : ''}`}
+                  onClick={() => {
+                    setSelectedLesson(lesson);
+                    setLastPosition({ courseId: selectedCourse.id, moduleId: selectedModule.moduleId, lessonId: lesson.id });
+                  }}
+                >
                 <div className="lesson-number">{idx + 1}</div>
                 <div className="lesson-details">
                   <h4>{lesson.title}</h4>
