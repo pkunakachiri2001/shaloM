@@ -802,7 +802,13 @@ export default function EnhancedAcademy() {
     setCompletedLessons(prev => ({ ...prev, [key]: true }));
     updateProgress(courseId, moduleId, lesson.id);
     setLastPosition({ courseId, moduleId, lessonId: lesson.id });
-    const nextStep = getNextStep(selectedCourse, selectedModule, lesson);
+
+    const course = selectedCourse ?? courses.find(item => item.id === courseId);
+    const module = selectedModule ?? course?.syllabus?.find(item => item.moduleId === moduleId);
+    const nextStep = course && module
+      ? getNextStep(course, module, lesson)
+      : { type: 'modules', label: 'Back to Modules', target: null };
+
     setCompletionPrompt({ key, nextStep });
   };
 
@@ -810,16 +816,27 @@ export default function EnhancedAcademy() {
     if (!nextStep) return;
     setCompletionPrompt(null);
 
-    if (nextStep.type === 'lesson') {
+    if (nextStep.type === 'lesson' && nextStep.target) {
+      setQuizMode(false);
       setSelectedLesson(nextStep.target);
+      setLastPosition({
+        courseId: selectedCourse.id,
+        moduleId: selectedModule.moduleId,
+        lessonId: nextStep.target.id
+      });
       return;
     }
 
     if (nextStep.type === 'quiz') {
+      setSelectedLesson(null);
+      setQuizAnswers({});
+      setQuizScore(null);
       setQuizMode(true);
       return;
     }
 
+    setSelectedLesson(null);
+    setQuizMode(false);
     setSelectedModule(null);
   };
 
