@@ -10,7 +10,11 @@ const quickPrompts = [
   'Fake profile using my photo',
   'Suspicious link received',
   'Online shopping fraud',
-  'Harassment or blackmail'
+  'Harassment or blackmail',
+  'Email hacked',
+  'SIM swap fraud',
+  'Digital arrest scam',
+  'Loan app harassment'
 ];
 
 const knowledgeBase = [
@@ -78,9 +82,29 @@ const knowledgeBase = [
       "Financial fraud? Act within minutes: 1) Call bank immediately to freeze account/card 2) Note transaction ID & time 3) File complaint at cybercrime.gov.in within 24hrs 4) Call 1930 (cyber helpline) 5) Email bank's fraud team 6) DO NOT wait - quick action can recover money"
   },
   {
+    match: ['investment scam', 'crypto scam', 'bitcoin scam', 'trading scam', 'forex scam'],
+    response:
+      'Investment/crypto scam: 1) Stop further transfers 2) Notify your bank/exchange 3) Preserve chats, receipts, wallet addresses 4) File complaint at cybercrime.gov.in 5) Call 1930 for quick guidance.'
+  },
+  {
+    match: ['card skimming', 'atm skimming', 'card cloned', 'card swipe scam'],
+    response:
+      'Card/ATM skimming: 1) Block the card immediately 2) Dispute transactions with bank 3) Change ATM PIN 4) File cybercrime complaint 5) Preserve transaction SMS as evidence.'
+  },
+  {
+    match: ['sim swap', 'sim swapped', 'sim hijack', 'sim replacement fraud'],
+    response:
+      'SIM swap suspected: 1) Contact your mobile operator to block SIM 2) Secure email and banking accounts 3) Reset passwords and 2FA 4) File complaint at cybercrime.gov.in 5) Ask operator for a SIM swap report.'
+  },
+  {
     match: ['lottery scam', 'prize scam', 'won lottery', 'kbc lottery', 'tax scam', 'won prize'],
     response:
       `This is a scam. No real lottery/prize requires advance payment. Never pay "processing fees" or "taxes". If you already paid: 1) File complaint at cybercrime.gov.in immediately 2) Call 1930 3) Inform your bank 4) Block contact 5) Save all messages as evidence`
+  },
+  {
+    match: ['digital arrest', 'police call scam', 'customs scam', 'cbi call', 'legal notice scam'],
+    response:
+      'Digital arrest scam: No agency arrests or investigates over video calls. Do not pay or share documents. Hang up, report on cybercrime.gov.in, and call 1930 if money was sent.'
   },
   {
     match: ['qr code scam', 'payment qr', 'scanner app', 'scan to receive'],
@@ -93,6 +117,26 @@ const knowledgeBase = [
     match: ['phishing', 'suspicious link', 'fake website', 'fake email', 'spam message', 'suspicious sms', 'suspicious email'],
     response:
       "Phishing attempt! Do NOT click links or share info. Signs: urgent tone, spelling errors, suspicious sender. If you clicked: 1) Don't enter any details 2) Change passwords immediately 3) Run antivirus 4) Monitor bank accounts 5) Report to cybercrime.gov.in"
+  },
+  {
+    match: ['otp shared', 'shared otp', 'gave otp', 'shared verification code'],
+    response:
+      'If you shared OTP: 1) Immediately block cards/UPI 2) Change passwords 3) Enable 2FA 4) Contact bank/app 5) File complaint at cybercrime.gov.in and call 1930.'
+  },
+  {
+    match: ['email spoofing', 'spoofed email', 'fake email sender', 'impersonated email'],
+    response:
+      'Email spoofing: Verify sender domain, avoid clicking links, and report the email. If you shared details, change passwords and enable 2FA. Consider adding SPF/DKIM/DMARC if you own a domain.'
+  },
+  {
+    match: ['screen share', 'anydesk', 'teamviewer', 'remote access scam'],
+    response:
+      'Remote access scam: If you installed a remote app, disconnect internet, uninstall the app, change passwords from another device, and alert your bank. Report at cybercrime.gov.in.'
+  },
+  {
+    match: ['loan app', 'instant loan', 'app harassment'],
+    response:
+      'Loan app harassment: Do not pay under threat. Save evidence, revoke app permissions, report the app to the store, and file a complaint at cybercrime.gov.in.'
   },
   {
     match: ['job scam', 'fake job', 'work from home scam', 'job offer scam', 'recruitment fraud'],
@@ -122,6 +166,11 @@ const knowledgeBase = [
     match: ['ransomware', 'files locked', 'virus', 'malware', 'trojan', 'files encrypted'],
     response:
       'Ransomware/malware detected: 1) Disconnect from internet immediately 2) Do NOT pay ransom 3) Run antivirus in safe mode 4) Contact IT expert for decryption 5) File complaint at cybercrime.gov.in 6) Call 1930 7) Restore from backup if available 8) Report to CERT-In'
+  },
+  {
+    match: ['screen share', 'anydesk', 'teamviewer', 'remote access'],
+    response:
+      'Remote access scam: Uninstall the app, disconnect internet, change passwords from another device, alert your bank, and file a complaint at cybercrime.gov.in.'
   },
   
   // DATA BREACH & PRIVACY
@@ -237,6 +286,16 @@ const knowledgeBase = [
       'The Career Hub offers guidance and resources for law and tech careers, including skill-building and opportunities.'
   },
   {
+    match: ['progress', 'completion', 'resume learning'],
+    response:
+      'Your Academy progress is saved automatically. Use the “Continue learning” card to resume where you left off.'
+  },
+  {
+    match: ['certificate', 'certification'],
+    response:
+      'Certificates unlock after completing lessons and the module quiz. Keep learning to earn them.'
+  },
+  {
     match: ['skills', 'learn skills', 'career path', 'opportunities'],
     response:
       'Check the Career Hub for skills guidance, resources, and growth paths in cyber law and legal tech.'
@@ -337,6 +396,18 @@ const appFaqs = [
     patterns: [/privacy|data protection|dpdp|gdpr/i],
     reply:
       'CyberGuard Pro references privacy and data protection topics. Check About and Academy for details on data protection laws.'
+  },
+  {
+    id: 'progress',
+    patterns: [/progress|completion|resume/i],
+    reply:
+      'Your Academy progress is stored locally and shown in module progress bars. Use “Continue learning” to resume.'
+  },
+  {
+    id: 'certificate',
+    patterns: [/certificate|certification/i],
+    reply:
+      'Certificates unlock after completing lessons and the module quiz. Keep learning to earn them.'
   }
 ];
 
@@ -354,6 +425,11 @@ const TEXT_REPLACEMENTS = [
   { pattern: /\bmobile\b|\bcell\b|\bhandset\b/gi, replace: 'phone' },
   { pattern: /\bhacked\b|\bhack\b|\bhacker\b|\bcompromised\b/gi, replace: 'hacked' },
   { pattern: /\bupi\b|\bgpay\b|\bpaytm\b|\bphonepe\b/gi, replace: 'upi' },
+  { pattern: /\bnet\s?banking\b|\bonline banking\b|\bmobile banking\b/gi, replace: 'banking' },
+  { pattern: /\bdebit\s?card\b|\bcredit\s?card\b|\batm\b/gi, replace: 'card' },
+  { pattern: /\bemail\b|\bgmail\b|\bmail\b/gi, replace: 'email' },
+  { pattern: /\bsim\s?swap\b|\bsim\b/gi, replace: 'sim' },
+  { pattern: /\baadhaar\b|\baadhar\b/gi, replace: 'identity' },
   { pattern: /\bwhatsapp\b/gi, replace: 'whatsapp' },
   { pattern: /\binsta\b|\binstagram\b/gi, replace: 'instagram' },
   { pattern: /\bfb\b|\bfacebook\b/gi, replace: 'facebook' },
@@ -367,6 +443,11 @@ const SYNONYMS = {
   account: ['account', 'profile', 'id', 'login', 'credential'],
   fraud: ['fraud', 'scam', 'thagi', 'dhokha', 'cheating'],
   money: ['money', 'funds', 'balance', 'cash', 'rupees'],
+  banking: ['banking', 'bank', 'netbanking', 'transaction', 'transfer'],
+  card: ['card', 'debit', 'credit', 'atm'],
+  email: ['email', 'mail', 'gmail'],
+  sim: ['sim', 'swap', 'sim swap'],
+  identity: ['identity', 'aadhaar', 'aadhar', 'impersonation'],
   harassment: ['harassment', 'abuse', 'bully', 'bullying', 'troll', 'trolling', 'threat', 'threats'],
   blackmail: ['blackmail', 'sextortion'],
   phishing: ['phishing', 'phish', 'fake', 'spoof'],
@@ -376,7 +457,9 @@ const SYNONYMS = {
   emergency: ['emergency', 'urgent', 'immediately', 'asap'],
   shop: ['shopping', 'seller', 'product', 'order', 'delivery'],
   fake: ['fake', 'impersonation', 'duplicate'],
-  deepfake: ['deepfake', 'morphed', 'edited']
+  deepfake: ['deepfake', 'morphed', 'edited'],
+  malware: ['malware', 'virus', 'ransomware', 'trojan', 'spyware'],
+  privacy: ['privacy', 'dpdp', 'gdpr', 'data', 'leak']
 };
 
 const SYNONYM_INDEX = Object.entries(SYNONYMS).reduce((acc, [canonical, words]) => {
@@ -447,13 +530,14 @@ function detectIntent(tokens, normalized) {
   const has = (list) => list.some(item => tokens.includes(item));
   if (normalized.includes('1930') || normalized.includes('helpline')) return 'helpline';
   if (has(['report', 'complaint', 'fir'])) return 'report';
-  if (has(['hacked', 'account', 'phone'])) return 'hack';
-  if (has(['fraud', 'upi', 'money'])) return 'fraud';
+  if (has(['malware'])) return 'malware';
+  if (has(['hacked', 'account', 'phone', 'email', 'sim'])) return 'hack';
+  if (has(['fraud', 'upi', 'money', 'banking', 'card', 'transaction', 'stolen'])) return 'fraud';
   if (has(['phishing', 'link', 'fake'])) return 'phishing';
-  if (has(['harassment', 'blackmail'])) return 'harassment';
+  if (has(['harassment', 'blackmail', 'threat'])) return 'harassment';
   if (has(['deepfake'])) return 'deepfake';
   if (has(['password', 'otp'])) return 'security';
-  if (has(['privacy', 'dpdp'])) return 'privacy';
+  if (has(['privacy', 'dpdp', 'identity'])) return 'privacy';
   return 'general';
 }
 
@@ -465,6 +549,7 @@ function buildFollowUp(intent) {
     harassment: 'Is the threat ongoing or do you have screenshots/evidence?',
     report: 'Do you want the online complaint steps or a report template?',
     security: 'Do you want steps for 2FA setup or password recovery?',
+    malware: 'Did you install any new app or file before this happened?',
     general: 'Can you describe the issue in one or two sentences?'
   };
   return followUps[intent] || followUps.general;
@@ -505,7 +590,7 @@ function getSmartReply(userText, lastTopic) {
     .map(entry => ({ entry, score: scoreEntry(entry, normalized, tokens) }))
     .sort((a, b) => b.score - a.score);
 
-  if (scored.length && scored[0].score >= 4) {
+  if (scored.length && (scored[0].score >= 3 || (scored[0].score >= 2 && scored[0].score > (scored[1]?.score || 0)))) {
     const urgent = tokens.includes('emergency') || normalized.includes('urgent') || normalized.includes('immediately');
     const base = scored[0].entry.response;
     if (urgent) {
@@ -515,6 +600,24 @@ function getSmartReply(userText, lastTopic) {
   }
 
   const intent = detectIntent(tokens, normalized);
+  const intentResponses = {
+    hack: 'Account/device compromise steps: 1) Change passwords from a safe device 2) Enable 2FA 3) Check recovery options 4) Revoke unknown sessions 5) Run antivirus 6) Report on cybercrime.gov.in if loss involved. Which account/device is affected?',
+    fraud: 'Financial fraud steps: 1) Call bank/payment app immediately 2) Freeze cards/UPI 3) Note transaction ID/time 4) File complaint at cybercrime.gov.in 5) Call 1930. Was it UPI, card, or netbanking?',
+    phishing: 'Phishing guidance: Don’t click links or share OTPs. If you clicked: change passwords, enable 2FA, scan device, and report. Did you share any OTP or enter details?',
+    harassment: 'Harassment/blackmail steps: Save evidence, block the sender, report to platform, and file complaint at cybercrime.gov.in. If threats are serious, contact local police. Do you have screenshots?',
+    deepfake: 'Deepfake/morphed content: Save evidence, report on cybercrime.gov.in, request takedown from platform, and consider legal action under IT Act 66E/67. Do you want a reporting checklist?',
+    malware: 'Malware/ransomware steps: Disconnect from internet, run antivirus in safe mode, do not pay ransom, restore from backups if possible, and report to CERT-In. Do you need cleanup steps?',
+    security: 'Security steps: Use strong unique passwords, enable 2FA (authenticator app), and review account activity. Do you need help enabling 2FA?',
+    privacy: 'Privacy/data leak steps: Change passwords, enable 2FA, monitor accounts, and check breach notices. For India, DPDP Act 2023 provides rights and penalties. Do you want a summary of your rights?',
+    report: 'Reporting steps: File online at cybercrime.gov.in, attach evidence, and note complaint number. Do you want a sample report template?',
+    helpline: 'For urgent help in India: call 1930 (cyber fraud). For emergencies contact local police. If you are elsewhere, use your national cybercrime helpline.'
+  };
+
+  if (intent !== 'general' && intentResponses[intent]) {
+    const followUp = buildFollowUp(intent);
+    return { text: `${intentResponses[intent]} ${followUp}`, topic: intent };
+  }
+
   if (lastTopic && intent === 'general') {
     const followUp = buildFollowUp(lastTopic);
     return { text: followUp, topic: lastTopic };

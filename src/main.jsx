@@ -17,3 +17,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </ThemeProvider>
   </React.StrictMode>
 );
+
+const loader = document.getElementById('app-loader');
+if (loader) {
+  loader.classList.add('app-loader-hide');
+  setTimeout(() => loader.remove(), 450);
+}
