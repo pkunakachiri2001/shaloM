@@ -4,6 +4,7 @@
   "description": "Your Global Digital Legal Companion",
   "webDir": "dist",
   "server": {
+    "url": "https://shalom-5upo.onrender.com",
     "androidScheme": "https"
   },
   "plugins": {
