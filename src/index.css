@@ -5265,6 +5265,49 @@ select:focus-visible {
   color: #cbd5e1;
 }
 
+[data-theme='dark'] .course-detail-desc,
+[data-theme='dark'] .course-detail-meta,
+[data-theme='dark'] .module-arrow,
+[data-theme='dark'] .lesson-arrow,
+[data-theme='dark'] .lesson-number,
+[data-theme='dark'] .lesson-type,
+[data-theme='dark'] .badge-type,
+[data-theme='dark'] .badge-duration,
+[data-theme='dark'] .progress-label,
+[data-theme='dark'] .module-progress-header span,
+[data-theme='dark'] .quiz-lock-note {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .lesson-number {
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+[data-theme='dark'] .lesson-type,
+[data-theme='dark'] .badge-type {
+  background: rgba(59, 130, 246, 0.18);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+[data-theme='dark'] .badge-duration {
+  background: rgba(148, 163, 184, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+[data-theme='dark'] .progress-track {
+  background: rgba(148, 163, 184, 0.25);
+}
+
+[data-theme='dark'] .progress-fill {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+}
+
+[data-theme='dark'] .quiz-section {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
 [data-theme='dark'] .resume-card {
   background: rgba(59, 130, 246, 0.15);
   border-color: rgba(59, 130, 246, 0.35);
