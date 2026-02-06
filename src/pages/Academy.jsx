@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { useData } from '../context/DataContext';
 
 const courses = [
@@ -75,10 +75,10 @@ const courses = [
                   <p><strong>Scenario:</strong> A company's customer database containing 1 million records is hacked and sold on the dark web.</p>
                   <p><strong>Cyber Law Application:</strong></p>
                   <ul>
-                    <li>Company liable under data protection laws (₹25 crore penalty possible)</li>
+                    <li>Company liable under data protection laws (DPDP Act 2023 penalties can reach ₹250 crore)</li>
                     <li>Hackers prosecuted under IT Act Section 66 (hacking)</li>
                     <li>Victims can claim compensation under Section 43A</li>
-                    <li>Company must notify affected users within 72 hours</li>
+                    <li>Company must notify affected users and authorities as required by law</li>
                   </ul>
                 </div>
 
@@ -292,11 +292,11 @@ const courses = [
                     <div class="answer">
                       <ul>
                         <li><strong>Section 43:</strong> Unauthorized access to computer system (civil liability)</li>
-                        <li><strong>Section 66C:</strong> Identity theft (using Priya's email identity)</li>
-                        <li><strong>Section 66D:</strong> Cheating by personation (impersonating Priya)</li>
+                        <li><strong>Section 66C:</strong> Identity theft (fraudulent use of Priya's digital identity)</li>
+                        <li><strong>Section 66D:</strong> Cheating by personation (impersonating Priya to mislead her employer)</li>
                         <li><strong>Punishment:</strong> Up to 3 years imprisonment + fines + compensation to Priya</li>
                       </ul>
-                      <p class="warning"><strong>Lesson:</strong> Even "pranks" can have serious legal consequences!</p>
+                      <p class="warning"><strong>Lesson:</strong> Even "pranks" can trigger real criminal liability under the IT Act.</p>
                     </div>
                   </details>
                 </div>
