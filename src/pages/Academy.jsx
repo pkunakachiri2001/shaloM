@@ -43,555 +43,403 @@ const courses = [
                   </ul>
                 </div>
 
-                <h4>🔍 Key Areas of Cyber Law</h4>
-                <div class="topic-grid">
-                  <div class="topic-card">
-                    <span class="topic-icon">🔒</span>
-                    <h5>Data Protection</h5>
-                    <p>Privacy rights, GDPR, national data protection laws</p>
-                  </div>
-                  <div class="topic-card">
-                    <span class="topic-icon">⚖️</span>
-                    <h5>Cybercrime Law</h5>
-                    <p>Hacking, fraud, identity theft, cyberbullying</p>
-                  </div>
-                  <div class="topic-card">
-                    <span class="topic-icon">🛒</span>
-                    <h5>E-Commerce Law</h5>
-                    <p>Online contracts, consumer rights, digital payments</p>
-                  </div>
-                  <div class="topic-card">
-                    <span class="topic-icon">©️</span>
-                    <h5>Intellectual Property</h5>
-                    <p>Copyright, patents, trademarks in digital space</p>
-                  </div>
-                </div>
+                const courses = [
+                  {
+                    id: 1,
+                    title: 'Intellectual Property Fundamentals',
+                    level: 'Beginner',
+                    duration: '4 hours',
+                    modules: 2,
+                    rating: 4.9,
+                    enrolled: 14200,
+                    description: 'Learn the core IP rights, why they matter, and how creators and businesses protect innovations, brands, and content.',
+                    instructor: 'Amicus IPR Academy',
+                    image: '📘',
+                    color: '#3b82f6',
+                    syllabus: [
+                      {
+                        moduleId: 1,
+                        title: 'Module 1: IP Rights Overview',
+                        duration: '35 min',
+                        lessons: [
+                          {
+                            id: 1,
+                            title: 'What Is Intellectual Property?',
+                            type: 'reading',
+                            duration: '12 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>Understanding Intellectual Property</h3>
+                                <p class="lead">Intellectual property (IP) protects creations of the mind—innovations, artistic works, and distinctive brand identifiers.</p>
 
-                <div class="example-box">
-                  <h4>📌 Real-World Example</h4>
-                  <p><strong>Scenario:</strong> A company's customer database containing 1 million records is hacked and sold on the dark web.</p>
-                  <p><strong>Cyber Law Application:</strong></p>
-                  <ul>
-                    <li>Company liable under data protection laws (DPDP Act 2023 penalties can reach ₹250 crore)</li>
-                    <li>Hackers prosecuted under IT Act Section 66 (hacking)</li>
-                    <li>Victims can claim compensation under Section 43A</li>
-                    <li>Company must notify affected users and authorities as required by law</li>
-                  </ul>
-                </div>
+                                <div class="info-card">
+                                  <h4>📌 Why IP Matters</h4>
+                                  <ul>
+                                    <li><strong>Incentive to Innovate:</strong> Rewards creators and investors</li>
+                                    <li><strong>Brand Trust:</strong> Protects reputation and goodwill</li>
+                                    <li><strong>Economic Value:</strong> IP assets can be licensed or sold</li>
+                                    <li><strong>Consumer Protection:</strong> Reduces counterfeits and confusion</li>
+                                  </ul>
+                                </div>
 
-                <h4>📊 Global Cyber Law Frameworks</h4>
-                <table class="data-table">
-                  <thead>
-                    <tr>
-                      <th>Region/Country</th>
-                      <th>Primary Law</th>
-                      <th>Year</th>
-                      <th>Focus</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>🇮🇳 India</td>
-                      <td>IT Act 2000, DPDP Act 2023</td>
-                      <td>2000, 2023</td>
-                      <td>Cybercrime & Data Protection</td>
-                    </tr>
-                    <tr>
-                      <td>🇪🇺 European Union</td>
-                      <td>GDPR</td>
-                      <td>2018</td>
-                      <td>Privacy & Data Rights</td>
-                    </tr>
-                    <tr>
-                      <td>🇿🇼 Zimbabwe</td>
-                      <td>Cyber & Data Protection Act</td>
-                      <td>2021</td>
-                      <td>Cybersecurity & Privacy</td>
-                    </tr>
-                    <tr>
-                      <td>🇺🇸 USA</td>
-                      <td>CFAA, State laws</td>
-                      <td>1986+</td>
-                      <td>Computer Fraud & Abuse</td>
-                    </tr>
-                  </tbody>
-                </table>
+                                <h4>🧭 Core IP Categories</h4>
+                                <div class="topic-grid">
+                                  <div class="topic-card">
+                                    <span class="topic-icon">💡</span>
+                                    <h5>Patents</h5>
+                                    <p>Protect new, useful, and non-obvious inventions</p>
+                                  </div>
+                                  <div class="topic-card">
+                                    <span class="topic-icon">™️</span>
+                                    <h5>Trademarks</h5>
+                                    <p>Protect brand names, logos, and distinctive signs</p>
+                                  </div>
+                                  <div class="topic-card">
+                                    <span class="topic-icon">©️</span>
+                                    <h5>Copyright</h5>
+                                    <p>Protects original literary, artistic, and software works</p>
+                                  </div>
+                                  <div class="topic-card">
+                                    <span class="topic-icon">🧪</span>
+                                    <h5>Trade Secrets</h5>
+                                    <p>Protects confidential business information</p>
+                                  </div>
+                                </div>
 
-                <div class="key-takeaway">
-                  <h4>🎯 Key Takeaways</h4>
-                  <ol>
-                    <li>Cyber law protects individuals, businesses, and governments in digital space</li>
-                    <li>It covers crimes, privacy, commerce, and intellectual property</li>
-                    <li>Every country has different cyber laws - understand your jurisdiction</li>
-                    <li>Cyber law is constantly evolving with technology</li>
-                  </ol>
-                </div>
+                                <div class="example-box">
+                                  <h4>📎 Example</h4>
+                                  <p><strong>Scenario:</strong> A startup builds a unique water‑filter design and a brand name for its product line.</p>
+                                  <p><strong>IP Strategy:</strong></p>
+                                  <ul>
+                                    <li>File a patent for the filter mechanism</li>
+                                    <li>Register a trademark for the brand name/logo</li>
+                                    <li>Copyright the product manual and marketing visuals</li>
+                                    <li>Keep supplier lists and formulas as trade secrets</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            `
+                          },
+                          {
+                            id: 2,
+                            title: 'Global IP Systems at a Glance',
+                            type: 'reading',
+                            duration: '10 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>Key IP Institutions & Treaties</h3>
+                                <p class="lead">IP rights are territorial, but global systems help streamline protection across borders.</p>
 
-                <div class="quiz-preview">
-                  <p><strong>✅ Check Your Understanding:</strong> Complete the quiz at the end of this module to test your knowledge!</p>
-                </div>
-              </div>
-            `
-          },
-          {
-            id: 2,
-            title: 'India IT Act 2000 - Overview',
-            type: 'reading',
-            duration: '12 min',
-            content: `
-              <div class="lesson-content">
-                <h3>The Information Technology Act, 2000</h3>
-                <p class="lead">India's primary law governing electronic governance, e-commerce, and cybercrimes. Amended in 2008 to include more comprehensive provisions.</p>
+                                <table class="data-table">
+                                  <thead>
+                                    <tr>
+                                      <th>System</th>
+                                      <th>Focus</th>
+                                      <th>Purpose</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>WIPO</td>
+                                      <td>Global IP coordination</td>
+                                      <td>Treaties, standards, and global guidance</td>
+                                    </tr>
+                                    <tr>
+                                      <td>PCT</td>
+                                      <td>Patents</td>
+                                      <td>Single international patent filing route</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Madrid System</td>
+                                      <td>Trademarks</td>
+                                      <td>International trademark registration</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Berne Convention</td>
+                                      <td>Copyright</td>
+                                      <td>Automatic protection across member states</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
 
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <div class="timeline-date">May 2000</div>
-                    <div class="timeline-content">
-                      <h5>IT Act 2000 Enacted</h5>
-                      <p>President K.R. Narayanan gave assent, making India one of the first countries with cyber law</p>
-                    </div>
-                  </div>
-                  <div class="timeline-item">
-                    <div class="timeline-date">October 2008</div>
-                    <div class="timeline-content">
-                      <h5>IT Amendment Act 2008</h5>
-                      <p>Major update adding Sections 66A-66F, addressing cyber terrorism and child pornography</p>
-                    </div>
-                  </div>
-                  <div class="timeline-item">
-                    <div class="timeline-date">March 2015</div>
-                    <div class="timeline-content">
-                      <h5>Section 66A Struck Down</h5>
-                      <p>Supreme Court declared Section 66A unconstitutional (Shreya Singhal case)</p>
-                    </div>
-                  </div>
-                </div>
+                                <div class="key-takeaway">
+                                  <h4>🎯 Key Takeaways</h4>
+                                  <ol>
+                                    <li>IP protection is territorial—register where you operate</li>
+                                    <li>Treaties simplify filing but do not replace national rights</li>
+                                    <li>Enforcement depends on local laws and courts</li>
+                                  </ol>
+                                </div>
+                              </div>
+                            `
+                          }
+                        ],
+                        quiz: {
+                          questions: [
+                            {
+                              question: 'Which IP right protects brand names and logos?',
+                              options: ['Patent', 'Trademark', 'Copyright', 'Trade Secret'],
+                              correct: 1,
+                              explanation: 'Trademarks protect brand identifiers such as names, logos, and slogans.'
+                            },
+                            {
+                              question: 'Which treaty system streamlines international trademark filing?',
+                              options: ['Berne Convention', 'Madrid System', 'PCT', 'TRIPS'],
+                              correct: 1,
+                              explanation: 'The Madrid System provides an international route for trademark registration.'
+                            },
+                            {
+                              question: 'IP rights are primarily:',
+                              options: ['Global by default', 'Territorial by default', 'Unlimited in scope', 'Only for large companies'],
+                              correct: 1,
+                              explanation: 'IP rights are territorial and depend on each country’s law.'
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        moduleId: 2,
+                        title: 'Module 2: IP Ownership & Commercialization',
+                        duration: '30 min',
+                        lessons: [
+                          {
+                            id: 1,
+                            title: 'Ownership, Assignment & Licensing',
+                            type: 'reading',
+                            duration: '15 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>Who Owns IP?</h3>
+                                <p class="lead">Ownership depends on creator status, employment contracts, and written assignments.</p>
 
-                <h4>🔑 Key Sections of IT Act 2000</h4>
+                                <div class="info-card">
+                                  <h4>📑 Common Scenarios</h4>
+                                  <ul>
+                                    <li><strong>Employee IP:</strong> Often owned by the employer if created within scope of work</li>
+                                    <li><strong>Freelancers:</strong> Creator owns unless rights are assigned in writing</li>
+                                    <li><strong>Collaborations:</strong> Joint ownership unless otherwise agreed</li>
+                                  </ul>
+                                </div>
 
-                <div class="section-card important">
-                  <div class="section-number">43</div>
-                  <div class="section-details">
-                    <h5>Section 43: Penalty for Damage to Computer Systems</h5>
-                    <p><strong>Offense:</strong> Unauthorized access, data download, virus introduction, damage to computer system</p>
-                    <p><strong>Penalty:</strong> Compensation up to ₹1 crore to affected party</p>
-                    <p><strong>Example:</strong> Employee deletes company data before leaving - liable under Section 43</p>
-                  </div>
-                </div>
-
-                <div class="section-card critical">
-                  <div class="section-number">66</div>
-                  <div class="section-details">
-                    <h5>Section 66: Hacking with Computer System</h5>
-                    <p><strong>Offense:</strong> Intentionally destroys, deletes, alters information, or diminishes its value</p>
-                    <p><strong>Punishment:</strong> Up to 3 years imprisonment and/or fine up to ₹5 lakh</p>
-                    <p><strong>Example:</strong> Hacking into someone's email and deleting messages</p>
-                  </div>
-                </div>
-
-                <div class="section-card critical">
-                  <div class="section-number">66C</div>
-                  <div class="section-details">
-                    <h5>Section 66C: Identity Theft</h5>
-                    <p><strong>Offense:</strong> Fraudulently using someone's password, digital signature, or unique identification</p>
-                    <p><strong>Punishment:</strong> Up to 3 years imprisonment and/or fine up to ₹1 lakh</p>
-                    <p><strong>Example:</strong> Creating fake Facebook profile using someone's photos and name</p>
-                  </div>
-                </div>
-
-                <div class="section-card critical">
-                  <div class="section-number">66D</div>
-                  <div class="section-details">
-                    <h5>Section 66D: Cheating by Personation</h5>
-                    <p><strong>Offense:</strong> Cheating by impersonation using computer resources</p>
-                    <p><strong>Punishment:</strong> Up to 3 years imprisonment and/or fine up to ₹1 lakh</p>
-                    <p><strong>Example:</strong> Sending phishing emails pretending to be a bank</p>
-                  </div>
-                </div>
-
-                <div class="section-card high">
-                  <div class="section-number">66E</div>
-                  <div class="section-details">
-                    <h5>Section 66E: Violation of Privacy</h5>
-                    <p><strong>Offense:</strong> Capturing, publishing, transmitting images of private areas without consent</p>
-                    <p><strong>Punishment:</strong> Up to 3 years imprisonment and/or fine up to ₹2 lakh</p>
-                    <p><strong>Example:</strong> Hidden camera in changing room, revenge porn</p>
-                  </div>
-                </div>
-
-                <div class="section-card high">
-                  <div class="section-number">66F</div>
-                  <div class="section-details">
-                    <h5>Section 66F: Cyber Terrorism</h5>
-                    <p><strong>Offense:</strong> Terrorist acts using computer resources to threaten national security</p>
-                    <p><strong>Punishment:</strong> Life imprisonment</p>
-                    <p><strong>Example:</strong> Hacking into defense systems, spreading terror propaganda</p>
-                  </div>
-                </div>
-
-                <div class="section-card moderate">
-                  <div class="section-number">67</div>
-                  <div class="section-details">
-                    <h5>Section 67: Publishing Obscene Material</h5>
-                    <p><strong>Offense:</strong> Publishing sexually explicit material in electronic form</p>
-                    <p><strong>Punishment:</strong> First offense: Up to 3 years + ₹5 lakh fine; Subsequent: Up to 5 years + ₹10 lakh</p>
-                  </div>
-                </div>
-
-                <div class="section-card moderate">
-                  <div class="section-number">67A</div>
-                  <div class="section-details">
-                    <h5>Section 67A: Sexually Explicit Material</h5>
-                    <p><strong>Offense:</strong> Publishing material containing sexually explicit acts</p>
-                    <p><strong>Punishment:</strong> First: Up to 5 years + ₹10 lakh; Subsequent: Up to 7 years + ₹10 lakh</p>
-                  </div>
-                </div>
-
-                <div class="section-card moderate">
-                  <div class="section-number">67B</div>
-                  <div class="section-details">
-                    <h5>Section 67B: Child Pornography</h5>
-                    <p><strong>Offense:</strong> Publishing or transmitting material depicting children in sexually explicit acts</p>
-                    <p><strong>Punishment:</strong> First: Up to 5 years + ₹10 lakh; Subsequent: Up to 7 years + ₹10 lakh</p>
-                  </div>
-                </div>
-
-                <div class="comparison-box">
-                  <h4>⚖️ Civil vs Criminal Liability</h4>
-                  <div class="comparison-grid">
-                    <div>
-                      <h5>Civil (Section 43)</h5>
-                      <ul>
-                        <li>Compensation to victim</li>
-                        <li>No imprisonment</li>
-                        <li>Monetary damages</li>
-                        <li>Sued in civil court</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h5>Criminal (Section 66+)</h5>
-                      <ul>
-                        <li>Imprisonment possible</li>
-                        <li>Fines to government</li>
-                        <li>Criminal record</li>
-                        <li>Tried in criminal court</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="practice-scenario">
-                  <h4>💡 Practice Scenario</h4>
-                  <p><strong>Case:</strong> Raj logs into his colleague Priya's laptop (she left it unlocked) and sends a fake resignation email to her boss as a "prank".</p>
-                  <p><strong>Question:</strong> Which sections of IT Act apply?</p>
-                  <details>
-                    <summary>Click to see answer</summary>
-                    <div class="answer">
-                      <ul>
-                        <li><strong>Section 43:</strong> Unauthorized access to computer system (civil liability)</li>
-                        <li><strong>Section 66C:</strong> Identity theft (fraudulent use of Priya's digital identity)</li>
-                        <li><strong>Section 66D:</strong> Cheating by personation (impersonating Priya to mislead her employer)</li>
-                        <li><strong>Punishment:</strong> Up to 3 years imprisonment + fines + compensation to Priya</li>
-                      </ul>
-                      <p class="warning"><strong>Lesson:</strong> Even "pranks" can trigger real criminal liability under the IT Act.</p>
-                    </div>
-                  </details>
-                </div>
-
-                <div class="key-takeaway">
-                  <h4>🎯 Key Takeaways</h4>
-                  <ol>
-                    <li>IT Act 2000 covers both civil and criminal cyber offenses</li>
-                    <li>Penalties range from fines to life imprisonment depending on severity</li>
-                    <li>Section 66A (offensive messages) was struck down as unconstitutional</li>
-                    <li>Know your rights - and your responsibilities online</li>
-                  </ol>
-                </div>
-              </div>
-            `
-          },
-          {
-            id: 3,
-            title: 'Landmark Case: Shreya Singhal v. Union of India',
-            type: 'case-study',
-            duration: '10 min',
-            content: `
-              <div class="lesson-content">
-                <div class="case-header">
-                  <h3>📋 Shreya Singhal v. Union of India (2015)</h3>
-                  <div class="case-meta">
-                    <span><strong>Court:</strong> Supreme Court of India</span>
-                    <span><strong>Citation:</strong> AIR 2015 SC 1523</span>
-                    <span><strong>Judges:</strong> J. Chelameswar & R.F. Nariman</span>
-                    <span><strong>Date:</strong> March 24, 2015</span>
-                  </div>
-                </div>
-
-                <h4>📖 Background</h4>
-                <p>Section 66A of the IT Act, 2000 made it a criminal offense to send "offensive" or "menacing" messages through communication services. Many people were arrested for posting critical comments on social media about politicians and public figures.</p>
-
-                <div class="incident-box">
-                  <h5>Trigger Incident (2012)</h5>
-                  <p>Two girls in Mumbai were arrested for a Facebook post questioning the shutdown of the city after a political leader's death. One girl posted the comment, the other just "liked" it. Both faced charges under Section 66A.</p>
-                  <p><strong>Charged under:</strong> Section 66A (offensive messages) + Section 505(2) IPC (promoting enmity)</p>
-                  <p><strong>Public Reaction:</strong> Massive outrage over arrest for simply expressing an opinion</p>
-                </div>
-
-                <h4>🔍 What was Section 66A?</h4>
-                <div class="law-text">
-                  <p><em>"Any person who sends, by means of a computer resource or a communication device,—</em></p>
-                  <ul>
-                    <li>(a) any information that is grossly offensive or has menacing character; or</li>
-                    <li>(b) any information which he knows to be false, but for the purpose of causing annoyance, inconvenience, danger, obstruction, insult, injury, criminal intimidation, enmity, hatred or ill will..."</li>
-                  </ul>
-                  <p><em>Punishment: Up to 3 years imprisonment + fine</em></p>
-                </div>
-
-                <div class="problem-box">
-                  <h5>⚠️ Problems with Section 66A</h5>
-                  <ul>
-                    <li><strong>Vague Terms:</strong> "Grossly offensive," "menacing," "annoyance" - not clearly defined</li>
-                    <li><strong>Chilling Effect:</strong> People afraid to express opinions online</li>
-                    <li><strong>Misuse:</strong> Used by police to arrest critics of government and politicians</li>
-                    <li><strong>No Safeguards:</strong> Arrests made without proper inquiry</li>
-                    <li><strong>Disproportionate:</strong> 3 years jail for posting an opinion</li>
-                  </ul>
-                </div>
-
-                <h4>⚖️ Court's Reasoning</h4>
-                <div class="judgment-points">
-                  <div class="point">
-                    <span class="point-number">1</span>
-                    <div>
-                      <h5>Violates Freedom of Speech (Article 19(1)(a))</h5>
-                      <p>Section 66A imposed unreasonable restrictions on free speech without falling under the exceptions in Article 19(2) of the Constitution.</p>
-                    </div>
-                  </div>
-                  <div class="point">
-                    <span class="point-number">2</span>
-                    <div>
-                      <h5>Terms Were Vague and Overbroad</h5>
-                      <p>"Grossly offensive" and "causing annoyance" have no clear legal meaning, allowing arbitrary interpretation and misuse.</p>
-                    </div>
-                  </div>
-                  <div class="point">
-                    <span class="point-number">3</span>
-                    <div>
-                      <h5>No Procedural Safeguards</h5>
-                      <p>Unlike defamation laws, Section 66A had no requirement to prove actual harm or malicious intent.</p>
-                    </div>
-                  </div>
-                  <div class="point">
-                    <span class="point-number">4</span>
-                    <div>
-                      <h5>Online Speech = Offline Speech</h5>
-                      <p>The Court held that freedom of expression applies equally online and offline. No special restrictions for internet speech.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="verdict-box">
-                  <h4>⚡ The Verdict</h4>
-                  <p class="verdict-text"><strong>Section 66A was struck down as UNCONSTITUTIONAL and void.</strong></p>
-                  <p>The Supreme Court held that it violated Article 19(1)(a) - the fundamental right to freedom of speech and expression.</p>
-                </div>
-
-                <h4>🌟 Impact & Legacy</h4>
-                <ul>
-                  <li><strong>Landmark Victory:</strong> Huge win for free speech and civil liberties in India</li>
-                  <li><strong>International Recognition:</strong> Cited globally as a model judgment on internet freedom</li>
-                  <li><strong>All Pending Cases Dropped:</strong> People arrested under 66A were freed</li>
-                  <li><strong>Precedent Set:</strong> Online speech enjoys constitutional protection</li>
-                  <li><strong>Continuing Challenge:</strong> Despite judgment, some police still try to use 66A (illegally)</li>
-                </ul>
-
-                <div class="comparison-box">
-                  <h4>Before vs After Section 66A</h4>
-                  <div class="comparison-grid">
-                    <div>
-                      <h5>❌ Before (with Section 66A)</h5>
-                      <ul>
-                        <li>21,000+ arrests in 2 years</li>
-                        <li>Political criticism led to jail</li>
-                        <li>Self-censorship on social media</li>
-                        <li>Vague, arbitrary arrests</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h5>✅ After (without Section 66A)</h5>
-                      <ul>
-                        <li>Free political discourse online</li>
-                        <li>Criticism not a crime</li>
-                        <li>Protection for online speech</li>
-                        <li>Still liable for: defamation, threats, hate speech</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="important-note">
-                  <h5>⚠️ Important: What's Still Illegal?</h5>
-                  <p>While Section 66A is gone, you can still be prosecuted for:</p>
-                  <ul>
-                    <li><strong>Defamation:</strong> False statements harming someone's reputation (IPC 499)</li>
-                    <li><strong>Hate Speech:</strong> Promoting enmity between groups (IPC 153A)</li>
-                    <li><strong>Threats:</strong> Criminal intimidation (IPC 506)</li>
-                    <li><strong>Obscenity:</strong> IT Act Sections 67, 67A, 67B</li>
-                    <li><strong>Incitement to Violence:</strong> Constitutional exception</li>
-                  </ul>
-                  <p><strong>Key Difference:</strong> These have clear legal definitions and require proof of harm or intent.</p>
-                </div>
-
-                <div class="quiz-preview">
-                  <h4>🎓 Discussion Questions</h4>
-                  <ol>
-                    <li>Why was Section 66A considered a threat to democracy?</li>
-                    <li>How does the Shreya Singhal judgment protect your rights as an internet user?</li>
-                    <li>Can you think of examples where online speech should still be restricted?</li>
-                  </ol>
-                </div>
-
-                <div class="key-takeaway">
-                  <h4>🎯 Key Takeaways</h4>
-                  <ol>
-                    <li>Freedom of speech applies equally online and offline</li>
-                    <li>Laws restricting speech must be clear, not vague</li>
-                    <li>You can criticize government and politicians without fear of arrest</li>
-                    <li>However, defamation, threats, and hate speech remain illegal</li>
-                    <li>Know your rights - the Supreme Court has your back on free expression!</li>
-                  </ol>
-                </div>
-              </div>
-            `
-          }
-        ],
-        quiz: {
-          questions: [
-            {
-              question: 'Which Supreme Court case struck down Section 66A of the IT Act?',
-              options: ['Shreya Singhal v. Union of India', 'Anuradha Bhasin v. Union of India', 'K.S. Puttaswamy v. Union of India', 'Maneka Gandhi v. Union of India'],
-              correct: 0,
-              explanation: 'Shreya Singhal v. Union of India (2015) struck down Section 66A as it violated the fundamental right to freedom of speech and expression.'
-            },
-            {
-              question: 'Under Section 66 of the IT Act, what is the maximum imprisonment for hacking?',
-              options: ['1 year', '2 years', '3 years', '5 years'],
-              correct: 2,
-              explanation: 'Section 66 prescribes imprisonment up to 3 years and/or a fine up to ₹5 lakh for hacking with computer systems.'
-            },
-            {
-              question: 'Which section deals with identity theft?',
-              options: ['Section 66A', 'Section 66B', 'Section 66C', 'Section 66D'],
-              correct: 2,
-              explanation: 'Section 66C deals with identity theft - fraudulently using someone\'s password, digital signature, or unique identification.'
-            },
-            {
-              question: 'What is the punishment for cyber terrorism under Section 66F?',
-              options: ['3 years', '7 years', '10 years', 'Life imprisonment'],
-              correct: 3,
-              explanation: 'Section 66F prescribes life imprisonment for acts of cyber terrorism that threaten national security.'
-            },
-            {
-              question: 'Which fundamental right was violated by Section 66A?',
-              options: ['Right to Equality', 'Right to Freedom of Speech', 'Right to Life', 'Right to Education'],
-              correct: 1,
-              explanation: 'Section 66A violated Article 19(1)(a) - the fundamental right to freedom of speech and expression.'
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    id: 2,
-    title: 'Cybercrime Investigation & Prevention',
-    level: 'Intermediate',
-    duration: '6 hours',
-    modules: 10,
-    rating: 4.9,
-    enrolled: 8750,
-    description: 'Learn to identify, investigate, and prevent cybercrimes. Understand digital forensics, evidence collection, and reporting procedures.',
-    instructor: 'Amicus IPR Academy',
-    image: '🔍',
-    color: '#8b5cf6',
-    syllabus: [
-      {
-        moduleId: 1,
-        title: 'Module 1: Types of Cybercrimes',
-        duration: '45 min',
-        lessons: [
-          {
-            id: 1,
-            title: 'Hacking & Unauthorized Access',
-            type: 'reading',
-            duration: '18 min',
-            content: `
-              <div class="lesson-content">
-                <h3>Hacking & Unauthorized Access</h3>
-                <p class="lead">Understanding different types of hacking, their legal implications, and how to protect yourself.</p>
-
-                <div class="hacker-types">
-                  <div class="hacker-card black-hat">
-                    <div class="hacker-icon">🎩</div>
-                    <h4>Black Hat Hackers</h4>
-                    <p><strong>Motivation:</strong> Financial gain, malicious intent, revenge</p>
-                    <p><strong>Activities:</strong> Stealing data, spreading malware, identity theft, ransomware</p>
-                    <p><strong>Legal Status:</strong> ILLEGAL - Criminal prosecution under IT Act</p>
-                  </div>
-
-                  <div class="hacker-card white-hat">
-                    <div class="hacker-icon">👨‍💻</div>
-                    <h4>White Hat Hackers (Ethical Hackers)</h4>
-                    <p><strong>Motivation:</strong> Security improvement, protecting systems</p>
-                    <p><strong>Activities:</strong> Penetration testing, bug bounties, security audits</p>
-                    <p><strong>Legal Status:</strong> LEGAL - With proper authorization</p>
-                  </div>
-
-                  <div class="hacker-card grey-hat">
-                    <div class="hacker-icon">🕵️</div>
-                    <h4>Grey Hat Hackers</h4>
-                    <p><strong>Motivation:</strong> Curiosity, recognition, ethical ambiguity</p>
-                    <p><strong>Activities:</strong> Finding vulnerabilities without permission, reporting for reward</p>
-                    <p><strong>Legal Status:</strong> ILLEGAL (no authorization) but often not malicious</p>
-                  </div>
-                </div>
-
-                <h4>🚨 Common Hacking Techniques</h4>
-                <div class="technique-list">
-                  <div class="technique">
-                    <h5>1. Phishing</h5>
-                    <p>Fake emails/websites to steal login credentials</p>
-                    <div class="example">
-                      <strong>Example:</strong> Email claiming "Your bank account will be closed. Click here to verify."
-                    </div>
-                  </div>
-
-                  <div class="technique">
-                    <h5>2. Brute Force Attack</h5>
-                    <p>Trying thousands of password combinations until finding the right one</p>
-                    <div class="example">
-                      <strong>Protection:</strong> Use strong passwords (12+ characters, mixed case, numbers, symbols)
-                    </div>
-                  </div>
-
-                  <div class="technique">
-                    <h5>3. SQL Injection</h5>
-                    <p>Injecting malicious code into website databases to access data</p>
-                    <div class="example">
-                      <strong>Impact:</strong> Can expose entire databases of user information
-                    </div>
-                  </div>
-
-                  <div class="technique">
-                    <h5>4. Man-in-the-Middle (MitM)</h5>
-                    <p>Intercepting communication between two parties</p>
-                    <div class="example">
-                      <strong>Common Scenario:</strong> Public WiFi networks at cafes, airports
-                    </div>
-                  </div>
-
-                  <div class="technique">
-                    <h5>5. Malware/Ransomware</h5>
+                                <div class="topic-grid">
+                                  <div class="topic-card">
+                                    <span class="topic-icon">📝</span>
+                                    <h5>Assignments</h5>
+                                    <p>Transfer ownership of IP rights</p>
+                                  </div>
+                                  <div class="topic-card">
+                                    <span class="topic-icon">🤝</span>
+                                    <h5>Licensing</h5>
+                                    <p>Grant permission to use IP while retaining ownership</p>
+                                  </div>
+                                  <div class="topic-card">
+                                    <span class="topic-icon">💼</span>
+                                    <h5>Royalty Models</h5>
+                                    <p>Revenue sharing, fixed fees, or usage‑based royalties</p>
+                                  </div>
+                                </div>
+                              </div>
+                            `
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    id: 2,
+                    title: 'Patents & Innovation Protection',
+                    level: 'Intermediate',
+                    duration: '5 hours',
+                    modules: 2,
+                    rating: 4.8,
+                    enrolled: 7800,
+                    description: 'From patentability to enforcement—learn how to protect inventions, draft claims, and build filing strategy.',
+                    instructor: 'Amicus IPR Academy',
+                    image: '🔬',
+                    color: '#8b5cf6',
+                    syllabus: [
+                      {
+                        moduleId: 1,
+                        title: 'Module 1: Patentability & Prior Art',
+                        duration: '40 min',
+                        lessons: [
+                          {
+                            id: 1,
+                            title: 'Patentability Criteria',
+                            type: 'reading',
+                            duration: '15 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>What Can Be Patented?</h3>
+                                <p class="lead">Most jurisdictions require novelty, inventive step, and industrial applicability.</p>
+                                <ul>
+                                  <li><strong>Novelty:</strong> Not publicly disclosed anywhere in the world</li>
+                                  <li><strong>Inventive Step:</strong> Not obvious to a skilled person</li>
+                                  <li><strong>Utility:</strong> Practical, industrial application</li>
+                                </ul>
+                                <div class="example-box">
+                                  <h4>🧠 Prior Art Search</h4>
+                                  <p>Search existing patents, publications, and products before filing to assess novelty and reduce risk.</p>
+                                </div>
+                              </div>
+                            `
+                          }
+                        ]
+                      },
+                      {
+                        moduleId: 2,
+                        title: 'Module 2: Filing Strategy & Enforcement',
+                        duration: '45 min',
+                        lessons: [
+                          {
+                            id: 1,
+                            title: 'Claims, Scope & Enforcement',
+                            type: 'reading',
+                            duration: '15 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>Drafting Strong Patent Claims</h3>
+                                <p class="lead">Claims define the legal boundary of protection and are central in enforcement.</p>
+                                <div class="info-card">
+                                  <h4>✅ Best Practices</h4>
+                                  <ul>
+                                    <li>Define core inventive concept clearly</li>
+                                    <li>Include dependent claims to cover variants</li>
+                                    <li>Align claim scope with business strategy</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            `
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    id: 3,
+                    title: 'Trademarks & Brand Protection',
+                    level: 'Intermediate',
+                    duration: '4 hours',
+                    modules: 2,
+                    rating: 4.7,
+                    enrolled: 9100,
+                    description: 'Protect brand identity, conduct clearance searches, and enforce rights against confusion and counterfeits.',
+                    instructor: 'Amicus IPR Academy',
+                    image: '™️',
+                    color: '#10b981',
+                    syllabus: [
+                      {
+                        moduleId: 1,
+                        title: 'Module 1: Trademark Basics',
+                        duration: '35 min',
+                        lessons: [
+                          {
+                            id: 1,
+                            title: 'Distinctiveness & Clearance',
+                            type: 'reading',
+                            duration: '12 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>Choosing a Strong Mark</h3>
+                                <p class="lead">Fanciful and arbitrary marks are strongest; descriptive marks are hardest to protect.</p>
+                                <div class="example-box">
+                                  <h4>🔍 Clearance Search</h4>
+                                  <p>Search registries, marketplaces, and domain names before adopting a brand.</p>
+                                </div>
+                              </div>
+                            `
+                          }
+                        ]
+                      },
+                      {
+                        moduleId: 2,
+                        title: 'Module 2: Enforcement & Online Protection',
+                        duration: '40 min',
+                        lessons: [
+                          {
+                            id: 1,
+                            title: 'Opposition, Infringement & Takedowns',
+                            type: 'reading',
+                            duration: '14 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>Defending Your Brand</h3>
+                                <p class="lead">Use opposition proceedings, infringement claims, and platform takedowns to curb misuse.</p>
+                                <ul>
+                                  <li>Monitor for confusingly similar marks</li>
+                                  <li>Document evidence of use and reputation</li>
+                                  <li>Leverage marketplace and social platform tools</li>
+                                </ul>
+                              </div>
+                            `
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    id: 4,
+                    title: 'Copyright & Digital Rights',
+                    level: 'Advanced',
+                    duration: '4 hours',
+                    modules: 2,
+                    rating: 4.6,
+                    enrolled: 6200,
+                    description: 'Understand copyright scope, fair use exceptions, licensing, and enforcement in digital platforms.',
+                    instructor: 'Amicus IPR Academy',
+                    image: '🎨',
+                    color: '#f59e0b',
+                    syllabus: [
+                      {
+                        moduleId: 1,
+                        title: 'Module 1: Copyright Basics',
+                        duration: '30 min',
+                        lessons: [
+                          {
+                            id: 1,
+                            title: 'Scope, Duration & Exceptions',
+                            type: 'reading',
+                            duration: '12 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>What Copyright Protects</h3>
+                                <p class="lead">Original expression in literary, artistic, musical, and software works.</p>
+                                <div class="info-card">
+                                  <h4>⚖️ Exceptions</h4>
+                                  <p>Fair use/fair dealing allows limited use for criticism, education, and news reporting.</p>
+                                </div>
+                              </div>
+                            `
+                          }
+                        ]
+                      },
+                      {
+                        moduleId: 2,
+                        title: 'Module 2: Licensing & Enforcement',
+                        duration: '35 min',
+                        lessons: [
+                          {
+                            id: 1,
+                            title: 'Takedowns, Licensing & Royalties',
+                            type: 'reading',
+                            duration: '15 min',
+                            content: `
+                              <div class="lesson-content">
+                                <h3>Monetizing Creative Works</h3>
+                                <p class="lead">Use licenses to enable lawful use and enforce rights on platforms when infringed.</p>
+                                <ul>
+                                  <li>Exclusive vs non‑exclusive licenses</li>
+                                  <li>Collecting royalties through CMOs</li>
+                                  <li>Notice‑and‑takedown workflows</li>
+                                </ul>
+                              </div>
+                            `
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ];
                     <p>Malicious software that steals data or locks files for ransom</p>
                     <div class="example">
                       <strong>Example:</strong> WannaCry ransomware attack (2017) - 200,000+ computers in 150 countries
