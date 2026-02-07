@@ -14,7 +14,7 @@ const courses = [
     rating: 4.8,
     enrolled: 12450,
     description: 'Master the basics of cyber law, understand legal frameworks, and learn how to protect your digital rights.',
-    instructor: 'CyberGuard Pro Academy',
+    instructor: 'Amicus IPR Academy',
     image: '📚',
     color: '#3b82f6',
     syllabus: [
@@ -511,7 +511,7 @@ const courses = [
     rating: 4.9,
     enrolled: 8750,
     description: 'Learn to identify, investigate, and prevent cybercrimes. Understand digital forensics, evidence collection, and reporting procedures.',
-    instructor: 'CyberGuard Pro Academy',
+    instructor: 'Amicus IPR Academy',
     image: '🔍',
     color: '#8b5cf6',
     syllabus: [
@@ -735,7 +735,7 @@ const courses = [
     rating: 4.7,
     enrolled: 10200,
     description: 'Master data privacy laws, GDPR, India DPDP Act 2023, and learn practical strategies to protect your digital footprint.',
-    instructor: 'CyberGuard Pro Academy',
+    instructor: 'Amicus IPR Academy',
     image: '🔐',
     color: '#10b981'
   },
@@ -748,7 +748,7 @@ const courses = [
     rating: 4.6,
     enrolled: 5600,
     description: 'Understand online contracts, consumer rights, digital signatures, and legal framework for e-commerce transactions.',
-    instructor: 'CyberGuard Pro Academy',
+    instructor: 'Amicus IPR Academy',
     image: '🛒',
     color: '#f59e0b'
   }
@@ -875,8 +875,8 @@ export default function EnhancedAcademy() {
       <div className="page academy-page-enhanced">
         <div className="page-header academy-header-enhanced">
           <div className="header-content-enhanced">
-            <h1>🎓 Cyber Law Academy</h1>
-            <p className="lead">Professional learning platform with comprehensive courses, interactive quizzes, and certificates</p>
+            <h1>🎓 IPR Academy</h1>
+            <p className="lead">Professional learning platform with IPR courses, interactive quizzes, and practical certificates</p>
             <div className="stats-row">
               <div className="stat-item">
                 <span className="stat-number">50,000+</span>
@@ -949,7 +949,7 @@ export default function EnhancedAcademy() {
         </div>
 
         <div className="why-learn-section">
-          <h2>Why Learn Cyber Law?</h2>
+          <h2>Why Learn IPR?</h2>
           <div className="benefits-grid">
             <div className="benefit-card">
               <span className="benefit-icon">💼</span>
@@ -969,7 +969,7 @@ export default function EnhancedAcademy() {
             <div className="benefit-card">
               <span className="benefit-icon">🌍</span>
               <h4>Global Relevance</h4>
-              <p>Cyber law applies worldwide. Learn international frameworks and standards.</p>
+              <p>IPR applies worldwide. Learn international frameworks and standards.</p>
             </div>
           </div>
         </div>

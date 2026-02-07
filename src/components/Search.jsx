@@ -8,16 +8,16 @@ export default function Search() {
   const { bookmarks } = useData();
 
   const searchData = [
-    { id: 'acad-1', title: 'Cyber Law Academy', category: 'Academy', path: '/academy' },
-    { id: 'ident-1', title: 'Crime Identifier', category: 'Tools', path: '/identifier' },
-    { id: 'emerg-1', title: 'Emergency Tools', category: 'Emergency', path: '/emergency' },
-    { id: 'news-1', title: 'Latest News', category: 'News', path: '/news' },
-    { id: 'career-1', title: 'Career Hub', category: 'Career', path: '/career' },
-    { id: 'about-1', title: 'About CyberGuard', category: 'Info', path: '/about' },
-    { id: 'quiz-1', title: 'Cyber Law Quiz', category: 'Learning', path: '/academy?quiz=1' },
-    { id: 'phishing-1', title: 'Phishing Detection Guide', category: 'Academy', path: '/academy?lesson=phishing' },
-    { id: 'fraud-1', title: 'Online Fraud Prevention', category: 'Academy', path: '/academy?lesson=fraud' },
-    { id: 'harassment-1', title: 'Cyberbullying & Harassment Laws', category: 'Academy', path: '/academy?lesson=harassment' },
+    { id: 'acad-1', title: 'IPR Academy', category: 'Academy', path: '/academy' },
+    { id: 'ident-1', title: 'IPR Issue Identifier', category: 'Tools', path: '/identifier' },
+    { id: 'emerg-1', title: 'Report IPR Issue', category: 'Reporting', path: '/emergency' },
+    { id: 'news-1', title: 'IPR News', category: 'News', path: '/news' },
+    { id: 'career-1', title: 'IP Career Hub', category: 'Career', path: '/career' },
+    { id: 'about-1', title: 'About Amicus IPR', category: 'Info', path: '/about' },
+    { id: 'quiz-1', title: 'IPR Basics Quiz', category: 'Learning', path: '/academy?quiz=1' },
+    { id: 'patent-1', title: 'Patent Protection Guide', category: 'Academy', path: '/academy?lesson=patents' },
+    { id: 'trademark-1', title: 'Trademark Enforcement Guide', category: 'Academy', path: '/academy?lesson=trademarks' },
+    { id: 'copyright-1', title: 'Copyright Takedown Guide', category: 'Academy', path: '/academy?lesson=copyright' },
   ];
 
   const handleSearch = (value) => {
@@ -39,7 +39,7 @@ export default function Search() {
       <div className="search-input-wrapper">
         <input
           type="text"
-          placeholder="🔍 Search lessons, tools, careers..."
+          placeholder="🔍 Search IPR lessons, tools, reporting..."
           value={query}
           onChange={(e) => handleSearch(e.target.value)}
           onFocus={() => setShowResults(true)}

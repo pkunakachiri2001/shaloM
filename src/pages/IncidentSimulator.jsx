@@ -136,8 +136,8 @@ export default function IncidentSimulator() {
     return (
       <div className="simulator-container">
         <div className="simulator-header">
-          <h1>🎯 Incident Response Simulator</h1>
-          <p>Test your cybersecurity decision-making skills in realistic scenarios</p>
+          <h1>🎯 IPR Response Simulator</h1>
+          <p>Practice decision-making for common IP infringement scenarios</p>
         </div>
 
         {stats.total > 0 && (
@@ -223,10 +223,10 @@ export default function IncidentSimulator() {
             </div>
 
             <div className="legal-info">
-              <h4>💡 Cyber Law Insight:</h4>
+              <h4>💡 IPR Insight:</h4>
               <p>
                 {choice.correct
-                  ? 'Your decision aligns with cybersecurity best practices and legal requirements for incident response.'
+                  ? 'Your decision aligns with IPR best practices and legal requirements for enforcement.'
                   : 'This action could violate data protection laws and expose your organization to legal liability.'}
               </p>
             </div>

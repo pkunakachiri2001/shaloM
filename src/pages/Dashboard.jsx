@@ -11,17 +11,17 @@ export default function Dashboard() {
     : 0;
 
   const modules = [
-    { name: 'Cyber Laws & Rights', icon: '⚖️' },
-    { name: 'Crime Identification', icon: '🔍' },
-    { name: 'Emergency Response', icon: '🚨' },
-    { name: 'Digital Safety', icon: '🛡️' },
+    { name: 'IPR Fundamentals', icon: '⚖️' },
+    { name: 'Issue Identification', icon: '🔍' },
+    { name: 'Reporting & Enforcement', icon: '🚨' },
+    { name: 'IP Strategy', icon: '🛡️' },
   ];
 
   return (
     <div className="dashboard-page">
       <div className="dashboard-header">
         <h1>📊 Your Learning Dashboard</h1>
-        <p>Track your progress towards becoming a cyber law expert</p>
+        <p>Track your progress towards becoming an IPR expert</p>
       </div>
 
       {/* Progress Overview */}
@@ -146,11 +146,11 @@ export default function Dashboard() {
       <div className="motivation-card">
         <h3>✨ Keep Learning!</h3>
         <p>
-          {totalProgress < 25 && "Great start! Keep exploring to build your cyber law knowledge."}
+          {totalProgress < 25 && "Great start! Keep exploring to build your IPR knowledge."}
           {totalProgress >= 25 && totalProgress < 50 && "You're making solid progress! Continue with the modules."}
           {totalProgress >= 50 && totalProgress < 75 && "Excellent work! You're over halfway there!"}
           {totalProgress >= 75 && totalProgress < 100 && "Almost complete! Finish strong!"}
-          {totalProgress === 100 && "🎉 You've completed all modules! You're a cyber law expert!"}
+          {totalProgress === 100 && "🎉 You've completed all modules! You're an IPR expert!"}
         </p>
       </div>
     </div>

@@ -56,14 +56,14 @@ export default function News() {
 
   const getCategoryColor = (category) => {
     const colors = {
-      'Law Update': '#3b82f6',
-      'Cyber Crime Alert': '#dc2626',
-      'Court Verdict': '#7c3aed',
-      'Statistics': '#0891b2',
-      'Technology': '#059669',
-      'Legal Education': '#d97706',
-      'International': '#ec4899',
-      'Case Study': '#8b5cf6'
+      'Policy Update': '#3b82f6',
+      'Enforcement Alert': '#dc2626',
+      'Court Decision': '#7c3aed',
+      'Patent': '#0ea5e9',
+      'Trademark': '#059669',
+      'Copyright': '#d97706',
+      'Trade Secret': '#8b5cf6',
+      'International': '#ec4899'
     };
     return colors[category] || '#6b7280';
   };
@@ -71,8 +71,8 @@ export default function News() {
   return (
     <div className="page news-page">
       <div className="page-header">
-        <h1>📰 Legal News & Updates</h1>
-        <p>Stay informed about the latest in cyber law, crimes, and legal developments</p>
+        <h1>📰 IPR News & Updates</h1>
+        <p>Stay informed about patents, trademarks, copyrights, enforcement, and policy changes</p>
         
         {/* Refresh and Status Info */}
         <div className="news-controls" style={{ marginTop: '15px', display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center' }}>
@@ -260,20 +260,20 @@ export default function News() {
         <h3>📚 Stay Updated - Follow These Sources:</h3>
         <div className="sources-grid">
           <div className="source-item">
-            <strong>🌐 National Cyber Crime Portal</strong>
-            <p>cybercrime.gov.in - Official alerts and advisories</p>
+            <strong>🌐 WIPO</strong>
+            <p>wipo.int - Global IP resources and treaties</p>
           </div>
           <div className="source-item">
-            <strong>⚖️ Supreme Court of India</strong>
-            <p>sci.gov.in - Latest judgments and verdicts</p>
+            <strong>⚖️ EUIPO</strong>
+            <p>euipo.europa.eu - EU trademarks and designs</p>
           </div>
           <div className="source-item">
-            <strong>💻 CERT-In</strong>
-            <p>cert-in.org.in - Cyber security alerts</p>
+            <strong>🏛️ USPTO</strong>
+            <p>uspto.gov - US patents and trademarks</p>
           </div>
           <div className="source-item">
-            <strong>📱 Social Media</strong>
-            <p>Follow @IndianCyberCops on Twitter</p>
+            <strong>📱 Brand Protection Updates</strong>
+            <p>Follow official IP office channels for alerts</p>
           </div>
         </div>
       </div>

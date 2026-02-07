@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default function EmergencyTools() {
   const [activeTab, setActiveTab] = useState('reporter');
+  const [selectedCountry, setSelectedCountry] = useState('india');
   const [reportData, setReportData] = useState({
     type: '',
     description: '',
@@ -13,7 +14,7 @@ export default function EmergencyTools() {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!reportData.type.trim()) newErrors.type = 'Incident type is required';
+    if (!reportData.type.trim()) newErrors.type = 'IPR issue type is required';
     if (!reportData.description.trim()) newErrors.description = 'Description is required (minimum 20 characters)';
     if (reportData.description.trim().length < 20) newErrors.description = 'Description must be at least 20 characters';
     return newErrors;
@@ -37,202 +38,309 @@ export default function EmergencyTools() {
       setReportData({ type: '', description: '', evidence: '', urgency: 'medium' });
     }, 3000);
     
-    alert('✓ Report prepared! Visit cybercrime.gov.in to submit officially. Save this information for reference.');
+    alert('✓ Report prepared! Use the country guidance below to submit officially. Save this information for reference.');
   };
+
+  const countryGuides = [
+    {
+      id: 'india',
+      name: 'India',
+      portals: [
+        { label: 'IP India (CGPDTM)', url: 'https://ipindia.gov.in/' },
+        { label: 'Copyright Office', url: 'https://copyright.gov.in/' }
+      ],
+      reportTo: [
+        'IP India for patents, trademarks, and designs',
+        'Copyright Office for copyright registration guidance',
+        'Local police for counterfeiting or criminal infringement',
+        'Customs IPR recordation for import seizures'
+      ],
+      laws: [
+        'Patents Act, 1970',
+        'Trade Marks Act, 1999',
+        'Copyright Act, 1957',
+        'Designs Act, 2000',
+        'Geographical Indications of Goods Act, 1999'
+      ]
+    },
+    {
+      id: 'us',
+      name: 'United States',
+      portals: [
+        { label: 'USPTO', url: 'https://www.uspto.gov/' },
+        { label: 'U.S. Copyright Office', url: 'https://www.copyright.gov/' }
+      ],
+      reportTo: [
+        'Federal court or counsel for infringement claims',
+        'Platform takedown for online infringement (DMCA)',
+        'USITC for import-related infringement (Section 337)'
+      ],
+      laws: [
+        'Title 35 (Patents)',
+        'Lanham Act (Trademarks)',
+        'Title 17 (Copyrights)',
+        'Defend Trade Secrets Act (DTSA)'
+      ]
+    },
+    {
+      id: 'uk',
+      name: 'United Kingdom',
+      portals: [
+        { label: 'UK Intellectual Property Office', url: 'https://www.gov.uk/government/organisations/intellectual-property-office' }
+      ],
+      reportTo: [
+        'UK IPO guidance and dispute resolution',
+        'Trading Standards for counterfeits',
+        'Civil courts for infringement claims'
+      ],
+      laws: [
+        'Patents Act 1977',
+        'Trade Marks Act 1994',
+        'Copyright, Designs and Patents Act 1988'
+      ]
+    },
+    {
+      id: 'eu',
+      name: 'European Union',
+      portals: [
+        { label: 'EUIPO', url: 'https://euipo.europa.eu/' }
+      ],
+      reportTo: [
+        'EUIPO for EU trademarks and designs',
+        'National patent offices for patents',
+        'Local courts for enforcement'
+      ],
+      laws: [
+        'EU Trademark Regulation',
+        'EU Design Regulation',
+        'EU Copyright Directives'
+      ]
+    },
+    {
+      id: 'canada',
+      name: 'Canada',
+      portals: [
+        { label: 'CIPO', url: 'https://ised-isde.canada.ca/site/canadian-intellectual-property-office/en' }
+      ],
+      reportTo: [
+        'CIPO guidance for registrations',
+        'Civil courts for enforcement',
+        'Border services for counterfeits'
+      ],
+      laws: [
+        'Patent Act',
+        'Trademarks Act',
+        'Copyright Act',
+        'Industrial Design Act'
+      ]
+    },
+    {
+      id: 'australia',
+      name: 'Australia',
+      portals: [
+        { label: 'IP Australia', url: 'https://www.ipaustralia.gov.au/' }
+      ],
+      reportTo: [
+        'IP Australia guidance',
+        'Federal Court or counsel for enforcement',
+        'Customs for border enforcement'
+      ],
+      laws: [
+        'Patents Act 1990',
+        'Trade Marks Act 1995',
+        'Copyright Act 1968',
+        'Designs Act 2003'
+      ]
+    }
+  ];
+
+  const selectedGuide = countryGuides.find((guide) => guide.id === selectedCountry);
 
   const emergencyContacts = [
     {
-      name: 'Cyber Crime Helpline',
-      number: '1930',
-      description: 'National cyber crime reporting & helpline',
-      available: '24/7',
-      icon: '🚨'
-    },
-    {
-      name: 'Police Emergency',
-      number: '100',
-      description: 'General police emergency services',
-      available: '24/7',
-      icon: '👮'
-    },
-    {
-      name: 'Women Helpline',
-      number: '181',
-      description: 'For women facing cyber harassment',
-      available: '24/7',
-      icon: '👩'
-    },
-    {
-      name: 'Child Helpline',
-      number: '1098',
-      description: 'For children facing online abuse',
-      available: '24/7',
-      icon: '👶'
-    },
-    {
-      name: 'National Cyber Coordination',
-      number: '155260',
-      description: 'Cyber security incidents',
+      name: 'IP Office Guidance',
+      number: 'Official portal',
+      description: 'Contact your national IP office for guidance and filings',
       available: 'Business hours',
-      icon: '💻'
+      icon: '🏛️'
     },
     {
-      name: 'Banking Fraud',
-      number: '1800-425-3800',
-      description: 'Reserve Bank of India - Banking fraud',
+      name: 'Customs IPR Cell',
+      number: 'Varies by country',
+      description: 'Border enforcement for counterfeit imports',
       available: 'Business hours',
-      icon: '🏦'
+      icon: '🛃'
+    },
+    {
+      name: 'Platform Takedown',
+      number: 'Online',
+      description: 'Use marketplace/hosting takedown or DMCA forms',
+      available: '24/7',
+      icon: '🧾'
+    },
+    {
+      name: 'Legal Counsel',
+      number: 'Local IP lawyer',
+      description: 'For infringement disputes or litigation',
+      available: 'By appointment',
+      icon: '⚖️'
     }
   ];
 
   const complaintTemplates = [
     {
-      title: 'Hacking / Unauthorized Access',
+      title: 'Patent Infringement Notice',
       template: `To,
-The Cyber Crime Cell,
-[Your City]
+[Recipient Name / Company]
+[Address]
 
-Subject: Complaint regarding Unauthorized Access to [Account/System]
+Subject: Notice of Patent Infringement – [Patent Number/Title]
 
-Respected Sir/Madam,
+Dear [Recipient],
 
-I, [Your Name], resident of [Your Address], would like to file a complaint regarding unauthorized access to my [specify: email account/social media account/computer system].
-
-Details of the incident:
-- Date and Time: [DD/MM/YYYY, HH:MM]
-- Platform/Account affected: [Specify]
-- Description: [Describe what happened]
-- Evidence: [List evidence: screenshots, emails, transaction records]
-
-This is in violation of Section 66 of the Information Technology Act, 2000.
-
-I request you to kindly investigate this matter and take necessary legal action against the perpetrator.
-
-Thanking you,
-[Your Name]
-[Contact Number]
-[Email Address]
-Date: [DD/MM/YYYY]`
-    },
-    {
-      title: 'Cyberbullying / Online Harassment',
-      template: `To,
-The Cyber Crime Cell,
-[Your City]
-
-Subject: Complaint regarding Cyberbullying and Online Harassment
-
-Respected Sir/Madam,
-
-I, [Your Name], resident of [Your Address], would like to file a complaint regarding cyberbullying and online harassment.
+I am the owner/authorized licensee of [Patent Number/Title], granted on [Date]. It has come to my attention that [describe infringing product/process] appears to use the patented invention without authorization.
 
 Details:
-- Date harassment started: [DD/MM/YYYY]
-- Platform: [Facebook/Instagram/WhatsApp/Other]
-- Perpetrator's details: [Username/Phone number if known]
-- Nature of harassment: [Describe: threats, abusive messages, etc.]
-- Evidence: Attached screenshots with timestamps
+- Patent: [Number/Title]
+- Infringing activity: [Describe product/process and where observed]
+- Evidence: [Links, screenshots, product listings, technical comparison]
 
-This constitutes an offense under Section 66E of IT Act, 2000 and Section 354D & 509 of IPC.
+I request that you immediately cease and desist all infringing activities and confirm in writing within [X days].
 
-I request immediate action to stop this harassment and legal proceedings against the perpetrator.
+This notice is sent without prejudice to my rights and remedies.
 
-Thanking you,
+Sincerely,
 [Your Name]
-[Contact Number]
-[Email Address]
-Date: [DD/MM/YYYY]`
+[Contact Details]
+[Date]`
     },
     {
-      title: 'Online Financial Fraud',
+      title: 'Trademark Infringement / Counterfeit Report',
       template: `To,
-The Cyber Crime Cell,
-[Your City]
+[Marketplace/Platform/IP Contact]
 
-Subject: Urgent - Online Financial Fraud
+Subject: Trademark Infringement / Counterfeit Report – [Trademark Name/Reg. No.]
 
-Respected Sir/Madam,
+Hello,
 
-I, [Your Name], would like to report an online financial fraud that occurred on [Date].
+I am the owner/representative of the trademark [Name/Reg. No.]. The following listings appear to infringe our trademark or sell counterfeit goods:
 
-Transaction Details:
-- Date & Time: [DD/MM/YYYY, HH:MM]
-- Amount: ₹[Amount]
-- Account/Card: [Last 4 digits]
-- Mode: [UPI/Card/Net Banking]
-- Transaction ID: [If available]
+- Listing URL(s): [Links]
+- Seller/Store: [Name]
+- Evidence: [Screenshots, comparison of genuine vs counterfeit]
 
-Details of fraud:
-[Describe how the fraud occurred: phishing call, fake website, etc.]
+Please remove the infringing listings and confirm action taken. I can provide additional documentation upon request.
 
-I have immediately:
-- Blocked my card/account
-- Informed my bank
-- Called 1930 cyber fraud helpline
-
-This is punishable under Section 66C & 66D of IT Act and Section 420 of IPC.
-
-I request urgent action to trace and recover my money.
-
-Evidence attached: [List screenshots, call records, etc.]
-
-Thanking you,
+Regards,
 [Your Name]
-[Contact Number]
-[Email Address]
-Date: [DD/MM/YYYY]`
+[Brand/Company]
+[Contact Details]`
     },
     {
-      title: 'Identity Theft / Impersonation',
+      title: 'Copyright Takedown Request (DMCA-style)',
       template: `To,
-The Cyber Crime Cell,
-[Your City]
+[Service Provider/Platform]
 
-Subject: Complaint regarding Identity Theft and Impersonation
+Subject: Copyright Infringement Takedown Request
 
-Respected Sir/Madam,
+I am the owner/authorized agent of the copyrighted work described below:
 
-I, [Your Name], would like to report that someone has created a fake profile/account using my personal information and photographs without my consent.
+- Original work: [Title/URL]
+- Infringing material: [URL(s)]
+- Statement of good faith: I believe this use is not authorized by the copyright owner, its agent, or the law.
+- Statement under penalty of perjury: The information in this notice is accurate and I am authorized to act.
+
+Please remove or disable access to the infringing material.
+
+Sincerely,
+[Your Name]
+[Contact Details]
+[Date]`
+    },
+    {
+      title: 'Trade Secret Misappropriation Report',
+      template: `To,
+[Legal Counsel / HR / Law Enforcement]
+
+Subject: Report of Trade Secret Misappropriation
+
+I am reporting suspected misappropriation of confidential trade secrets including: [describe trade secrets].
 
 Details:
-- Platform: [Facebook/Instagram/Other]
-- Fake account URL: [Link]
-- My real account: [Link]
 - Date discovered: [DD/MM/YYYY]
-- Misuse: [Describe how it's being misused]
+- Suspected party: [Name/Role]
+- Evidence: [Access logs, emails, device records]
 
-This is a clear case of identity theft under Section 66C & 66D of the Information Technology Act, 2000.
+Please advise on immediate preservation steps and legal remedies.
 
-I have:
-- Reported to the platform
-- Requested removal
-- Saved screenshots as evidence
-
-I request immediate action to remove the fake account and legal action against the perpetrator.
-
-Evidence attached: [Screenshots, comparison photos]
-
-Thanking you,
+Sincerely,
 [Your Name]
-[Contact Number]
-[Email Address]
-Date: [DD/MM/YYYY]`
+[Contact Details]
+[Date]`
     }
   ];
 
   return (
     <div className="page emergency-page">
       <div className="page-header emergency-header">
-        <h1>🚨 Emergency Tools</h1>
-        <p>Quick access to reporting, complaints, and emergency contacts</p>
+        <h1>🚨 Report Intellectual Property Issues</h1>
+        <p>Country-specific reporting routes, templates, and enforcement guidance</p>
       </div>
+
+      <section className="emergency-country">
+        <div className="info-card">
+          <h3>🌍 Select your country</h3>
+          <p>We’ll show the most relevant IP offices, reporting routes, and laws. This is educational guidance, not legal advice.</p>
+          <select
+            className="country-select"
+            value={selectedCountry}
+            onChange={(e) => setSelectedCountry(e.target.value)}
+            aria-label="Select country"
+          >
+            {countryGuides.map((guide) => (
+              <option key={guide.id} value={guide.id}>{guide.name}</option>
+            ))}
+          </select>
+
+          {selectedGuide && (
+            <div className="country-guide">
+              <div className="country-section">
+                <h4>Where to report</h4>
+                <ul>
+                  {selectedGuide.reportTo.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="country-section">
+                <h4>Applicable laws</h4>
+                <ul>
+                  {selectedGuide.laws.map((law) => (
+                    <li key={law}>{law}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="country-section">
+                <h4>Official portals</h4>
+                <div className="portal-links">
+                  {selectedGuide.portals.map((portal) => (
+                    <a key={portal.url} href={portal.url} target="_blank" rel="noopener noreferrer">
+                      {portal.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
 
       <div className="emergency-tabs">
         <button 
           className={`tab-btn ${activeTab === 'reporter' ? 'active' : ''}`}
           onClick={() => setActiveTab('reporter')}
         >
-          📝 Report Incident
+          📝 Report IPR Issue
         </button>
         <button 
           className={`tab-btn ${activeTab === 'templates' ? 'active' : ''}`}
@@ -244,7 +352,7 @@ Date: [DD/MM/YYYY]`
           className={`tab-btn ${activeTab === 'contacts' ? 'active' : ''}`}
           onClick={() => setActiveTab('contacts')}
         >
-          📞 Emergency Contacts
+          📞 Key Contacts
         </button>
       </div>
 
@@ -252,18 +360,18 @@ Date: [DD/MM/YYYY]`
         {activeTab === 'reporter' && (
           <div className="reporter-section">
             <div className="alert-box">
-              <strong>⚠️ Important:</strong> This form helps you organize information. For official reporting, visit <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a> or call 1930.
+              <strong>⚠️ Important:</strong> This form helps you organize information. Use the country guidance above and official IP office portals to file or escalate.
             </div>
 
             <form onSubmit={handleReportSubmit} className="report-form" noValidate>
               {submitted && (
                 <div style={{ background: '#d1fae5', color: '#065f46', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1.5rem', border: '1px solid #6ee7b7' }}>
-                  ✓ Report prepared successfully! Now visit cybercrime.gov.in to file officially.
+                  ✓ Report prepared successfully! Use the country guidance above to file officially.
                 </div>
               )}
               
               <div className="form-group">
-                <label htmlFor="incident-type">Type of Incident *</label>
+                <label htmlFor="incident-type">Type of IPR Issue *</label>
                 <select 
                   id="incident-type"
                   value={reportData.type}
@@ -275,14 +383,13 @@ Date: [DD/MM/YYYY]`
                   aria-invalid={!!errors.type}
                   aria-describedby={errors.type ? 'incident-type-error' : undefined}
                 >
-                  <option value="">Select incident type...</option>
-                  <option value="hacking">Hacking / Unauthorized Access</option>
-                  <option value="harassment">Cyberbullying / Harassment</option>
-                  <option value="fraud">Financial Fraud</option>
-                  <option value="identity">Identity Theft</option>
-                  <option value="phishing">Phishing / Scam</option>
-                  <option value="stalking">Cyberstalking</option>
-                  <option value="privacy">Privacy Violation</option>
+                  <option value="">Select issue type...</option>
+                  <option value="patent">Patent Infringement</option>
+                  <option value="trademark">Trademark Infringement / Counterfeits</option>
+                  <option value="copyright">Copyright Infringement</option>
+                  <option value="trade-secret">Trade Secret Theft</option>
+                  <option value="design">Design Infringement</option>
+                  <option value="domain">Cybersquatting / Domain Abuse</option>
                   <option value="other">Other</option>
                 </select>
                 {errors.type && <span id="incident-type-error" className="error-message">{errors.type}</span>}
@@ -327,7 +434,7 @@ Date: [DD/MM/YYYY]`
                 <textarea
                   id="description"
                   rows="6"
-                  placeholder="Describe what happened in detail: date, time, how it occurred, who was involved (if known)..."
+                  placeholder="Describe what happened: product/service, where you saw it, dates, parties involved, and how it conflicts with your rights..."
                   value={reportData.description}
                   onChange={(e) => {
                     setReportData({...reportData, description: e.target.value});
@@ -345,7 +452,7 @@ Date: [DD/MM/YYYY]`
                 <textarea
                   id="evidence"
                   rows="4"
-                  placeholder="List evidence you have: screenshots (with timestamps), emails, messages, transaction IDs, URLs, phone numbers..."
+                  placeholder="List evidence: registration numbers, certificates, screenshots, URLs, invoices, product photos, source files..."
                   value={reportData.evidence}
                   onChange={(e) => setReportData({...reportData, evidence: e.target.value})}
                   aria-label="Evidence details (optional)"
@@ -355,12 +462,12 @@ Date: [DD/MM/YYYY]`
               <div className="evidence-tips">
                 <h4>📸 Evidence Collection Tips:</h4>
                 <ul>
-                  <li>Take screenshots with visible timestamps</li>
-                  <li>Save original emails and messages</li>
-                  <li>Note down URLs and usernames</li>
-                  <li>Keep transaction IDs and receipts</li>
-                  <li>Record dates and times of incidents</li>
-                  <li>Don't delete anything - it's evidence!</li>
+                  <li>Capture listings with timestamps and seller details</li>
+                  <li>Save your registration certificates or filings</li>
+                  <li>Keep source files, sketches, and drafts</li>
+                  <li>Preserve invoices and proof of first use</li>
+                  <li>Record dates and locations of infringement</li>
+                  <li>Do not alter originals; keep clean copies</li>
                 </ul>
               </div>
 
@@ -373,10 +480,11 @@ Date: [DD/MM/YYYY]`
               <h3>📋 Next Steps:</h3>
               <ol>
                 <li>Save this information in a document</li>
-                <li>Gather all evidence (screenshots, emails, etc.)</li>
-                <li>Visit <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a> to file official complaint</li>
-                <li>Or visit your nearest cyber crime police station</li>
-                <li>Keep a copy of your complaint acknowledgment</li>
+                <li>Gather evidence (registrations, URLs, screenshots, proof of use)</li>
+                <li>Use the official portals listed for your country</li>
+                <li>Submit marketplace or hosting takedown requests if needed</li>
+                <li>Consider consulting an IP professional for enforcement</li>
+                <li>Keep a copy of your submission acknowledgment</li>
               </ol>
             </div>
           </div>
@@ -385,7 +493,7 @@ Date: [DD/MM/YYYY]`
         {activeTab === 'templates' && (
           <div className="templates-section">
             <div className="info-box">
-              <strong>💡 How to use:</strong> Select a template, copy it, fill in your details, and use it to file your complaint at the cyber cell or online portal.
+              <strong>💡 How to use:</strong> Select a template, copy it, fill in your details, and send it to the platform, infringer, or counsel.
             </div>
 
             <div className="templates-grid">
@@ -415,7 +523,7 @@ Date: [DD/MM/YYYY]`
                 <li>Be specific with dates, times, and descriptions</li>
                 <li>Attach all relevant evidence</li>
                 <li>Keep a copy for your records</li>
-                <li>Submit at cyber cell or upload to cybercrime.gov.in</li>
+                <li>Submit to the appropriate IP office, platform, or counsel</li>
               </ul>
             </div>
           </div>
@@ -424,16 +532,16 @@ Date: [DD/MM/YYYY]`
         {activeTab === 'contacts' && (
           <div className="contacts-section">
             <div className="urgent-alert">
-              <h3>🚨 In Immediate Danger?</h3>
+              <h3>🚨 Counterfeit or high-risk cases?</h3>
               <div className="urgent-actions">
-                <a href="tel:100" className="urgent-btn">
-                  <span className="btn-icon">👮</span>
-                  <span>Call Police: 100</span>
-                </a>
-                <a href="tel:1930" className="urgent-btn">
-                  <span className="btn-icon">💻</span>
-                  <span>Cyber Helpline: 1930</span>
-                </a>
+                <button type="button" className="urgent-btn">
+                  <span className="btn-icon">🧾</span>
+                  <span>File a takedown request</span>
+                </button>
+                <button type="button" className="urgent-btn">
+                  <span className="btn-icon">⚖️</span>
+                  <span>Contact IP counsel</span>
+                </button>
               </div>
             </div>
 
@@ -442,9 +550,7 @@ Date: [DD/MM/YYYY]`
                 <div key={index} className="contact-card-large">
                   <div className="contact-icon-large">{contact.icon}</div>
                   <h3>{contact.name}</h3>
-                  <div className="contact-number">
-                    <a href={`tel:${contact.number}`}>{contact.number}</a>
-                  </div>
+                  <div className="contact-number">{contact.number}</div>
                   <p className="contact-desc">{contact.description}</p>
                   <div className="contact-availability">
                     <span className="availability-badge">{contact.available}</span>
@@ -456,37 +562,37 @@ Date: [DD/MM/YYYY]`
             <div className="online-resources">
               <h3>🌐 Online Resources:</h3>
               <div className="resources-list">
-                <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" className="resource-link">
+                <a href="https://www.wipo.int/" target="_blank" rel="noopener noreferrer" className="resource-link">
                   <span>🔗</span>
                   <div>
-                    <strong>National Cyber Crime Portal</strong>
-                    <p>File online complaints, track status</p>
+                    <strong>WIPO (Global IP Guidance)</strong>
+                    <p>International IP resources and dispute resolution</p>
                   </div>
                 </a>
-                <a href="https://www.ncw.nic.in" target="_blank" rel="noopener noreferrer" className="resource-link">
+                <a href="https://www.wipo.int/amc/en/" target="_blank" rel="noopener noreferrer" className="resource-link">
                   <span>🔗</span>
                   <div>
-                    <strong>National Commission for Women</strong>
-                    <p>For women facing cyber harassment</p>
+                    <strong>WIPO Arbitration & Mediation</strong>
+                    <p>Dispute resolution options for IP conflicts</p>
                   </div>
                 </a>
-                <a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" className="resource-link">
+                <a href="https://www.wipo.int/amc/en/domains/" target="_blank" rel="noopener noreferrer" className="resource-link">
                   <span>🔗</span>
                   <div>
-                    <strong>Income Tax Department</strong>
-                    <p>Report tax-related cyber fraud</p>
+                    <strong>Domain Name Disputes (UDRP)</strong>
+                    <p>Resolve cybersquatting disputes</p>
                   </div>
                 </a>
               </div>
             </div>
 
             <div className="local-info">
-              <h3>📍 Local Cyber Crime Cells:</h3>
-              <p>Find your nearest cyber crime police station:</p>
+              <h3>📍 Local IP Offices:</h3>
+              <p>Check your national IP office for local contacts and guidance:</p>
               <ul>
-                <li><strong>Pune Cyber Cell:</strong> Shivajinagar Police Station - 020-26126296</li>
-                <li><strong>Mumbai Cyber Cell:</strong> BKC - 022-26471101</li>
-                <li>Visit your local police station and ask for cyber crime wing</li>
+                <li>Use the country selector above to access official portals</li>
+                <li>Contact customs for counterfeit border enforcement</li>
+                <li>Consult a qualified IP attorney for litigation or settlement</li>
               </ul>
             </div>
           </div>

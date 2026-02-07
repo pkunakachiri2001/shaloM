@@ -15,15 +15,15 @@ export default function Layout({ children }) {
 
   const navItems = [
     { path: '/', label: 'Home', icon: '🏠' },
-    { path: '/academy', label: 'Academy', icon: '📚' },
-    { path: '/identifier', label: 'Identifier', icon: '🔍' },
-    { path: '/emergency', label: 'Emergency', icon: '🚨' },
-    { path: '/news', label: 'News', icon: '📰' },
+    { path: '/academy', label: 'IPR Academy', icon: '📚' },
+    { path: '/identifier', label: 'IPR Identifier', icon: '🔍' },
+    { path: '/emergency', label: 'Report IPR', icon: '🚨' },
+    { path: '/news', label: 'IPR News', icon: '📰' },
     { path: '/dashboard', label: 'Dashboard', icon: '📊' },
     { path: '/case-studies', label: 'Cases', icon: '📋' },
     { path: '/simulator', label: 'Simulator', icon: '🎯' },
     { path: '/timeline', label: 'Timeline', icon: '📅' },
-    { path: '/resources', label: 'Resources', icon: '📚' },
+    { path: '/resources', label: 'Resources', icon: '📘' },
   ];
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Layout({ children }) {
       }
 
       backPromptActive.current = true;
-      const shouldExit = window.confirm('Do you want to close CyberGuard Pro?');
+      const shouldExit = window.confirm('Do you want to close Amicus IPR?');
       backPromptActive.current = false;
       if (shouldExit) {
         CapacitorApp.exitApp();
@@ -65,15 +65,15 @@ export default function Layout({ children }) {
       <header className="header">
         <div className="header-content">
           <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <span className="logo-icon">🛡️</span>
-            <span className="logo-text">CyberGuard Pro</span>
+            <span className="logo-icon">⚖️</span>
+            <span className="logo-text">Amicus IPR</span>
           </Link>
           
           {/* Quick Action Buttons - Desktop */}
           <div className="header-actions">
             <Link to="/academy" className="header-action-btn header-btn-primary">
               <span>🎯</span>
-              <span>Learn</span>
+              <span>Learn IPR</span>
             </Link>
             <Link to="/emergency" className="header-action-btn header-btn-danger">
               <span>🚨</span>
@@ -81,7 +81,7 @@ export default function Layout({ children }) {
             </Link>
             <Link to="/identifier" className="header-action-btn header-btn-info">
               <span>❓</span>
-              <span>Identify</span>
+              <span>Identify IPR</span>
             </Link>
           </div>
           
@@ -192,35 +192,35 @@ export default function Layout({ children }) {
         <div className="footer-container">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="footer-logo-icon">🛡️</span>
-              <span className="footer-logo-text">CyberGuard Pro</span>
+              <span className="footer-logo-icon">⚖️</span>
+              <span className="footer-logo-text">Amicus IPR</span>
             </div>
-            <p className="footer-tagline">Your Global Digital Legal Companion</p>
+            <p className="footer-tagline">Your Intellectual Property Rights Companion</p>
           </div>
 
           <div className="footer-links">
             <div className="footer-column">
               <h4>Quick Links</h4>
-              <Link to="/academy">Cyber Law Academy</Link>
-              <Link to="/identifier">Crime Identifier</Link>
-              <Link to="/emergency">Emergency Tools</Link>
-              <Link to="/career">Career Hub</Link>
+              <Link to="/academy">IPR Academy</Link>
+              <Link to="/identifier">IPR Identifier</Link>
+              <Link to="/emergency">Report IPR</Link>
+              <Link to="/career">IP Career Hub</Link>
             </div>
 
             <div className="footer-column">
               <h4>Learn</h4>
               <Link to="/case-studies">Case Studies</Link>
-              <Link to="/simulator">Incident Simulator</Link>
+              <Link to="/simulator">Scenario Simulator</Link>
               <Link to="/dashboard">Dashboard</Link>
               <Link to="/bookmarks">Bookmarks</Link>
             </div>
 
             <div className="footer-column">
               <h4>Resources</h4>
-              <Link to="/news">Latest News</Link>
-              <a href="https://www.itu.int/en/ITU-D/Cybersecurity/Pages/Legal-Measures.aspx" target="_blank" rel="noopener noreferrer">Global Cyber Law</a>
-              <a href="https://www.unodc.org/unodc/en/cybercrime/" target="_blank" rel="noopener noreferrer">UN Cybercrime</a>
-              <a href="https://www.interpol.int" target="_blank" rel="noopener noreferrer">INTERPOL</a>
+              <Link to="/news">IPR News</Link>
+              <a href="https://www.wipo.int/" target="_blank" rel="noopener noreferrer">WIPO</a>
+              <a href="https://euipo.europa.eu/" target="_blank" rel="noopener noreferrer">EUIPO</a>
+              <a href="https://www.uspto.gov/" target="_blank" rel="noopener noreferrer">USPTO</a>
             </div>
           </div>
         </div>
@@ -228,15 +228,15 @@ export default function Layout({ children }) {
         <div className="footer-bottom">
           <div className="footer-creator">
             <p className="creator-text">
-              <strong>CyberGuard Pro</strong> 🛡️
+              <strong>Amicus IPR</strong> ⚖️
             </p>
             <p className="creator-details">
-              Global Cyber Law Education & Protection | Law & Technology Initiative
+              Intellectual Property Rights Guidance | Law & Innovation Initiative
             </p>
           </div>
           <div className="footer-copyright">
-            <p>&copy; {new Date().getFullYear()} CyberGuard Pro. Educational Project.</p>
-            <p className="footer-disclaimer">For educational purposes. Consult legal professionals for advice.</p>
+            <p>&copy; {new Date().getFullYear()} Amicus IPR. Educational Project.</p>
+            <p className="footer-disclaimer">For educational purposes. Consult qualified IP counsel for advice.</p>
           </div>
         </div>
       </footer>

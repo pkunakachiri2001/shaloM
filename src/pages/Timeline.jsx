@@ -2,64 +2,64 @@ import '../styles/Timeline.css';
 
 const TIMELINE_EVENTS = [
   {
+    year: 1883,
+    icon: '🌍',
+    title: 'Paris Convention',
+    description: 'Foundational treaty for patents, trademarks, and industrial designs.'
+  },
+  {
+    year: 1886,
+    icon: '📚',
+    title: 'Berne Convention',
+    description: 'Establishes international copyright protection standards.'
+  },
+  {
+    year: 1994,
+    icon: '⚖️',
+    title: 'TRIPS Agreement',
+    description: 'Integrates IP protection into global trade rules under the WTO.'
+  },
+  {
+    year: 1996,
+    icon: '🔗',
+    title: 'WIPO Internet Treaties',
+    description: 'Modernizes copyright for the digital environment.'
+  },
+  {
     year: 1998,
     icon: '💻',
-    title: 'Digital Millennium Copyright Act (DMCA)',
-    description: 'United States enacts DMCA, establishing first comprehensive cybercrime law framework globally.'
+    title: 'DMCA (United States)',
+    description: 'Introduces digital copyright enforcement and takedown procedures.'
   },
   {
     year: 2000,
-    icon: '⚖️',
-    title: 'IT Act 2000 (India)',
-    description: 'India passes Information Technology Act, landmark cyber law in Asia-Pacific region.'
+    icon: '🇮🇳',
+    title: 'IP India Modernization',
+    description: 'Expanded filing systems and reforms for patents and trademarks.'
   },
   {
-    year: 2001,
-    icon: '🦠',
-    title: 'ILOVEYOU Worm Attack',
-    description: 'Global computer worm causes $5.6B in damages, highlights need for cyber laws.'
-  },
-  {
-    year: 2003,
-    icon: '📋',
-    title: 'EU Directive 2002/58/EC',
-    description: 'European Union establishes privacy rights for electronic communications.'
-  },
-  {
-    year: 2012,
-    icon: '🔐',
-    title: 'LinkedIn Data Breach',
-    description: '6.5 million user passwords leaked, triggers stronger data protection laws.'
-  },
-  {
-    year: 2016,
-    icon: '🇪🇺',
-    title: 'GDPR Adopted',
-    description: 'European Union adopts GDPR, becomes global benchmark for data protection.'
+    year: 2011,
+    icon: '🔬',
+    title: 'America Invents Act',
+    description: 'US shifts to a first-inventor-to-file patent system.'
   },
   {
     year: 2017,
-    icon: '🌍',
-    title: 'WannaCry Ransomware',
-    description: 'Global ransomware attack affects 200,000+ computers in 150 countries.'
+    icon: '🛃',
+    title: 'Stronger Customs Enforcement',
+    description: 'Global focus on counterfeit seizure and border protection.'
   },
   {
-    year: 2018,
-    icon: '📊',
-    title: 'Cambridge Analytica Scandal',
-    description: 'Facebook data misuse scandal leads to renewed focus on privacy laws.'
-  },
-  {
-    year: 2020,
-    icon: '🛡️',
-    title: 'Zoom Security Upgrades',
-    description: 'Video conferencing security issues lead to privacy regulation updates.'
+    year: 2021,
+    icon: '💡',
+    title: 'Oracle v. Google Decision',
+    description: 'Clarifies fair use for software interfaces in the US.'
   },
   {
     year: 2024,
-    icon: '🔮',
-    title: 'AI & Cybersecurity Laws',
-    description: 'Nations develop laws for AI-powered cyber threats and defenses.'
+    icon: '🤖',
+    title: 'AI & IP Policy Debates',
+    description: 'Governments refine IP policies for AI-generated content.'
   }
 ];
 
@@ -67,8 +67,8 @@ export default function Timeline() {
   return (
     <div className="timeline-page">
       <div className="timeline-header">
-        <h1>📅 Cyber Law & Crime Timeline</h1>
-        <p>Evolution of cybersecurity regulations and major incidents</p>
+        <h1>📅 Intellectual Property Timeline</h1>
+        <p>Key milestones in global IP protection and enforcement</p>
       </div>
 
       <div className="timeline-container">
@@ -88,7 +88,7 @@ export default function Timeline() {
       </div>
 
       <div className="timeline-footer">
-        <p>This timeline shows key milestones in cyber law development and major security events that shaped regulations.</p>
+        <p>This timeline highlights major milestones that shaped modern intellectual property frameworks.</p>
       </div>
     </div>
   );

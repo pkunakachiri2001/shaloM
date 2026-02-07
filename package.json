@@ -1,7 +1,7 @@
 {
-  "name": "cyberguard-pro",
+  "name": "amicus-ipr",
   "version": "2.0.0",
-  "description": "CyberGuard Pro - Global Digital Legal Companion for Cyber Law Education & Protection",
+  "description": "Amicus IPR - Your AI-powered Intellectual Property Rights companion, offering practical help, reporting guidance, and applicable laws for issues like patent theft, tailored to your country.",
   "main": "index.html",
   "scripts": {
     "dev": "vite",
@@ -13,13 +13,16 @@
     "test:coverage": "vitest run --coverage"
   },
   "keywords": [
+    "IPR",
+    "intellectual property",
+    "patent",
+    "trademark",
+    "copyright",
     "legal",
-    "cyber-law",
-    "education",
-    "pwa",
-    "cyber-crime"
+    "guidance",
+    "chatbot"
   ],
-  "author": "CyberGuard Pro Team",
+  "author": "Amicus IPR Team",
   "license": "MIT",
   "dependencies": {
     "@capacitor/app": "^8.0.0",

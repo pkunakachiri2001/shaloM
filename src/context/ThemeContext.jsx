@@ -4,12 +4,12 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [isDark, setIsDark] = useState(() => {
-    const saved = localStorage.getItem('cyberguard-theme');
+    const saved = localStorage.getItem('amicus-ipr-theme');
     return saved ? JSON.parse(saved) : false;
   });
 
   useEffect(() => {
-    localStorage.setItem('cyberguard-theme', JSON.stringify(isDark));
+    localStorage.setItem('amicus-ipr-theme', JSON.stringify(isDark));
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   }, [isDark]);
 

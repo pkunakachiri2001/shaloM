@@ -3,101 +3,101 @@ import '../styles/ResourceLibrary.css';
 const RESOURCES = [
   {
     id: 1,
-    category: 'Laws & Acts',
-    icon: '📖',
+    category: 'IP Offices',
+    icon: '🏛️',
     items: [
       {
-        title: 'GDPR (General Data Protection Regulation)',
-        description: 'European Union\'s comprehensive data protection regulation',
-        link: 'https://gdpr-info.eu/',
-        tags: ['EU', 'Privacy', 'Data Protection']
+        title: 'WIPO (World Intellectual Property Organization)',
+        description: 'Global IP treaties, resources, and filing guidance',
+        link: 'https://www.wipo.int/',
+        tags: ['Global', 'IPR']
       },
       {
-        title: 'US Computer Fraud & Abuse Act (CFAA)',
-        description: 'Federal law addressing computer-related crimes in the US',
-        link: 'https://www.justice.gov/criminal-ccips',
-        tags: ['USA', 'Cybercrime', 'Federal']
+        title: 'USPTO (United States)',
+        description: 'Patent and trademark filings, guidance, and tools',
+        link: 'https://www.uspto.gov/',
+        tags: ['USA', 'Patents', 'Trademarks']
       },
       {
-        title: 'India Information Technology Act 2000',
-        description: 'Indian law governing electronic commerce and cybercrime',
-        link: 'https://www.meity.gov.in',
-        tags: ['India', 'Cybercrime', 'E-commerce']
+        title: 'EUIPO (European Union)',
+        description: 'EU trademarks and design registrations',
+        link: 'https://euipo.europa.eu/',
+        tags: ['EU', 'Trademarks', 'Designs']
       }
     ]
   },
   {
     id: 2,
-    category: 'Organizations',
-    icon: '🏢',
+    category: 'National Portals',
+    icon: '📍',
     items: [
       {
-        title: 'INTERPOL - International Police',
-        description: 'Global law enforcement cybercrime operations',
-        link: 'https://www.interpol.int',
-        tags: ['International', 'Law Enforcement']
+        title: 'UK Intellectual Property Office',
+        description: 'UK patents, trademarks, and designs',
+        link: 'https://www.gov.uk/government/organisations/intellectual-property-office',
+        tags: ['UK', 'IPR']
       },
       {
-        title: 'UN Office on Drugs & Crime (UNODC)',
-        description: 'United Nations cybercrime initiatives and resources',
-        link: 'https://www.unodc.org/unodc/en/cybercrime/',
-        tags: ['UN', 'International', 'Crime']
+        title: 'IP India (CGPDTM)',
+        description: 'Patents, trademarks, designs, and GI in India',
+        link: 'https://ipindia.gov.in/',
+        tags: ['India', 'IPR']
       },
       {
-        title: 'National Cybersecurity Centers (CISA - USA)',
-        description: 'US government cybersecurity agency',
-        link: 'https://www.cisa.gov',
-        tags: ['USA', 'Government', 'Security']
+        title: 'Copyright Office (India)',
+        description: 'Copyright registration and guidance',
+        link: 'https://copyright.gov.in/',
+        tags: ['India', 'Copyright']
       }
     ]
   },
   {
     id: 3,
-    category: 'Security Resources',
-    icon: '🛡️',
+    category: 'Dispute Resolution',
+    icon: '⚖️',
     items: [
       {
-        title: 'NIST Cybersecurity Framework',
-        description: 'Comprehensive cybersecurity standards and best practices',
-        link: 'https://www.nist.gov/cyberframework',
-        tags: ['Standards', 'Best Practices']
+        title: 'WIPO Arbitration & Mediation',
+        description: 'IP dispute resolution and mediation services',
+        link: 'https://www.wipo.int/amc/en/',
+        tags: ['Disputes', 'Mediation']
       },
       {
-        title: 'OWASP (Open Web Application Security Project)',
-        description: 'Web application security testing and standards',
-        link: 'https://owasp.org',
-        tags: ['Web Security', 'Application Security']
+        title: 'WIPO Domain Disputes (UDRP)',
+        description: 'Domain name dispute resolution guidance',
+        link: 'https://www.wipo.int/amc/en/domains/',
+        tags: ['Domains', 'Cybersquatting']
       },
       {
-        title: 'ISO 27001 Information Security Standard',
-        description: 'International standard for information security management',
-        link: 'https://www.iso.org/isoiec-27001-information-security-management.html',
-        tags: ['Standards', 'ISO', 'Management']
+        title: 'USITC Section 337',
+        description: 'US import-related IP enforcement',
+        link: 'https://www.usitc.gov/',
+        tags: ['USA', 'Enforcement']
       }
     ]
   },
   {
     id: 4,
-    category: 'Educational Resources',
+    category: 'Learning Resources',
     icon: '📚',
     items: [
       {
-        title: 'Coursera Cybersecurity Courses',
-        description: 'Free and paid cybersecurity and law courses',
-        link: 'https://www.coursera.org/search?query=cybersecurity',
-        tags: ['Learning', 'Online Courses']
+        title: 'WIPO Learn',
+        description: 'Free IP courses and certifications',
+        link: 'https://welc.wipo.int/',
+        tags: ['Learning', 'Courses']
       },
       {
-        title: 'IEEE Cybersecurity & Privacy',
-        description: 'IEEE publications on cybersecurity and legal topics',
-        link: 'https://www.ieee.org',
-        tags: ['Research', 'Publications']
+        title: 'IPO Academy (India)',
+        description: 'Training and awareness programs on IP',
+        link: 'https://ipindia.gov.in/ipo-academy.htm',
+        tags: ['India', 'Training']
       },
       {
-        title: 'World Economic Forum Cyber Resources',
-        description: 'Global insights on cybercrime and cybersecurity laws',
-        link: 'https://www.weforum.org',
-        tags: ['Global', 'Trends', 'Reports']
+        title: 'Copyright Office (US) - Education',
+        description: 'Copyright basics and FAQs',
+        link: 'https://www.copyright.gov/education/',
+        tags: ['USA', 'Copyright']
       }
     ]
   }
@@ -107,8 +107,8 @@ export default function ResourceLibrary() {
   return (
     <div className="resource-library-page">
       <div className="library-header">
-        <h1>📚 Cyber Law Resource Library</h1>
-        <p>Curated collection of laws, organizations, and learning resources</p>
+        <h1>📚 IPR Resource Library</h1>
+        <p>Curated collection of IP offices, dispute resolution, and learning resources</p>
       </div>
 
       <div className="resources-container">
@@ -148,11 +148,11 @@ export default function ResourceLibrary() {
       <div className="library-footer">
         <h3>💡 Pro Tips</h3>
         <ul>
-          <li>Start with GDPR or your country's cyber laws for foundational knowledge</li>
-          <li>NIST and ISO standards provide industry best practices</li>
-          <li>INTERPOL and UNODC offer international cyber law resources</li>
-          <li>Regular training through OWASP and Coursera keeps you updated</li>
-          <li>Bookmark resources for quick reference during incident response</li>
+          <li>Start with your national IP office resources for local rules</li>
+          <li>Keep registration certificates and proof of use organized</li>
+          <li>Use WIPO guidance for cross-border strategy</li>
+          <li>Follow platform takedown procedures for online infringements</li>
+          <li>Bookmark key portals for quick reporting</li>
         </ul>
       </div>
     </div>

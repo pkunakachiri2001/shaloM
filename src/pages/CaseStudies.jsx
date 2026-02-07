@@ -5,113 +5,82 @@ import '../styles/CaseStudies.css';
 const CASE_STUDIES = [
   {
     id: 1,
-    title: 'WannaCry Ransomware Attack (2017)',
-    year: 2017,
-    severity: 'Critical',
-    icon: '🦠',
-    summary: 'A global ransomware attack affecting hundreds of thousands of computers across 150+ countries.',
+    title: 'Apple v. Samsung – Design & Utility Patents',
+    year: 2011,
+    severity: 'High',
+    icon: '📱',
+    summary: 'A landmark dispute over smartphone design and utility patents across multiple jurisdictions.',
     timeline: [
-      { date: 'May 12, 2017', event: 'Initial detection of WannaCry propagation', impact: 'First reported cases in UK hospitals' },
-      { date: 'May 13, 2017', event: 'Rapid global spread', impact: 'Spread to 100+ countries' },
-      { date: 'May 15, 2017', event: 'Kill switch activated', impact: 'Spread halted but damage done' }
+      { date: '2011', event: 'Initial filings', impact: 'Global litigation begins' },
+      { date: '2012', event: 'Major jury verdict', impact: 'Large damages awarded' },
+      { date: '2016', event: 'Supreme Court review', impact: 'Design patent damages clarified' }
     ],
     lessons: [
-      '💡 Regular software updates are critical security measures',
-      '💡 Exploit mitigation prevents known vulnerability attacks',
-      '💡 Backup systems enable recovery from ransomware',
-      '💡 Employee training reduces infection vectors'
+      '💡 Design patents can drive significant damages',
+      '💡 Claim scope and evidence are critical',
+      '💡 Litigation can span multiple jurisdictions',
+      '💡 Early portfolio strategy matters'
     ],
-    applicableLaws: ['GDPR', 'Computer Crime & Cybersecurity Laws', 'Data Protection Act'],
-    question: 'What would you do if your organization was hit by ransomware?',
+    applicableLaws: ['Patent law', 'Design protection rules'],
+    question: 'What is a key takeaway from this case?',
     answers: [
-      'Pay the ransom immediately',
-      'Isolate affected systems, backup unencrypted data, notify authorities, restore from backups',
-      'Delete all files to prevent spread',
-      'Ignore and hope it goes away'
+      'Design protection is irrelevant',
+      'Portfolio strategy and evidence drive outcomes',
+      'Only trademarks matter',
+      'Patents cannot be enforced globally'
     ],
     correctAnswer: 1
   },
   {
     id: 2,
-    title: 'Equifax Data Breach (2017)',
-    year: 2017,
-    severity: 'Critical',
-    icon: '🔓',
-    summary: 'Unauthorized access to sensitive personal data of 147 million people.',
-    timeline: [
-      { date: 'March-April 2017', event: 'Breach occurs', impact: '147M records exposed' },
-      { date: 'July 2017', event: 'Equifax discovers breach', impact: '3 months later' },
-      { date: 'September 7, 2017', event: 'Public disclosure', impact: 'Massive public exposure' }
-    ],
-    lessons: [
-      '💡 Timely vulnerability patching is essential',
-      '💡 Breach notification laws require disclosure within specific timeframes',
-      '💡 Companies must implement robust access controls',
-      '💡 Data minimization principle: collect only necessary data'
-    ],
-    applicableLaws: ['GDPR Article 33-34', 'Personal Data Protection Laws', 'Breach Notification Laws'],
-    question: 'How long should companies take to notify users of a data breach?',
-    answers: [
-      'Within 1 year',
-      'Whenever they feel like it',
-      'Within 72 hours (per GDPR)',
-      'Only if requested'
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 3,
-    title: 'Facebook-Cambridge Analytica Scandal (2018)',
-    year: 2018,
+    title: 'Oracle v. Google – API Copyright',
+    year: 2010,
     severity: 'High',
-    icon: '📊',
-    summary: 'Unauthorized collection and misuse of 87 million Facebook users\' personal data.',
+    icon: '💻',
+    summary: 'A high-profile dispute on whether API declarations are copyrightable and fair use.',
     timeline: [
-      { date: '2013-2015', event: 'Data collection begins', impact: 'Unauthorized data access' },
-      { date: 'March 2018', event: 'Story breaks', impact: 'Public outcry' },
-      { date: 'April 2018', event: 'Congressional hearing', impact: 'Mark Zuckerberg testifies' }
+      { date: '2010', event: 'Complaint filed', impact: 'Developer community attention' },
+      { date: '2016', event: 'Jury fair use verdict', impact: 'Google wins at trial' },
+      { date: '2021', event: 'US Supreme Court decision', impact: 'Fair use affirmed' }
     ],
     lessons: [
-      '💡 Users must provide explicit informed consent for data usage',
-      '💡 Third-party app access requires strict verification',
-      '💡 Data sharing agreements must be transparent',
-      '💡 Platform responsibility for user data'
+      '💡 Fair use can apply to software interfaces',
+      '💡 Licensing strategies should be explicit',
+      '💡 Documentation and intent matter'
     ],
-    applicableLaws: ['GDPR Consent Principles', 'Personal Privacy Laws', 'FTC Act'],
-    question: 'What is the key principle violated in this scandal?',
+    applicableLaws: ['Copyright law', 'Fair use doctrine'],
+    question: 'What was central to the final decision?',
     answers: [
-      'Users gave explicit consent',
-      'Data was used without proper authorization',
-      'Data was encrypted',
-      'No personal data was involved'
+      'Trademark confusion',
+      'Fair use analysis',
+      'Trade secret theft',
+      'Patent invalidity'
     ],
     correctAnswer: 1
   },
   {
-    id: 4,
-    title: 'Zoom Privacy Issues (2020)',
-    year: 2020,
+    id: 3,
+    title: 'Adidas Three-Stripes – Trademark Protection',
+    year: 2022,
     severity: 'Medium',
-    icon: '🎥',
-    summary: 'Multiple security vulnerabilities and privacy concerns in Zoom video conferencing.',
+    icon: '👟',
+    summary: 'Ongoing enforcement actions to protect distinctive brand identifiers.',
     timeline: [
-      { date: 'April 2020', event: 'Zoom-bombing incidents reported', impact: 'Unauthorized meeting access' },
-      { date: 'April 2020', event: 'Privacy concerns highlighted', impact: 'Data encryption issues' },
-      { date: 'April-May 2020', event: 'Zoom enhances security', impact: 'Fixes implemented' }
+      { date: '2010-2022', event: 'Multiple enforcement actions', impact: 'Refined standards for distinctiveness' },
+      { date: '2022', event: 'Key rulings', impact: 'Clarity on scope of protection' }
     ],
     lessons: [
-      '💡 End-to-end encryption must be default for sensitive communications',
-      '💡 Password protection should be required for public meetings',
-      '💡 Rapid security response is critical',
-      '💡 Public communication during issues builds trust'
+      '💡 Distinctiveness must be proven and maintained',
+      '💡 Evidence of use is essential',
+      '💡 Consistent enforcement protects brand value'
     ],
-    applicableLaws: ['Communication Privacy Laws', 'Consumer Protection Regulations', 'Accessibility Laws'],
-    question: 'How can meeting organizers prevent unauthorized access?',
+    applicableLaws: ['Trademark law', 'Unfair competition'],
+    question: 'Which factor is crucial for trademark enforcement?',
     answers: [
-      'Share meeting IDs publicly',
-      'Use strong passwords and waiting rooms',
-      'Send links on public social media',
-      'Allow any user to join'
+      'Public domain use',
+      'Distinctiveness and evidence of use',
+      'Patent filings',
+      'Trade secret measures'
     ],
     correctAnswer: 1
   }
@@ -128,8 +97,8 @@ export default function CaseStudies() {
   return (
     <div className="case-studies-page">
       <div className="case-studies-header">
-        <h1>📋 Real Cyber Crime Case Studies</h1>
-        <p>Learn from major incidents that shaped cyber law</p>
+        <h1>📋 Real IPR Case Studies</h1>
+        <p>Learn from landmark IP disputes and enforcement outcomes</p>
       </div>
 
       {!selectedCase ? (
@@ -234,7 +203,7 @@ export default function CaseStudies() {
             {userAnswer !== null && (
               <div className={`feedback ${userAnswer === selectedCase.correctAnswer ? 'correct-feedback' : 'incorrect-feedback'}`}>
                 {userAnswer === selectedCase.correctAnswer
-                  ? '✓ Correct! This is the proper cybersecurity and legal response.'
+                  ? '✓ Correct! This is the proper IPR and legal response.'
                   : '✗ Not quite right. The best approach considers legal requirements and security best practices.'}
               </div>
             )}

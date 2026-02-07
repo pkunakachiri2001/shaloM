@@ -1,141 +1,93 @@
 import { useState } from 'react';
 
-const crimeDatabase = [
+const iprDatabase = [
   {
-    keywords: ['hacked', 'hack', 'unauthorized access', 'account compromised', 'password stolen'],
-    crime: 'Unauthorized Access / Hacking',
-    section: 'IT Act Section 66',
+    keywords: ['patent', 'invention copied', 'utility patent', 'process copied', 'product copied'],
+    issue: 'Patent Infringement',
+    law: 'Patent laws (country-specific)',
     severity: 'High',
-    description: 'Someone has accessed your computer system, account, or device without your permission.',
+    description: 'A product or process appears to use your patented invention without authorization.',
     actions: [
-      'Immediately change all passwords',
-      'Enable two-factor authentication',
-      'Check for unauthorized transactions or activities',
-      'Save all evidence (emails, screenshots, logs)',
-      'File complaint at cybercrime.gov.in',
-      'Report to local cyber cell',
-      'Inform your bank if financial accounts affected'
+      'Confirm your patent status and claims scope',
+      'Collect product samples, listings, and technical comparisons',
+      'Document dates of first discovery and sales',
+      'Send a cease-and-desist notice (if appropriate)',
+      'Consult an IP attorney for infringement analysis',
+      'Use the Report page for country-specific routes'
     ],
-    penalty: 'Imprisonment up to 3 years and/or fine up to ₹5 lakh'
+    remedies: 'Injunctions, damages, account of profits (varies by country)'
   },
   {
-    keywords: ['bully', 'harass', 'threaten', 'abuse online', 'trolling', 'offensive message'],
-    crime: 'Cyberbullying / Online Harassment',
-    section: 'IT Act Section 66E, 67 | IPC Section 354D, 509',
+    keywords: ['trademark', 'logo copied', 'brand copied', 'counterfeit', 'fake brand', 'lookalike'],
+    issue: 'Trademark Infringement / Counterfeiting',
+    law: 'Trademark laws (country-specific)',
+    severity: 'High',
+    description: 'Someone is using a confusingly similar brand, logo, or name, or selling counterfeits.',
+    actions: [
+      'Collect listings, screenshots, and product photos',
+      'Document proof of trademark ownership and use',
+      'File platform/marketplace takedown requests',
+      'Consider customs recordation for border seizures',
+      'Consult counsel for enforcement or litigation'
+    ],
+    remedies: 'Takedowns, injunctions, damages, seizure of counterfeit goods'
+  },
+  {
+    keywords: ['copyright', 'copied content', 'piracy', 'reuploaded', 'copied code', 'copied design'],
+    issue: 'Copyright Infringement',
+    law: 'Copyright laws (country-specific)',
     severity: 'Medium-High',
-    description: 'You are being threatened, harassed, or bullied through digital platforms.',
+    description: 'Your original creative work (text, art, music, code) is being used without permission.',
     actions: [
-      'DO NOT respond to the bully',
-      'Take screenshots with dates and timestamps',
-      'Block the person on all platforms',
-      'Report to the platform (Instagram, Facebook, etc.)',
-      'File complaint with National Cyber Crime Portal',
-      'If threats are serious, file FIR at police station',
-      'Seek support from counselor or trusted adult'
+      'Document original creation and publication dates',
+      'Capture infringing URLs and screenshots',
+      'Submit DMCA-style takedown to platforms',
+      'Register the work if required for enforcement',
+      'Seek legal advice for repeat or commercial infringement'
     ],
-    penalty: 'Imprisonment up to 3 years and/or fine'
+    remedies: 'Takedowns, damages, statutory damages (where applicable)'
   },
   {
-    keywords: ['phishing', 'fake email', 'fake sms', 'fake call', 'asking for otp', 'asking for password', 'lottery scam'],
-    crime: 'Phishing / Online Fraud Attempt',
-    section: 'IT Act Section 66C, 66D | IPC Section 420',
-    severity: 'High',
-    description: 'Someone is trying to steal your personal information through deceptive messages or calls.',
-    actions: [
-      'DO NOT share any information (OTP, password, CVV)',
-      'DO NOT click on suspicious links',
-      'Report the email/SMS as spam',
-      'Forward phishing SMS to 1909 (India)',
-      'Report to your bank if bank-related',
-      'File complaint on cybercrime.gov.in',
-      'Warn others about the scam'
-    ],
-    penalty: 'Imprisonment up to 3 years and/or fine up to ₹1 lakh'
-  },
-  {
-    keywords: ['identity theft', 'fake profile', 'impersonation', 'someone using my photo', 'fake account'],
-    crime: 'Identity Theft / Impersonation',
-    section: 'IT Act Section 66C, 66D',
-    severity: 'High',
-    description: 'Someone is using your identity, photos, or personal information without permission.',
-    actions: [
-      'Report the fake account to the platform',
-      'Request removal of your photos/information',
-      'Take screenshots of fake profiles',
-      'File complaint at cybercrime.gov.in',
-      'Consider filing FIR if misused for fraud',
-      'Alert your contacts about the impersonation',
-      'Change privacy settings on your accounts'
-    ],
-    penalty: 'Imprisonment up to 3 years and/or fine up to ₹1 lakh'
-  },
-  {
-    keywords: ['leaked photo', 'revenge porn', 'intimate images', 'private video shared', 'morphed photo'],
-    crime: 'Non-consensual Sharing of Intimate Images',
-    section: 'IT Act Section 66E, 67, 67A | IPC Section 354C',
+    keywords: ['trade secret', 'confidential', 'nda breached', 'formula leaked', 'source code stolen'],
+    issue: 'Trade Secret Misappropriation',
+    law: 'Trade secret laws (country-specific)',
     severity: 'Very High',
-    description: 'Private or intimate images/videos shared without your consent.',
+    description: 'Confidential business information was acquired, disclosed, or used without permission.',
     actions: [
-      'Document everything (screenshots, URLs)',
-      'Report to platform immediately for removal',
-      'File FIR at nearest police station - THIS IS SERIOUS',
-      'Contact cyber cell for urgent removal',
-      'Seek legal counsel',
-      'Contact NGOs for support (POSH, cyber helplines)',
-      'Do not blame yourself - this is a CRIME'
+      'Preserve access logs, emails, and device records',
+      'Document confidentiality measures (NDAs, policies)',
+      'Limit further access and preserve evidence',
+      'Engage counsel for emergency relief and claims'
     ],
-    penalty: 'Imprisonment up to 3-7 years and fine'
+    remedies: 'Injunctions, damages, criminal penalties in some jurisdictions'
   },
   {
-    keywords: ['financial fraud', 'money stolen', 'unauthorized transaction', 'card cloned', 'online payment scam'],
-    crime: 'Online Financial Fraud',
-    section: 'IT Act Section 66C, 66D | IPC Section 420',
-    severity: 'Very High',
-    description: 'Unauthorized financial transactions or theft of money through digital means.',
+    keywords: ['design copied', 'product design copied', 'industrial design', 'look copied'],
+    issue: 'Design Infringement',
+    law: 'Design/industrial design laws (country-specific)',
+    severity: 'Medium',
+    description: 'The visual appearance or design of your product has been copied.',
     actions: [
-      'Call your bank IMMEDIATELY - block cards/accounts',
-      'File complaint at cybercrime.gov.in within 24 hours',
-      'Call national cyber fraud helpline: 1930',
-      'File FIR at police station',
-      'Collect transaction details, screenshots',
-      'Request bank for transaction reversal',
-      'Place fraud alert on credit reports'
+      'Collect side-by-side comparison images',
+      'Verify design registration (if applicable)',
+      'Submit takedown requests where available',
+      'Seek counsel for enforcement steps'
     ],
-    penalty: 'Imprisonment up to 3 years and/or fine'
+    remedies: 'Injunctions, damages, destruction of infringing goods'
   },
   {
-    keywords: ['stalking', 'following online', 'tracking location', 'monitoring activities', 'watching me'],
-    crime: 'Cyberstalking',
-    section: 'IPC Section 354D | IT Act Section 66',
-    severity: 'High',
-    description: 'Someone is persistently monitoring, following, or tracking you online.',
+    keywords: ['domain', 'cybersquatting', 'domain copied', 'brand domain', 'typosquatting'],
+    issue: 'Cybersquatting / Domain Abuse',
+    law: 'Domain dispute policies (UDRP/ccTLD rules)',
+    severity: 'Medium',
+    description: 'A domain name is using your brand in bad faith.',
     actions: [
-      'Block the person immediately',
-      'Change all privacy settings to most restrictive',
-      'Turn off location sharing',
-      'Document all stalking incidents',
-      'File complaint at cybercrime portal',
-      'Consider filing FIR if you feel unsafe',
-      'Inform trusted friends/family'
+      'Capture WHOIS records and website screenshots',
+      'Document your trademark rights and use',
+      'Consider UDRP or local dispute procedures',
+      'Consult counsel for domain recovery'
     ],
-    penalty: 'Imprisonment up to 5 years and fine'
-  },
-  {
-    keywords: ['data breach', 'leaked data', 'privacy violation', 'personal information leaked', 'data stolen'],
-    crime: 'Data Breach / Privacy Violation',
-    section: 'IT Act Section 43A, 72 | DPDP Act 2023',
-    severity: 'Medium-High',
-    description: 'Your personal data has been compromised or leaked.',
-    actions: [
-      'Contact the company/organization responsible',
-      'Change passwords for affected accounts',
-      'Enable two-factor authentication',
-      'Monitor accounts for suspicious activity',
-      'File complaint with Data Protection Authority',
-      'Consider legal action for compensation',
-      'Alert credit bureaus if financial data leaked'
-    ],
-    penalty: 'Compensation up to ₹5 crore depending on damages'
+    remedies: 'Domain transfer or cancellation'
   }
 ];
 
@@ -156,27 +108,26 @@ export default function CrimeIdentifier() {
     setTimeout(() => {
       const lowerSituation = situation.toLowerCase();
       
-      // Find matching crime based on keywords
-      const match = crimeDatabase.find(crime =>
-        crime.keywords.some(keyword => lowerSituation.includes(keyword))
+      // Find matching IPR issue based on keywords
+      const match = iprDatabase.find(issue =>
+        issue.keywords.some(keyword => lowerSituation.includes(keyword))
       );
 
       if (match) {
         setResult(match);
       } else {
         setResult({
-          crime: 'Unable to Determine / General Cyber Issue',
-          section: 'IT Act 2000 (Various sections)',
+          issue: 'Unable to Determine / General IPR Issue',
+          law: 'Country-specific IPR laws',
           severity: 'Unknown',
-          description: 'Based on your description, we cannot determine a specific crime category. However, this might still be illegal.',
+          description: 'Based on your description, we cannot determine a specific IPR category. It may still be an infringement issue.',
           actions: [
-            'Contact National Cyber Crime Helpline: 1930',
-            'Visit cybercrime.gov.in for guidance',
-            'Consult with a cyber law expert',
-            'File a general complaint at your local cyber cell',
-            'Save all evidence related to the incident'
+            'Collect and preserve evidence (screenshots, registrations)',
+            'Identify the country where infringement occurs',
+            'Use the Report page for country-specific guidance',
+            'Consider contacting an IP attorney for review'
           ],
-          penalty: 'Varies based on actual offense'
+          remedies: 'Varies based on actual infringement and jurisdiction'
         });
       }
 
@@ -202,8 +153,8 @@ export default function CrimeIdentifier() {
   return (
     <div className="page identifier-page">
       <div className="page-header">
-        <h1>🔍 Crime Identifier</h1>
-        <p>Describe what happened and get instant legal guidance</p>
+        <h1>🔍 IPR Issue Identifier</h1>
+        <p>Describe what happened and get practical IPR guidance</p>
       </div>
 
       <div className="identifier-container">
@@ -212,10 +163,10 @@ export default function CrimeIdentifier() {
             <div className="info-card">
               <h3>🛡️ How it works:</h3>
               <ol>
-                <li>Describe your situation in detail</li>
-                <li>Our system analyzes and identifies potential crimes</li>
-                <li>Get legal classification and step-by-step guidance</li>
-                <li>Learn what actions to take immediately</li>
+                <li>Describe your IPR issue in detail</li>
+                <li>We classify the likely IPR category</li>
+                <li>Get practical steps and reporting guidance</li>
+                <li>Learn immediate actions to protect your rights</li>
               </ol>
               <p className="privacy-note">🔒 Your privacy is protected. This analysis is done locally.</p>
             </div>
@@ -227,7 +178,7 @@ export default function CrimeIdentifier() {
               <textarea
                 id="situation"
                 rows="8"
-                placeholder="Example: Someone hacked my Instagram account and is sending messages to my friends... OR I received a call claiming to be from my bank asking for my credit card CVV..."
+                placeholder="Example: A seller is using my registered trademark on a product listing, or a competitor copied my patented design..."
                 value={situation}
                 onChange={(e) => setSituation(e.target.value)}
               />
@@ -238,17 +189,17 @@ export default function CrimeIdentifier() {
               onClick={analyzeSituation}
               disabled={analyzing}
             >
-              {analyzing ? 'Analyzing...' : 'Analyze Situation →'}
+              {analyzing ? 'Analyzing...' : 'Analyze IPR Issue →'}
             </button>
 
             <div className="examples-section">
               <h4>Example situations you can describe:</h4>
               <div className="example-tags">
-                <span onClick={() => setSituation('Someone created a fake profile using my photos and is messaging people pretending to be me')}>Fake Profile</span>
-                <span onClick={() => setSituation('I received an SMS saying I won a lottery and need to pay processing fees')}>Lottery Scam</span>
-                <span onClick={() => setSituation('Someone is sending me threatening messages on WhatsApp and social media')}>Online Threats</span>
-                <span onClick={() => setSituation('My email account was hacked and someone changed my password')}>Account Hacked</span>
-                <span onClick={() => setSituation('Unauthorized transactions appeared in my bank account')}>Financial Fraud</span>
+                <span onClick={() => setSituation('A marketplace seller is using my registered trademark on listings')}>Trademark Infringement</span>
+                <span onClick={() => setSituation('A competitor copied the design of my patented product')}>Patent Infringement</span>
+                <span onClick={() => setSituation('My artwork was reposted without permission on a commercial site')}>Copyright Infringement</span>
+                <span onClick={() => setSituation('A former employee shared our confidential formula')}>Trade Secret Theft</span>
+                <span onClick={() => setSituation('Someone registered a domain that matches my brand name')}>Cybersquatting</span>
               </div>
             </div>
           </div>
@@ -261,9 +212,9 @@ export default function CrimeIdentifier() {
                   {result.severity}
                 </span>
               </div>
-              <h2 className="crime-name">{result.crime}</h2>
+              <h2 className="crime-name">{result.issue}</h2>
               <div className="legal-section">
-                <strong>Legal Provision:</strong> {result.section}
+                <strong>Applicable Law:</strong> {result.law}
               </div>
             </div>
 
@@ -273,8 +224,8 @@ export default function CrimeIdentifier() {
             </div>
 
             <div className="result-penalty">
-              <h3>⚖️ Legal Penalty:</h3>
-              <p className="penalty-text">{result.penalty}</p>
+              <h3>⚖️ Remedies & Outcomes:</h3>
+              <p className="penalty-text">{result.remedies}</p>
             </div>
 
             <div className="result-actions">
@@ -287,34 +238,34 @@ export default function CrimeIdentifier() {
             </div>
 
             <div className="important-contacts">
-              <h3>📞 Important Contacts:</h3>
+              <h3>📞 Helpful Resources:</h3>
               <div className="contact-grid">
                 <div className="contact-card">
-                  <div className="contact-icon">🚨</div>
+                  <div className="contact-icon">🏛️</div>
                   <div className="contact-info">
-                    <strong>Cyber Crime Helpline</strong>
-                    <a href="tel:1930">1930</a>
+                    <strong>IP Office Portal</strong>
+                    <a href="https://www.wipo.int/" target="_blank" rel="noopener noreferrer">WIPO</a>
                   </div>
                 </div>
                 <div className="contact-card">
-                  <div className="contact-icon">💻</div>
+                  <div className="contact-icon">🧾</div>
                   <div className="contact-info">
-                    <strong>National Portal</strong>
-                    <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a>
+                    <strong>Domain Disputes</strong>
+                    <a href="https://www.wipo.int/amc/en/domains/" target="_blank" rel="noopener noreferrer">UDRP Guidance</a>
                   </div>
                 </div>
                 <div className="contact-card">
-                  <div className="contact-icon">👮</div>
+                  <div className="contact-icon">📄</div>
                   <div className="contact-info">
-                    <strong>Police Emergency</strong>
-                    <a href="tel:100">100</a>
+                    <strong>Takedown Info</strong>
+                    <a href="https://www.copyright.gov/dmca/" target="_blank" rel="noopener noreferrer">DMCA Basics</a>
                   </div>
                 </div>
                 <div className="contact-card">
-                  <div className="contact-icon">👩</div>
+                  <div className="contact-icon">⚖️</div>
                   <div className="contact-info">
-                    <strong>Women Helpline</strong>
-                    <a href="tel:181">181</a>
+                    <strong>Find Counsel</strong>
+                    <span>Local IP attorney</span>
                   </div>
                 </div>
               </div>
@@ -325,7 +276,7 @@ export default function CrimeIdentifier() {
                 ← Analyze Another Situation
               </button>
               <button className="btn-danger">
-                🚨 Report This Incident
+                🚨 Report This Issue
               </button>
             </div>
           </div>

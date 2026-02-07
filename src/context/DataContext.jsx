@@ -3,20 +3,20 @@ import { createContext, useContext, useState, useEffect } from 'react';
 const DataContext = createContext();
 
 export function DataProvider({ children }) {
-  const [bookmarks, setBookmarks] = useState(() => JSON.parse(localStorage.getItem('cyberguard-bookmarks') || '[]'));
-  const [progress, setProgress] = useState(() => JSON.parse(localStorage.getItem('cyberguard-progress') || '{}'));
-  const [quizScores, setQuizScores] = useState(() => JSON.parse(localStorage.getItem('cyberguard-quizzes') || '{}'));
+  const [bookmarks, setBookmarks] = useState(() => JSON.parse(localStorage.getItem('amicus-ipr-bookmarks') || '[]'));
+  const [progress, setProgress] = useState(() => JSON.parse(localStorage.getItem('amicus-ipr-progress') || '{}'));
+  const [quizScores, setQuizScores] = useState(() => JSON.parse(localStorage.getItem('amicus-ipr-quizzes') || '{}'));
 
   useEffect(() => {
-    localStorage.setItem('cyberguard-bookmarks', JSON.stringify(bookmarks));
+    localStorage.setItem('amicus-ipr-bookmarks', JSON.stringify(bookmarks));
   }, [bookmarks]);
 
   useEffect(() => {
-    localStorage.setItem('cyberguard-progress', JSON.stringify(progress));
+    localStorage.setItem('amicus-ipr-progress', JSON.stringify(progress));
   }, [progress]);
 
   useEffect(() => {
-    localStorage.setItem('cyberguard-quizzes', JSON.stringify(quizScores));
+    localStorage.setItem('amicus-ipr-quizzes', JSON.stringify(quizScores));
   }, [quizScores]);
 
   const toggleBookmark = (id, title, type) => {

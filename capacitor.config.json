@@ -1,7 +1,7 @@
 {
   "appId": "com.cyberguard.pro",
-  "appName": "CyberGuard Pro",
-  "description": "Your Global Digital Legal Companion",
+  "appName": "Amicus IPR",
+  "description": "Your AI-powered Intellectual Property Rights companion, offering practical help, reporting guidance, and applicable laws for issues like patent theft, tailored to your country.",
   "webDir": "dist",
   "server": {
     "url": "https://shalom-5upo.onrender.com",

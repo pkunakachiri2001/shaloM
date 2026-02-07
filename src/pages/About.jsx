@@ -2,19 +2,19 @@ import { Link } from 'react-router-dom';
 
 export default function About() {
   const features = [
-    { icon: '📚', title: 'Legal Education', desc: 'Comprehensive lessons on cyber law, IT Act 2000, DPDP Act 2023, and digital rights with interactive quizzes.', path: '/academy' },
-    { icon: '🔍', title: 'Crime Analysis', desc: 'AI-powered tool to identify cyber crimes and provide instant legal guidance and action steps.', path: '/identifier' },
-    { icon: '🚨', title: 'Emergency Support', desc: 'Quick access to incident reporting, complaint templates, and emergency contacts.', path: '/emergency' },
-    { icon: '📰', title: 'Latest Updates', desc: 'Stay informed about new laws, court verdicts, cyber crime trends, and legal developments.', path: '/news' },
-    { icon: '🎓', title: 'Career Guidance', desc: 'Resources for law students pursuing careers in legal tech and cyber law specialization.', path: '/career' },
-    { icon: '🌍', title: 'Global Perspective', desc: 'International legal frameworks and comparisons from cyber law systems worldwide.', path: '/about' }
+    { icon: '📚', title: 'IPR Education', desc: 'Clear lessons on patents, trademarks, copyrights, and trade secrets with practical checklists.', path: '/academy' },
+    { icon: '🔍', title: 'IPR Issue Identifier', desc: 'Describe your situation and get a likely infringement category with next steps.', path: '/identifier' },
+    { icon: '🚨', title: 'Reporting Guidance', desc: 'Country-specific reporting routes, templates, and enforcement pathways.', path: '/emergency' },
+    { icon: '📰', title: 'IPR Updates', desc: 'Track policy changes, court rulings, and enforcement trends worldwide.', path: '/news' },
+    { icon: '🎓', title: 'Career Guidance', desc: 'Resources for IP students, innovators, and legal professionals.', path: '/career' },
+    { icon: '🌍', title: 'Global Perspective', desc: 'International IP frameworks and filing strategies across jurisdictions.', path: '/about' }
   ];
 
   return (
     <div className="page about-page">
       <div className="page-header">
-        <h1>ℹ️ About CyberGuard Pro</h1>
-        <p>Your trusted companion for cyber law education and digital protection</p>
+        <h1>ℹ️ About Amicus IPR</h1>
+        <p>Your trusted companion for Intellectual Property Rights protection</p>
       </div>
 
       {/* Mission Section */}
@@ -22,10 +22,9 @@ export default function About() {
         <div className="about-card">
           <h2>🎯 Our Mission</h2>
           <p>
-            CyberGuard Pro was created to bridge the gap between complex cyber laws and everyday citizens worldwide. 
-            We believe that understanding your digital rights shouldn't require a law degree. Our mission is to empower 
-            people with knowledge, tools, and resources to navigate the digital world safely and confidently, regardless 
-            of their location or legal jurisdiction.
+            Amicus IPR bridges the gap between complex intellectual property laws and creators, startups, and students worldwide. 
+            We believe protecting inventions, brands, and creative works should be practical and accessible. Our mission is to equip 
+            users with clear steps, country-specific guidance, and trustworthy resources for reporting and enforcement.
           </p>
         </div>
       </section>
@@ -53,22 +52,22 @@ export default function About() {
             <span className="creator-flag">🛡️</span>
             <div className="creator-info-main">
               <h2>Innovative Project</h2>
-              <h3 className="creator-name-large">Global Legal Protection</h3>
-              <p className="creator-title">Law & Technology Educational Initiative</p>
+              <h3 className="creator-name-large">Intellectual Property Rights</h3>
+              <p className="creator-title">Law & Innovation Educational Initiative</p>
             </div>
           </div>
 
           <div className="creator-story">
             <h3>About the Project</h3>
             <p>
-              CyberGuard Pro represents an innovative approach to making cyber law accessible to everyone, 
-              regardless of their location or background. This project addresses the universal challenges of 
-              navigating digital security and the critical need for accessible legal education in the internet age.
+              Amicus IPR represents an innovative approach to making IP law accessible to everyone, 
+              regardless of their location or background. This project addresses the universal challenge of 
+              protecting creative and technical work in a fast-moving global market.
             </p>
             <p>
-              Developed as part of a <strong>Law & Technology</strong> initiative, this platform combines 
-              legal expertise with technical innovation to create a practical solution for cyber law education 
-              and digital protection that transcends borders.
+              Developed as part of a <strong>Law & Innovation</strong> initiative, this platform combines 
+              legal expertise with technical innovation to create a practical solution for IPR education 
+              and enforcement guidance that transcends borders.
             </p>
             
             <div className="creator-highlights">
@@ -83,14 +82,14 @@ export default function About() {
                 <span className="highlight-icon">🔗</span>
                 <div>
                   <strong>International Standards</strong>
-                  <p>Based on global cyber law principles</p>
+                  <p>Based on global IP law principles</p>
                 </div>
               </div>
               <div className="highlight-item">
                 <span className="highlight-icon">💼</span>
                 <div>
                   <strong>Focus Areas</strong>
-                  <p>Cyber Law, Legal Tech, Data Protection</p>
+                  <p>Patents, Trademarks, Copyright, Trade Secrets</p>
                 </div>
               </div>
               <div className="highlight-item">
@@ -128,10 +127,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why CyberGuard Pro */}
+      {/* Why Amicus IPR */}
       <section className="about-section">
         <div className="about-card highlight-card">
-          <h2>Why Choose CyberGuard Pro?</h2>
+          <h2>Why Choose Amicus IPR?</h2>
           <div className="why-list">
             <div className="why-item">
               <span className="why-icon">✅</span>
@@ -151,7 +150,7 @@ export default function About() {
               <span className="why-icon">✅</span>
               <div>
                 <strong>Always Updated</strong>
-                <p>Latest laws including DPDP Act 2023 and recent judgments</p>
+                <p>Latest IP policy changes and court decisions</p>
               </div>
             </div>
             <div className="why-item">
@@ -165,7 +164,7 @@ export default function About() {
               <span className="why-icon">✅</span>
               <div>
                 <strong>Student-Friendly</strong>
-                <p>Designed with law students and career seekers in mind</p>
+                <p>Designed for innovators, creators, and IP learners</p>
               </div>
             </div>
             <div className="why-item">
@@ -184,20 +183,20 @@ export default function About() {
         <div className="contact-card">
           <h2>📞 Important Contacts</h2>
           <div className="emergency-contacts-grid">
-            <a href="tel:1930" className="emergency-contact-item">
-              <span className="contact-icon-large">🚨</span>
-              <strong>Cyber Crime Helpline</strong>
-              <span className="contact-number">1930</span>
+            <a href="https://www.wipo.int/" target="_blank" rel="noopener noreferrer" className="emergency-contact-item">
+              <span className="contact-icon-large">🏛️</span>
+              <strong>WIPO</strong>
+              <span className="contact-link">wipo.int</span>
             </a>
-            <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" className="emergency-contact-item">
-              <span className="contact-icon-large">💻</span>
-              <strong>National Portal</strong>
-              <span className="contact-link">cybercrime.gov.in</span>
+            <a href="https://www.wipo.int/amc/en/" target="_blank" rel="noopener noreferrer" className="emergency-contact-item">
+              <span className="contact-icon-large">⚖️</span>
+              <strong>WIPO Arbitration</strong>
+              <span className="contact-link">wipo.int/amc</span>
             </a>
-            <a href="tel:100" className="emergency-contact-item">
-              <span className="contact-icon-large">👮</span>
-              <strong>Police Emergency</strong>
-              <span className="contact-number">100</span>
+            <a href="https://www.uspto.gov/" target="_blank" rel="noopener noreferrer" className="emergency-contact-item">
+              <span className="contact-icon-large">🇺🇸</span>
+              <strong>USPTO</strong>
+              <span className="contact-link">uspto.gov</span>
             </a>
           </div>
         </div>
@@ -208,9 +207,9 @@ export default function About() {
         <div className="disclaimer-box">
           <h3>⚠️ Disclaimer</h3>
           <p>
-            IndoZim Legal Guard is an educational platform for Law & Technology learning. 
+            Amicus IPR is an educational platform for Law & Innovation learning. 
             While we strive for accuracy, this app does not constitute legal advice. For specific 
-            legal matters, please consult qualified legal professionals.
+            legal matters, please consult qualified IP professionals.
           </p>
           <p>
             All information is provided for educational purposes only. Users are encouraged 
@@ -224,10 +223,10 @@ export default function About() {
       <section className="about-section">
         <div className="cta-box">
           <h2>Ready to Get Started?</h2>
-          <p>Explore our features and empower yourself with legal knowledge</p>
+          <p>Explore our features and protect your intellectual property</p>
           <div className="cta-buttons">
             <a href="/academy" className="btn-primary">Start Learning 📚</a>
-            <a href="/identifier" className="btn-secondary">Identify Crime 🔍</a>
+            <a href="/identifier" className="btn-secondary">Identify IPR Issue 🔍</a>
           </div>
         </div>
       </section>

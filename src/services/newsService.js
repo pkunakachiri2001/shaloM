@@ -1,67 +1,67 @@
-// News Service - Integrates with GNews API for real-time cyber law news
+// News Service - Integrates with GNews API for real-time IPR news
 // Free tier: 100 requests per hour, unlimited requests per day
 // API docs: https://gnews.io
 
 const GNEWS_API_KEY = 'demo'; // Replace with actual API key from gnews.io (free tier available)
 const CACHE_DURATION = 30 * 60 * 1000; // Cache for 30 minutes
-const CACHE_KEY = 'cyberguard_news_cache';
+const CACHE_KEY = 'amicus_ipr_news_cache';
 
 // Fallback data for when API fails
 const FALLBACK_NEWS = [
   {
     id: 'fallback-1',
-    category: 'Cyber Crime Alert',
-    title: 'UPI Fraud Cases Surge 400% in January 2026',
+    category: 'Enforcement Alert',
+    title: 'Customs Seizes Record Counterfeit Shipments in 2026 Crackdown',
     date: '2026-01-23',
-    summary: 'New sophisticated UPI scams targeting senior citizens and rural users reported across India.',
-    content: 'Advanced fraud detection systems deployed across banking sector.',
-    tags: ['UPI', 'Financial Fraud', 'Alert'],
+    summary: 'Border enforcement actions intensified against counterfeit luxury goods and electronics.',
+    content: 'Brands urged to refresh customs recordation to improve seizure rates.',
+    tags: ['Counterfeit', 'Customs', 'Enforcement'],
     importance: 'critical',
-    source: 'CyberGuard Pro'
+    source: 'Amicus IPR'
   },
   {
     id: 'fallback-2',
-    category: 'Law Update',
-    title: 'Digital India Act 2026 Draft Released for Public Consultation',
+    category: 'Policy Update',
+    title: 'Global Patent Harmonization Talks Resume',
     date: '2026-01-20',
-    summary: 'Government unveils comprehensive legislation to replace IT Act 2000.',
-    content: 'New regulations focus on AI governance and platform accountability.',
-    tags: ['Digital Law', 'AI Regulation', 'Policy'],
+    summary: 'Policy discussions focus on cross-border enforcement and examination standards.',
+    content: 'Stakeholders emphasize clearer pathways for international filings.',
+    tags: ['Policy', 'Patents', 'International'],
     importance: 'high',
-    source: 'CyberGuard Pro'
+    source: 'Amicus IPR'
   },
   {
     id: 'fallback-3',
-    category: 'Court Verdict',
-    title: 'Delhi HC: Workplace Cyber Harassment is Criminal Intimidation',
+    category: 'Court Decision',
+    title: 'Landmark Trademark Dilution Ruling Strengthens Brand Protections',
     date: '2026-01-18',
-    summary: 'Delhi High Court expands scope of Section 506 IPC to include digital harassment.',
-    content: 'Landmark ruling on workplace cyber harassment protections.',
-    tags: ['Delhi HC', 'Workplace Safety', 'Harassment'],
+    summary: 'Court clarifies standard for likelihood of dilution in online marketplaces.',
+    content: 'Decision reinforces the value of evidence-based takedown submissions.',
+    tags: ['Trademark', 'Court', 'Marketplace'],
     importance: 'high',
-    source: 'CyberGuard Pro'
+    source: 'Amicus IPR'
   },
   {
     id: 'fallback-4',
-    category: 'Technology',
-    title: 'India Launches National Blockchain Framework for Legal Records',
+    category: 'Copyright',
+    title: 'Streaming Platforms Expand Automated Takedown Tools',
     date: '2026-01-15',
-    summary: 'Government introduces blockchain-based system for tamper-proof storage.',
-    content: 'All High Courts to integrate with NLBF by June 2026.',
-    tags: ['Blockchain', 'Legal Tech', 'Innovation'],
+    summary: 'Rights holders gain faster DMCA-style workflows and improved dispute tracking.',
+    content: 'Creators advised to maintain proof of authorship and publication dates.',
+    tags: ['Copyright', 'DMCA', 'Platforms'],
     importance: 'medium',
-    source: 'CyberGuard Pro'
+    source: 'Amicus IPR'
   },
   {
     id: 'fallback-5',
-    category: 'Technology',
-    title: 'AI Deepfake Voice Scams Target Banking Customers',
+    category: 'Patent',
+    title: 'AI-Assisted Prior Art Search Reduces Examination Time',
     date: '2026-01-10',
-    summary: 'Criminals using AI-cloned voices of bank managers to trick victims.',
-    content: 'Over 2,500 cases reported with advanced fraud techniques.',
-    tags: ['AI Crime', 'Deepfake', 'Banking'],
-    importance: 'critical',
-    source: 'CyberGuard Pro'
+    summary: 'Patent offices pilot AI tools to speed up novelty and prior art checks.',
+    content: 'Applicants encouraged to submit structured disclosures for faster review.',
+    tags: ['Patent', 'Innovation', 'AI'],
+    importance: 'medium',
+    source: 'Amicus IPR'
   }
 ];
 
@@ -111,17 +111,23 @@ function cacheNews(data) {
 function mapGNewsToAppFormat(articles) {
   return articles.slice(0, 10).map((article, index) => {
     // Determine category based on keywords in title/description
-    let category = 'Technology';
+    let category = 'International';
     const text = `${article.title} ${article.description}`.toLowerCase();
 
-    if (text.includes('crime') || text.includes('fraud') || text.includes('scam') || text.includes('malware')) {
-      category = 'Cyber Crime Alert';
-    } else if (text.includes('law') || text.includes('regulation') || text.includes('act') || text.includes('court')) {
-      category = 'Law Update';
-    } else if (text.includes('verdict') || text.includes('ruling') || text.includes('judgment')) {
-      category = 'Court Verdict';
-    } else if (text.includes('international') || text.includes('global')) {
-      category = 'International';
+    if (text.includes('patent')) {
+      category = 'Patent';
+    } else if (text.includes('trademark') || text.includes('brand')) {
+      category = 'Trademark';
+    } else if (text.includes('copyright') || text.includes('dmca')) {
+      category = 'Copyright';
+    } else if (text.includes('trade secret') || text.includes('confidential')) {
+      category = 'Trade Secret';
+    } else if (text.includes('counterfeit') || text.includes('enforcement') || text.includes('seizure')) {
+      category = 'Enforcement Alert';
+    } else if (text.includes('policy') || text.includes('regulation') || text.includes('act') || text.includes('directive')) {
+      category = 'Policy Update';
+    } else if (text.includes('court') || text.includes('ruling') || text.includes('judgment')) {
+      category = 'Court Decision';
     }
 
     // Determine importance based on keywords
@@ -152,16 +158,16 @@ function mapGNewsToAppFormat(articles) {
  * Extract relevant tags from article title
  */
 function extractTags(title) {
-  const keywords = ['cyber', 'law', 'fraud', 'security', 'digital', 'data', 'privacy', 'ai', 'blockchain'];
+  const keywords = ['intellectual property', 'patent', 'trademark', 'copyright', 'trade secret', 'counterfeit', 'enforcement'];
   return keywords.filter(keyword => title.toLowerCase().includes(keyword)).slice(0, 2);
 }
 
 /**
  * Fetch news from GNews API
- * @param {string} query - Search query (default: 'cyber law')
+ * @param {string} query - Search query (default: 'intellectual property law')
  * @returns {Promise<Array>} News articles
  */
-export async function fetchNewsFromAPI(query = 'cyber law security') {
+export async function fetchNewsFromAPI(query = 'intellectual property law') {
   try {
     // Check cache first
     const cached = getCachedNews();

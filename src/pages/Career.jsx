@@ -1,140 +1,140 @@
 const careerData = {
   internships: [
     {
-      title: 'Legal Research Intern - Cyber Law',
+      title: 'IP Research Intern',
       company: 'Major Law Firm',
       location: 'Mumbai / Pune',
       duration: '3-6 months',
       stipend: '₹10,000 - ₹15,000/month',
-      description: 'Research on cyber crime cases, IT Act provisions, and international cyber law comparisons.',
-      skills: ['Legal Research', 'IT Act 2000', 'Case Analysis']
+      description: 'Research on patents, trademarks, and infringement cases across jurisdictions.',
+      skills: ['Legal Research', 'IPR Fundamentals', 'Case Analysis']
     },
     {
-      title: 'Legal Tech Intern',
+      title: 'IP Strategy Intern',
       company: 'LegalTech Startup',
       location: 'Bangalore / Remote',
       duration: '6 months',
       stipend: '₹15,000 - ₹20,000/month',
-      description: 'Work on AI-powered legal research tools, document automation, and legal databases.',
-      skills: ['Legal Knowledge', 'Tech Interest', 'Problem Solving']
+      description: 'Support prior art searches, portfolio audits, and IP risk assessments.',
+      skills: ['IP Research', 'Analytical Skills', 'Problem Solving']
     },
     {
-      title: 'Cyber Crime Investigation Support',
-      company: 'Government Cyber Cell',
+      title: 'Trademark Enforcement Intern',
+      company: 'Brand Protection Agency',
       location: 'Various Cities',
       duration: '6 months',
       stipend: 'Unpaid / Certificate',
-      description: 'Assist in cyber crime investigations, evidence documentation, and legal compliance.',
-      skills: ['Criminal Law', 'Cyber Security Basics', 'Documentation']
+      description: 'Assist in marketplace monitoring, takedowns, and evidence documentation.',
+      skills: ['Trademark Law', 'Investigation', 'Documentation']
     },
     {
-      title: 'Compliance Intern - Data Protection',
-      company: 'Tech Company',
+      title: 'Copyright Clearance Intern',
+      company: 'Media Company',
       location: 'Remote',
       duration: '3 months',
       stipend: '₹12,000 - ₹18,000/month',
-      description: 'Help ensure DPDP Act compliance, privacy policy drafting, and data audit support.',
-      skills: ['Privacy Law', 'DPDP Act', 'Policy Writing']
+      description: 'Assist with rights clearance, licensing records, and takedown coordination.',
+      skills: ['Copyright Law', 'Licensing', 'Policy Writing']
     }
   ],
   careerPaths: [
     {
-      title: 'Cyber Law Specialist',
-      description: 'Specialize in cyber crime litigation, representing clients in hacking, data breach, and online fraud cases.',
+      title: 'Patent Attorney',
+      description: 'Draft and prosecute patents, handle office actions, and advise on invention strategy.',
       salary: '₹6-15 LPA',
       growth: 'Very High',
-      skills: ['IT Act mastery', 'Litigation skills', 'Technical knowledge']
+      skills: ['Patent law', 'Technical knowledge', 'Drafting skills']
     },
     {
-      title: 'Legal Tech Consultant',
-      description: 'Bridge law and technology - help law firms adopt legal tech solutions, automate processes.',
+      title: 'Trademark Counsel',
+      description: 'Manage brand protection, oppositions, infringement actions, and enforcement strategy.',
       salary: '₹8-20 LPA',
       growth: 'Excellent',
-      skills: ['Legal knowledge', 'Technology skills', 'Business acumen']
+      skills: ['Trademark law', 'Investigation', 'Negotiation']
     },
     {
-      title: 'Data Protection Officer (DPO)',
-      description: 'Ensure company compliance with data protection laws, manage privacy policies and data audits.',
+      title: 'IP Portfolio Manager',
+      description: 'Oversee patent/trademark portfolios, filings, renewals, and strategy.',
       salary: '₹10-25 LPA',
       growth: 'Rapidly Growing',
-      skills: ['DPDP Act', 'GDPR', 'Risk management']
+      skills: ['Portfolio management', 'IP strategy', 'Risk assessment']
     },
     {
-      title: 'Cyber Crime Investigator',
-      description: 'Work with law enforcement to investigate and prosecute cyber crimes.',
+      title: 'IP Litigation Associate',
+      description: 'Support infringement disputes, remedies, and enforcement in courts.',
       salary: '₹5-12 LPA',
       growth: 'Stable',
-      skills: ['Criminal law', 'Digital forensics', 'Investigation']
+      skills: ['Litigation', 'Evidence handling', 'Legal writing']
     },
     {
-      title: 'IP & Technology Lawyer',
-      description: 'Handle intellectual property rights in digital space - patents, copyrights, trademarks.',
+      title: 'Trade Secret Counsel',
+      description: 'Protect confidential information, NDAs, and misappropriation claims.',
       salary: '₹7-18 LPA',
       growth: 'High',
-      skills: ['IP law', 'Technology understanding', 'Litigation']
+      skills: ['Trade secret law', 'Compliance', 'Incident response']
     },
     {
-      title: 'Legal AI Developer',
-      description: 'Develop AI tools for legal research, contract analysis, and case prediction.',
+      title: 'IP Due Diligence Analyst',
+      description: 'Audit IP assets for investments, M&A, or licensing deals.',
       salary: '₹12-30 LPA',
       growth: 'Explosive',
-      skills: ['Law', 'Programming', 'AI/ML basics']
+      skills: ['Due diligence', 'IP analysis', 'Research']
     }
   ],
   resources: [
     {
       category: 'Certifications',
       items: [
-        'Certified Cyber Law Professional (CCLP)',
-        'Data Protection Officer Certification',
-        'Certified Information Privacy Professional (CIPP)',
-        'SANS Cyber Law courses'
+        'WIPO General Course on IP',
+        'Patent Agent Preparation Programs',
+        'Trademark Law Certification',
+        'IP Licensing Professional Courses'
       ]
     },
     {
       category: 'Online Courses',
       items: [
-        'Coursera - Cyber Law & Ethics',
-        'NPTEL - Cyber Security & Law',
-        'Udemy - IT Act 2000 Complete Guide',
-        'edX - Data Privacy Fundamentals'
+        'WIPO Learn - IP Basics',
+        'Coursera - Intellectual Property Law',
+        'edX - Patent Law Fundamentals',
+        'NPTEL - Patent and Trademark Law'
       ]
     },
     {
       category: 'Books',
       items: [
-        '"Cyber Law in India" by Karnika Seth',
-        '"Information Technology Act 2000" by Vakul Sharma',
-        '"Privacy 3.0" by Justice BN Srikrishna',
-        '"Cyber Crime & Security" by Nina Godbole'
+        '"Intellectual Property" by Cornish, Llewelyn & Aplin',
+        '"Patent Law Essentials" by Alan L. Durham',
+        '"Trademark Law" by Irene Calboli & Jane C. Ginsburg',
+        '"Copyright Law" by Paul Goldstein'
       ]
     },
     {
       category: 'Organizations to Join',
       items: [
-        'Cyber Law Association of India',
-        'Data Security Council of India (DSCI)',
-        'International Association of Privacy Professionals (IAPP)',
-        'Student chapters of Bar Councils'
+        'International Trademark Association (INTA)',
+        'AIPPI (International Association for IP)',
+        'WIPO Academy Alumni Network',
+        'Local Bar Council IP Committees'
       ]
     }
   ],
   interviewTips: [
     {
-      question: 'What are the key sections of IT Act 2000?',
-      answer: 'Section 43 (penalty for damage), 66 (hacking), 66C (identity theft), 66D (cheating by personation), 66E (privacy violation), 67 (obscene content), and more.'
+      question: 'What are the core requirements for patentability?',
+      answer: 'Novelty, inventive step (non-obviousness), and industrial applicability. Requirements vary by jurisdiction.'
     },
     {
-      question: 'Difference between DPDP Act and GDPR?',
-      answer: 'DPDP Act covers only digital personal data while GDPR covers all personal data. GDPR has stricter consent requirements. Penalties differ - GDPR up to 4% revenue, DPDP up to ₹250 crore.'
+      question: 'Difference between trademark and copyright?',
+      answer: 'Trademarks protect brand identifiers (names, logos), while copyright protects original creative expression (text, art, code).'
     },
     {
-      question: 'What is the jurisdiction in cyber crimes?',
-      answer: 'Section 75 of IT Act extends to offenses committed outside India if involving Indian computer systems. Also where loss occurs or victim is located.'
+      question: 'How is jurisdiction determined in IP disputes?',
+      answer: 'Typically based on where infringement occurred, where rights are registered, and where the defendant is located.'
     },
     {
-      question: 'How is digital evidence handled in court?',
-      answer: 'Section 65B of Evidence Act allows electronic evidence if authenticated with certificate. Must show device was working properly, no tampering, and proper chain of custody.'
+      question: 'How is IP evidence handled in court?',
+      answer: 'Maintain chain of custody, preserve originals, document first use/publication, and collect screenshots with timestamps.'
     }
   ]
 };
@@ -143,8 +143,8 @@ export default function Career() {
   return (
     <div className="page career-page">
       <div className="page-header">
-        <h1>🎓 Student Career Hub</h1>
-        <p>Build your future at the intersection of law and technology</p>
+        <h1>🎓 IP Career Hub</h1>
+        <p>Build your future at the intersection of law, innovation, and creativity</p>
       </div>
 
       {/* Internships Section */}
@@ -179,7 +179,7 @@ export default function Career() {
 
       {/* Career Paths Section */}
       <section className="career-section">
-        <h2 className="section-title">🚀 Career Paths in Legal Tech & Cyber Law</h2>
+        <h2 className="section-title">🚀 Career Paths in IP Law & Innovation</h2>
         <div className="careers-grid">
           {careerData.careerPaths.map((career, index) => (
             <div key={index} className="career-card">
@@ -228,7 +228,7 @@ export default function Career() {
         <h2 className="section-title">💡 Interview Preparation</h2>
         <div className="interview-prep">
           <div className="prep-intro">
-            <p>Common questions asked in cyber law and legal tech interviews:</p>
+            <p>Common questions asked in IP law and legal tech interviews:</p>
           </div>
           <div className="interview-questions">
             {careerData.interviewTips.map((tip, index) => (
@@ -253,7 +253,7 @@ export default function Career() {
             <div className="cta-step">
               <div className="step-number">1</div>
               <h4>Build Knowledge</h4>
-              <p>Master cyber law through our Academy</p>
+              <p>Master IPR through our Academy</p>
             </div>
             <div className="cta-step">
               <div className="step-number">2</div>
@@ -286,7 +286,7 @@ export default function Career() {
             </div>
             <div className="advantage-card">
               <h4>💼 Cross-border Practice</h4>
-              <p>Opportunities in India-Africa trade, investment, and cyber law harmonization</p>
+              <p>Opportunities in cross-border IP strategy and licensing</p>
             </div>
             <div className="advantage-card">
               <h4>🚀 Pioneer Advantage</h4>

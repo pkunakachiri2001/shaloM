@@ -4,49 +4,49 @@ export default function Home() {
   const features = [
     {
       icon: '📚',
-      title: 'Cyber Law Academy',
-      description: 'Interactive lessons covering IT Act 2000, cyber crimes, digital rights, and international comparisons (India & Zimbabwe).',
-      items: ['Video tutorials & case studies', 'Gamified quizzes', 'Earn certificates'],
+      title: 'IPR Academy',
+      description: 'Learn patents, trademarks, copyrights, trade secrets, and enforcement basics in clear steps.',
+      items: ['Practical lessons', 'Real-world case studies', 'Actionable checklists'],
       className: 'card-primary',
       path: '/academy'
     },
     {
       icon: '🔍',
-      title: 'Crime Identifier',
-      description: 'AI-powered tool to identify if something is a cyber crime and get instant legal guidance.',
-      items: ['Situation analyzer', 'Legal classification', 'Action steps'],
+      title: 'IPR Issue Identifier',
+      description: 'Describe your problem and get a likely IPR category with immediate next steps.',
+      items: ['Situation analyzer', 'Likely infringement type', 'Evidence & action steps'],
       className: 'card-secondary',
       path: '/identifier'
     },
     {
       icon: '🚨',
-      title: 'Emergency Tools',
-      description: 'Quick access to incident reporting, complaint templates, and emergency contacts.',
-      items: ['One-tap reporting', 'Evidence saver', 'Direct helpline access'],
+      title: 'Report & Enforcement',
+      description: 'Country-specific reporting routes, IP office links, and escalation guidance.',
+      items: ['Where to report', 'Templates & checklists', 'Local law references'],
       className: 'card-accent',
       path: '/emergency'
     },
     {
       icon: '📰',
-      title: 'Legal News & Updates',
-      description: 'Stay informed about latest cyber crimes, new laws, court verdicts, and legal trends.',
-      items: ['Daily updates', 'Simplified summaries', 'Expert analysis'],
+      title: 'IPR News & Updates',
+      description: 'Track major IPR rulings, policy updates, and enforcement trends worldwide.',
+      items: ['Curated summaries', 'Policy highlights', 'Global trends'],
       className: 'card-success',
       path: '/news'
     },
     {
       icon: '🎓',
-      title: 'Student Career Hub',
-      description: 'Resources for law students: internships, career paths in legal tech, and networking.',
-      items: ['Internship listings', 'Career guidance', 'Interview prep'],
+      title: 'IP Career Hub',
+      description: 'Resources for IP students and innovators: internships, clinics, and skill paths.',
+      items: ['Clinic listings', 'Career guidance', 'Portfolio prep'],
       className: 'card-warning',
       path: '/career'
     },
     {
       icon: '💬',
-      title: 'Community & Resources',
-      description: 'Connect with peers, explore resource libraries, and get expert guidance in a safe space.',
-      items: ['Resource library', 'Expert Q&A', 'Success stories'],
+      title: 'Resources & Support',
+      description: 'Guides, templates, and chatbot help for protecting your IP assets.',
+      items: ['Resource library', 'Takedown templates', 'Chatbot assistance'],
       className: 'card-info',
       path: '/resources'
     }
@@ -58,23 +58,23 @@ export default function Home() {
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Your <span className="gradient-text">Legal Shield</span> in the Digital World
+            Protect Your <span className="gradient-text">Intellectual Property</span> Worldwide
           </h1>
           <p className="hero-subtitle">
-            Master cyber law, protect your rights, and navigate legal challenges with confidence
+            Practical guidance for patents, trademarks, copyrights, and trade secrets — tailored to your country
           </p>
           <div className="hero-stats">
             <div className="stat">
               <div className="stat-number">50+</div>
-              <div className="stat-label">Legal Topics</div>
+              <div className="stat-label">IP Topics</div>
             </div>
             <div className="stat">
               <div className="stat-number">24/7</div>
-              <div className="stat-label">Support Access</div>
+              <div className="stat-label">Reporting Paths</div>
             </div>
             <div className="stat">
               <div className="stat-number">100%</div>
-              <div className="stat-label">Free Forever</div>
+              <div className="stat-label">Free Guidance</div>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
 
       {/* Features Grid */}
       <section className="features">
-        <h2 className="section-title">Everything You Need</h2>
+        <h2 className="section-title">Everything You Need for IPR</h2>
         
         <div className="feature-grid">
           {features.map((feature) => (
@@ -109,15 +109,15 @@ export default function Home() {
         <div className="action-buttons">
           <Link to="/academy" className="action-btn btn-primary">
             <span className="btn-icon">🎯</span>
-            <span>Start Learning</span>
+            <span>Learn IPR</span>
           </Link>
           <Link to="/emergency" className="action-btn btn-danger">
             <span className="btn-icon">🚨</span>
-            <span>Report Incident</span>
+            <span>Report Infringement</span>
           </Link>
           <Link to="/identifier" className="action-btn btn-info">
             <span className="btn-icon">❓</span>
-            <span>Identify Crime</span>
+            <span>Identify IPR Issue</span>
           </Link>
         </div>
       </section>
@@ -126,13 +126,13 @@ export default function Home() {
       <footer className="home-footer">
         <div className="footer-content">
           <p className="footer-tagline">
-            <strong>Built for CyberGuard Pro</strong>
+            <strong>Built for Amicus IPR</strong>
           </p>
           <p className="footer-text">
-            Empowering law students and citizens with knowledge and tools to navigate cyber law
+            Practical IPR guidance for creators, founders, and legal learners
           </p>
           <p className="footer-legal">
-            Vishwakarma University Pune | BBALLB | Law & Technology Project
+            Law & Innovation | Educational Project
           </p>
         </div>
       </footer>
