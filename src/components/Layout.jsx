@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { App as CapacitorApp } from '@capacitor/app';
 import { Capacitor } from '@capacitor/core';
 import ChatbotWidget from './ChatbotWidget';
+import FloatingActionButton from './FloatingActionButton';
 import Search from './Search';
 import ThemeToggle from './ThemeToggle';
 import Breadcrumbs from './Breadcrumbs';
@@ -167,6 +168,7 @@ export default function Layout({ children }) {
         {children}
       </main>
 
+      <FloatingActionButton />
       <ChatbotWidget />
 
       {/* Bottom Navigation for Mobile */}
