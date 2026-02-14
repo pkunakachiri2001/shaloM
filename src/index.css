@@ -1215,7 +1215,7 @@ code {
 @media (max-width: 768px) {
   .chatbot {
     right: 16px;
-    bottom: 90px;
+    bottom: 180px;
   }
 
   .chatbot-panel {
