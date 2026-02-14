@@ -1,78 +1,73 @@
-# 🛡️ CyberGuard Pro - Legal Education & Incident Response
+# � Amicus IPR - Your Intellectual Property Rights Companion
 
-**A Professional Progressive Web App for Cyber Law Education, Case Analysis & Incident Simulation**
+**A Progressive Web App for IP Education, Issue Identification & Enforcement Guidance**
 
-Built for **Law Competitions** 🏆  
-Designed for **Lawyer Judges** ⚖️  
-Premium UI/UX with Interactive Features
+Built for **Creators & Innovators** 💡  
+Designed for **Global IPR Protection** 🌍  
+Premium UI/UX with Practical Tools
 
 ---
 
-## 🌟 About CyberGuard Pro
+## 🌟 About Amicus IPR
 
-CyberGuard Pro is a professional, competition-winning web application that combines **cyber law education, real-world case studies, interactive incident simulation, and comprehensive legal resources**. Designed specifically for lawyer judges, it features a premium interface with interactive cards, smooth animations, and a professional blue aesthetic that conveys authority and trust.
+Amicus IPR is a comprehensive intellectual property rights platform that helps creators, entrepreneurs, and businesses **understand, protect, and enforce their IP assets worldwide**. From patent basics to enforcement strategies, get practical guidance tailored to your country's legal system.
 
 ### ✨ Core Features
 
-1. **📚 Cyber Law Academy** - Interactive legal education
-   - Comprehensive cyber crime coverage
-   - IT Act, GDPR, Data Protection Laws
-   - Global legal comparisons
-   - Real-world case studies with court verdicts
-   - Gamified quizzes with detailed feedback
+1. **📚 IPR Academy** - Interactive IP education
+   - 4 comprehensive courses: IP Fundamentals, Patents, Trademarks, Copyright
+   - Module-based learning with quizzes
+   - Real-world case studies and examples
+   - Beginner to advanced pathways
+   - Progress tracking with completion certificates
 
 2. **📊 Learning Dashboard** - Progress tracking
-   - Circular progress indicators
+   - Visual progress indicators
    - Module completion metrics
    - Quiz performance analytics
-   - Personalized motivational messages
+   - Personalized learning insights
    - Bookmark management
 
-3. **📋 Interactive Case Studies** - Real incidents
-   - 4 major real-world breaches (WannaCry, Equifax, Cambridge Analytica, Zoom)
-   - Detailed timeline of events
-   - Key lessons learned
-   - Applicable laws & regulations
-   - Interactive decision scenarios
-   - Modal-based detailed views
+3. **🔍 IPR Issue Identifier** - Smart problem diagnosis
+   - Analyze your IP situation instantly
+   - Identify: Patent infringement, Trademark issues, Copyright violations, Trade secrets, Design copying, Cybersquatting
+   - Get severity assessment and applicable laws
+   - Receive actionable next steps
+   - Evidence collection guidance
 
-4. **🎯 Incident Response Simulator** - Decision making
-   - 4 realistic security scenarios (Phishing, Ransomware, Social Engineering, Data Breach)
-   - Interactive consequence tracking
-   - Cyber law insights for each decision
-   - Performance metrics and scoring
-   - Professional consequence descriptions
+4. **🚨 Report & Enforcement Tools** - Country-specific guidance
+   - Multi-country support (India, US, UK, EU, Canada, Australia, etc.)
+   - Direct links to IP offices (USPTO, IP India, EUIPO, etc.)
+   - Enforcement routes and procedures
+   - Report builder with templates
+   - Evidence documentation checklists
 
-5. **⭐ Bookmarks & Resources** - Knowledge management
-   - Save favorite content
-   - Curated resource library
-   - Professional reference materials
+5. **⭐ Resources & Support** - Knowledge hub
+   - Comprehensive resource library
+   - Takedown notice templates
+   - Filing guides and checklists
+   - Chatbot assistance
+   - Bookmarks for quick access
 ---
 
 ## 🎨 Professional UI/UX Highlights
 
 ### Premium Design System
-- **Legal Blue Color Scheme**: Professional #1e40af primary color conveying authority
-- **Interactive Cards**: Click to expand detailed modal views with smooth animations
-- **Glassmorphism**: Semi-transparent backgrounds with backdrop blur effects
-- **Smooth Animations**: Cubic-bezier easing for natural, polished transitions
+- **Professional Blue Theme**: Clean #1e40af primary color conveying trust
+- **Interactive Cards**: Smooth hover effects and click interactions
+- **Modern Gradients**: Eye-catching gradients throughout the interface
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Dark Mode**: Full dark theme support for comfortable learning
 
-### Interactive Components
-- **Case Study Modals**: Click any case study card to view detailed information
-- **Incident Scenarios**: Interactive decision-making with consequence tracking
-- **Dashboard Analytics**: Visual progress tracking with circular indicators
-- **Professional Badges**: Color-coded severity levels (critical, high, medium, low)
-
-### Judge-Focused Features
-✅ Professional aesthetic for legal competitions
-✅ Interactive case studies with real breach scenarios
-✅ Legal implications highlighted throughout
-✅ Performance metrics and progress tracking
-✅ Smooth, polished animations showing technical skill
+### Key Benefits
+✅ Learn IP law from basics to advanced concepts
+✅ Get country-specific enforcement guidance
+✅ Smart issue identification and diagnosis
+✅ Practical templates and checklists
+✅ Track your learning progress
+✅ Works offline as PWA and Android app
 
 **See [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) for complete design documentation**
-**See [INTERACTIVE_FEATURES_GUIDE.md](INTERACTIVE_FEATURES_GUIDE.md) for visual feature guide**
 
 ---
 
@@ -182,55 +177,60 @@ SHALO/
 
 ## 💡 Features Deep Dive
 
-### Cyber Law Academy
-- **5 comprehensive lessons** covering:
-  - Introduction to Cyber Law
-  - Hacking & Unauthorized Access
-  - Cyberbullying & Online Harassment
-  - Identity Theft & Online Fraud
-  - Privacy & Data Protection
+### IPR Academy
+- **4 comprehensive courses:**
+  - Intellectual Property Fundamentals
+  - Patents & Innovation Protection
+  - Trademarks & Brand Protection
+  - Copyright & Digital Rights
   
-- **Interactive quizzes** with instant grading
-- **Real case studies** from Indian courts
-- **Practical tips** for staying safe online
+- **Module-based learning** with lessons and quizzes
+- **Real-world examples** and case studies
+- **Progress tracking** with localStorage
+- **Interactive quizzes** with instant feedback
 
-### Crime Identifier
-- Analyzes your situation description
-- Matches with 8+ crime categories
+### IPR Issue Identifier
+- Keyword-based smart analysis
+- Identifies 6+ IP issue types:
+  - Patent infringement
+  - Trademark infringement
+  - Copyright violations
+  - Trade secret misappropriation
+  - Design infringement
+  - Cybersquatting/domain abuse
 - Provides:
-  - Crime name and severity
-  - Legal sections violated
-  - Penalties
+  - Issue severity level
+  - Applicable laws by country
   - Step-by-step action plan
-  - Emergency contacts
+  - Evidence collection tips
+  - Potential remedies
 
-### Emergency Tools
-- **Incident Reporter:** Organize information before filing FIR
-- **4 Complaint Templates:**
-  - Hacking/Unauthorized Access
-  - Cyberbullying/Harassment
-  - Online Financial Fraud
-  - Identity Theft/Impersonation
-- **Emergency Contacts:** One-tap calling
-- **Evidence Tips:** How to collect and preserve proof
+### Report & Enforcement
+- **Country-specific guidance** for:
+  - India, US, UK, EU, Canada, Australia, Singapore, Japan
+- **Direct links** to IP offices and portals
+- **Report builder** with structured forms
+- **Evidence documentation** checklists
+- **Filing procedures** for each country
 
 ### Career Hub
-- **4 Internship listings** (Legal research, Legal tech, Cyber cell, Compliance)
-- **6 Career paths** with salary ranges
-- **Learning resources:** Certifications, courses, books
-- **Interview prep:** Common questions and answers
-- **Zimbabwe-India bridge opportunities**
+- IP law career pathways
+- Internship opportunities
+- Skill development resources
+- Professional certifications
+- Industry insights
 
 ---
 
-## 🌍 International Perspective
+## 🌍 Global IP Protection
 
-LexGuard uniquely addresses the needs of international students by:
+Amicus IPR supports creators worldwide with:
 
-- Comparing Indian and Zimbabwean cyber laws
-- Highlighting cross-border legal tech opportunities
-- Providing resources relevant to both African and Asian markets
-- Showcasing career paths that leverage international experience
+- Multi-country IP office links and guidance
+- International treaties coverage (PCT, Madrid System, Berne Convention)
+- Country-specific enforcement routes
+- Cross-border IP strategy insights
+- Global best practices for IP protection
 
 ---
 
@@ -247,14 +247,14 @@ LexGuard uniquely addresses the needs of international students by:
 
 ## 📝 Customization
 
-### Adding New Lessons
-Edit [src/pages/Academy.jsx](src/pages/Academy.jsx) - add to the `lessons` array
+### Adding New Courses
+Edit [src/pages/Academy.jsx](src/pages/Academy.jsx) - add to the `courses` array
 
 ### Adding News Articles
 Edit [src/pages/News.jsx](src/pages/News.jsx) - add to the `newsData` array
 
-### Updating Emergency Contacts
-Edit [src/pages/EmergencyTools.jsx](src/pages/EmergencyTools.jsx) - modify `emergencyContacts` array
+### Adding New Countries
+Edit [src/pages/EmergencyTools.jsx](src/pages/EmergencyTools.jsx) - add to `countryGuides` array
 
 ### Changing Colors/Theme
 Edit [src/index.css](src/index.css) - modify CSS variables at the top
@@ -277,50 +277,47 @@ Before presenting:
 
 ---
 
-## 📞 Support & Resources
+## 📞 IPR Resources
 
-### For Reporting Cyber Crimes:
-- **National Portal:** [cybercrime.gov.in](https://cybercrime.gov.in)
-- **Helpline:** 1930 (India)
-- **Police:** 100
+### Global IP Offices:
+- **India:** [IP India](https://ipindia.gov.in)
+- **United States:** [USPTO](https://www.uspto.gov)
+- **European Union:** [EUIPO](https://euipo.europa.eu)
+- **UK:** [UK IPO](https://www.gov.uk/government/organisations/intellectual-property-office)
+- **WIPO:** [World IP Organization](https://www.wipo.int)
 
 ### For Learning More:
-- IT Act 2000: [meity.gov.in](https://www.meity.gov.in)
-- DPDP Act 2023: [Latest legislation](https://www.meity.gov.in)
-- Cyber Law Resources: CERT-In, DSCI, IAMAI
+- **WIPO Academy:** Free IP courses
+- **IP Guides:** National IP office websites
+- **Treaties:** PCT, Madrid System, Berne Convention
 
 ---
 
-## 🎓 For Project Owner
+## � Use Cases
 
-Dear Project Owner,
+### For Creators & Artists
+- Learn copyright basics
+- Understand fair use exceptions
+- Get DMCA takedown templates
+- Protect your creative works
 
-This app is built specifically for your **Law & Technology Project** at Vishwakarma University Pune. It combines your initial idea of cyber law education with additional features that make it a comprehensive legal companion.
+### For Startups & Businesses
+- Patent strategy guidance
+- Trademark clearance searches
+- Trade secret protection
+- IP portfolio management
 
-### How to use for your project:
+### For Students & Researchers
+- Learn IP law fundamentals
+- Understand patent filing process
+- Explore IP career paths
+- Access free learning resources
 
-1. **Demonstration:** Show the app on your phone to professors
-2. **Project Report:** Include screenshots and explain each feature
-3. **Presentation:** Highlight the Zimbabwe-India comparative aspects
-4. **Future Work:** Mention potential additions (community forum, AR features, etc.)
-
-### What makes it unique:
-
-✅ **Practical:** Not just theory - real tools people can use  
-✅ **Educational:** Comprehensive learning with quizzes  
-✅ **Timely:** Addresses DPDP Act 2023 (brand new!)  
-✅ **International:** Zimbabwe-India perspective  
-✅ **Accessible:** Works on any phone, even offline  
-
-### Tips for presenting:
-
-- Start with the Crime Identifier (most impressive)
-- Show the Academy with quiz functionality
-- Demonstrate the Emergency Tools
-- Explain the Career opportunities section
-- Highlight the international comparison angle
-
-**Good luck with your project! 🌟**
+### For Legal Professionals
+- Quick reference for multi-country IP laws
+- Client education materials
+- Template library for common filings
+- Enforcement procedure checklists
 
 ---
 
@@ -332,26 +329,27 @@ MIT License - Free for educational and personal use
 
 ## 👨‍💻 Credits
 
-**Concept:** Project Owner  
+**Concept:** Amicus IPR Team  
 **Development:** AI-Assisted Development  
-**Institution:** Vishwakarma University Pune  
-**Project:** Law & Technology - Mobile App Development  
+**Platform:** Progressive Web App + Android  
+**Focus:** Global Intellectual Property Rights Education & Enforcement  
 
 ---
 
-## 🤝 Contributing Ideas
+## 🤝 Future Enhancements
 
-Future enhancements could include:
-- Real-time chat with legal experts
-- Community forum for sharing experiences
-- Push notifications for new laws
-- Multi-language support (Hindi, Shona, etc.)
-- AR-based legal document scanner
-- Blockchain-based evidence storage
-- Integration with actual police FIR systems
+Potential additions could include:
+- Real-time chat with IP attorneys
+- Community forum for creators
+- Push notifications for IP law updates
+- Multi-language support
+- AI-powered prior art search
+- Blockchain-based IP timestamping
+- Integration with patent office APIs
+- Automated trademark monitoring
 
 ---
 
-**Built with ❤️ for legal education and digital safety**
+**Built with ❤️ for creators, innovators, and IP protection**
 
-🛡️ **Stay Safe. Stay Legal. Stay Informed.**
+📘 **Protect Your Ideas. Build Your Brand. Enforce Your Rights.**

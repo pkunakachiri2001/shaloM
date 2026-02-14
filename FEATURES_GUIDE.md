@@ -1,4 +1,4 @@
-# 🛡️ CyberGuard Pro - Feature Implementation Complete!
+# � Amicus IPR - Feature Implementation Complete!
 
 ## Quick Start
 
@@ -32,7 +32,7 @@ Navigate to `/dashboard` to see:
 - Motivational progress messages
 
 ### 4️⃣ **Interactive Quizzes** 📝
-- 5-question cyber law assessment
+- IPR knowledge assessment with detailed explanations
 - Instant feedback on answers
 - Score tracking and storage
 - Multiple quiz support ready
@@ -69,7 +69,7 @@ Decisions impact legal compliance!
 
 ### 8️⃣ **Timeline View** 📅
 Go to `/timeline` to see:
-- 26+ years of cyber law evolution
+- Evolution of global IP law and major treaties
 - Key legislation milestones
 - Major security incidents
 - Interactive visual timeline
@@ -94,17 +94,17 @@ Visit `/resources` for curated links:
 | Route | Feature | Icons | Status |
 |-------|---------|-------|--------|
 | `/` | Home | 🏠 | ✅ Original |
-| `/academy` | Cyber Law Academy | 📚 | ✅ Original |
+| `/academy` | IPR Academy | 📚 | ✅ Original |
 | `/identifier` | Crime Identifier Tool | 🔍 | ✅ Original |
 | `/emergency` | Emergency Resources | 🚨 | ✅ Original |
 | `/news` | Latest News | 📰 | ✅ Original |
 | `/career` | Career Hub | 🎓 | ✅ Original |
-| `/about` | About CyberGuard Pro | ℹ️ | ✅ Original |
+| `/about` | About Amicus IPR | ℹ️ | ✅ Original |
 | `/dashboard` | Learning Dashboard | 📊 | ✨ **NEW** |
 | `/bookmarks` | Saved Content | ⭐ | ✨ **NEW** |
 | `/case-studies` | Case Studies | 📋 | ✨ **NEW** |
 | `/simulator` | Incident Simulator | 🎯 | ✨ **NEW** |
-| `/timeline` | Cyber Law Timeline | 📅 | ✨ **NEW** |
+| `/timeline` | IP Law Timeline | 📅 | ✨ **NEW** |
 | `/resources` | Resource Library | 📚 | ✨ **NEW** |
 
 ---
@@ -131,10 +131,10 @@ Visit `/resources` for curated links:
 ## 💾 Data Persistence
 
 All user data is automatically saved:
-- **Theme**: `cyberguard-theme` (localStorage)
-- **Bookmarks**: `cyberguard-bookmarks` (localStorage)
-- **Progress**: `cyberguard-progress` (localStorage)
-- **Quiz Scores**: `cyberguard-quizzes` (localStorage)
+- **Theme**: `amicus-ipr-theme` (localStorage)
+- **Bookmarks**: `amicus-ipr-bookmarks` (localStorage)
+- **Progress**: `amicus-ipr-progress` (localStorage)
+- **Quiz Scores**: `amicus-ipr-quizzes` (localStorage)
 
 Data persists across sessions!
 
@@ -180,7 +180,7 @@ Data persists across sessions!
 2. **Try Case Studies** → Learn from real incidents
 3. **Use Simulator** → Test decision-making
 4. **Bookmark Resources** → Build personal library
-5. **Check Timeline** → Understand cyber law history
+5. **Check Timeline** → Understand IP law history and global treaties
 6. **Toggle Dark Mode** → Comfortable viewing anytime
 
 ---

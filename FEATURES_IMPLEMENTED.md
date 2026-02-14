@@ -1,4 +1,4 @@
-# CyberGuard Pro - 10 Implemented Features Summary
+# Amicus IPR - Implemented Features Summary
 
 ## ✅ COMPLETED FEATURES
 
@@ -36,7 +36,7 @@
 - **Files**: `src/components/Quiz.jsx`, `src/styles/Quiz.css`
 - **Features**:
   - Multiple-choice questions
-  - 5-question cyber law quiz included
+  - IPR knowledge quiz included
   - Score calculation and display
   - Progress bar during quiz
   - Correct/incorrect feedback
@@ -87,7 +87,7 @@
 - **Location**: `/timeline` route
 - **Files**: `src/pages/Timeline.jsx`, `src/styles/Timeline.css`
 - **Features**:
-  - 10 major cyber law milestones from 1998-2024
+  - Major IP law milestones from 1883-2024
   - Visual timeline with alternating card layout
   - Icons and year highlighting
   - Major regulations and incidents

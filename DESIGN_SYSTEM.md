@@ -105,7 +105,7 @@ Premium card component with modal system for all features.
 - **Statistics Display**: Professional performance metrics
 - **Consequence Panel**: Color-coded outcomes
 - **Impact Section**: Clear decision consequences
-- **Cyber Law Insight**: Legal implications display
+- **IP Law Insight**: Country-specific legal implications display
 
 **Professional Elements:**
 - Stat cards with hover effects

@@ -211,7 +211,7 @@ See these files for complete design details:
 ✅ Applicable laws highlighted
 ✅ Incident response protocols
 ✅ Decision consequences explained
-✅ Cyber law insights integrated
+✅ IP law insights integrated
 ✅ Professional severity indicators
 ```
 
@@ -221,7 +221,7 @@ See these files for complete design details:
 
 ### 1. Professional Header
 ```
-[🛡️ CyberGuard Pro] [Search] [🌙] [☰]
+[� Amicus IPR] [Search] [🌙] [☰]
 ───────────────────────────────────────
 Legal Blue gradient background
 Professional sans-serif font
@@ -306,7 +306,7 @@ Sticky positioning
 ✅ Technical showcase (React, Vite)
 ```
 
-### vs. Other Cyber Law Apps
+### vs. Other IP Law Apps
 ```
 ✅ Premium UI design
 ✅ Interactive case analysis
@@ -395,7 +395,7 @@ README.md                               - Updated documentation
 ✅ **Interactive Elements** - Cards, modals, hover effects
 ✅ **Real Case Studies** - WannaCry, Equifax, Cambridge Analytica
 ✅ **Incident Simulation** - Decision scenarios with consequences
-✅ **Legal Focus** - Applicable laws, cyber law insights
+✅ **Legal Focus** - Applicable laws, IP law insights for each country
 ✅ **Smooth Animations** - Professional, not overdone
 ✅ **Responsive Design** - Perfect on all devices
 ✅ **Technical Polish** - Proper state management, component reuse

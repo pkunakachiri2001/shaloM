@@ -1,4 +1,4 @@
-# 🧪 CyberGuard Pro - Testing Checklist
+# 🧪 Amicus IPR - Testing Checklist
 
 ## Pre-Launch Testing
 
@@ -16,7 +16,7 @@
 - [ ] Theme persists after page refresh
 - [ ] All components readable in dark mode
 - [ ] Smooth transition between modes
-- [ ] localStorage "cyberguard-theme" updates
+- [ ] localStorage "amicus-ipr-theme" updates
 
 ### ✅ Search Bar (🔍 Feature)
 - [ ] Appears in header
@@ -171,13 +171,13 @@
 // Test in browser console:
 
 // 1. Test Theme Toggle
-localStorage.setItem('cyberguard-theme', JSON.stringify(true));
+localStorage.setItem('amicus-ipr-theme', JSON.stringify(true));
 location.reload(); // Should be dark
 
 // 2. Test DataContext
-console.log(JSON.parse(localStorage.getItem('cyberguard-bookmarks')));
-console.log(JSON.parse(localStorage.getItem('cyberguard-progress')));
-console.log(JSON.parse(localStorage.getItem('cyberguard-quizzes')));
+console.log(JSON.parse(localStorage.getItem('amicus-ipr-bookmarks')));
+console.log(JSON.parse(localStorage.getItem('amicus-ipr-progress')));
+console.log(JSON.parse(localStorage.getItem('amicus-ipr-quizzes')));
 
 // 3. Test Navigation
 document.querySelector('a[href="/dashboard"]').click();

@@ -27,9 +27,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'CyberGuard Pro - Legal Companion',
-        short_name: 'CyberGuard',
-        description: 'Your comprehensive guide to cyber law, legal education, and digital protection',
+        name: 'Amicus IPR - Your IP Rights Companion',
+        short_name: 'Amicus IPR',
+        description: 'Comprehensive intellectual property rights education, issue identification, and enforcement guidance for global creators',
         theme_color: '#2563eb',
         background_color: '#ffffff',
         display: 'standalone',

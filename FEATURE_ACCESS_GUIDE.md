@@ -1,4 +1,4 @@
-# 🎬 CyberGuard Pro - Quick Feature Access Guide
+# 🎬 Amicus IPR - Quick Feature Access Guide
 
 ## 🏠 Home Page
 **URL**: `/`
@@ -117,7 +117,7 @@ Results page with:
 ```
 
 **Questions Cover**:
-- Cyber law basics
+- IPR law basics and advanced topics
 - Phishing identification
 - Password security
 - Email threats

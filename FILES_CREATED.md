@@ -1,4 +1,4 @@
-# 📁 CyberGuard Pro - Files Created/Modified Summary
+# 📁 Amicus IPR - Files Created/Modified Summary
 
 ## 🆕 NEW FILES CREATED (16 files)
 
@@ -32,7 +32,7 @@
    └─ Interactive incident response scenarios
    
 ✨ src/pages/Timeline.jsx (35 lines)
-   └─ Cyber law timeline (1998-2024)
+   └─ IP law timeline (1883-2024)
    
 ✨ src/pages/ResourceLibrary.jsx (70 lines)
    └─ Curated resource links & databases
@@ -200,13 +200,13 @@ SHALO/
 
 ### Theme Storage
 ```javascript
-localStorage.getItem('cyberguard-theme')
+localStorage.getItem('amicus-ipr-theme')
 // Returns: "true" or "false"
 ```
 
 ### Bookmarks Storage
 ```javascript
-localStorage.getItem('cyberguard-bookmarks')
+localStorage.getItem('amicus-ipr-bookmarks')
 // Returns: JSON stringified array
 [
   { id: string, title: string, type: string, savedAt: ISO-8601 },
@@ -216,7 +216,7 @@ localStorage.getItem('cyberguard-bookmarks')
 
 ### Progress Storage
 ```javascript
-localStorage.getItem('cyberguard-progress')
+localStorage.getItem('amicus-ipr-progress')
 // Returns: JSON stringified object
 {
   "Module Name": 0-100,
@@ -226,7 +226,7 @@ localStorage.getItem('cyberguard-progress')
 
 ### Quiz Scores Storage
 ```javascript
-localStorage.getItem('cyberguard-quizzes')
+localStorage.getItem('amicus-ipr-quizzes')
 // Returns: JSON stringified array
 [
   { quizId: string, score: number, total: number, date: ISO-8601 },
@@ -267,7 +267,7 @@ localStorage.getItem('cyberguard-quizzes')
 
 ```
 /                     Home
-/academy              Cyber Law Academy
+/academy              IPR Academy
 /identifier           Crime Identifier
 /emergency            Emergency Tools
 /news                 Latest News
@@ -278,7 +278,7 @@ localStorage.getItem('cyberguard-quizzes')
 /bookmarks       ✨ NEW - Saved Favorites
 /case-studies    ✨ NEW - Real Cases
 /simulator       ✨ NEW - Incident Simulator
-/timeline        ✨ NEW - Cyber Law Timeline
+/timeline        ✨ NEW - IP Law Timeline
 /resources       ✨ NEW - Resource Library
 ```
 

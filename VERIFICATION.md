@@ -78,7 +78,7 @@
 
 ### Feature 8: Timeline View ✅
 - [x] Timeline.jsx page created
-- [x] 10 major cyber law milestones
+- [x] Major IP law milestones and treaties
 - [x] Visual timeline layout
 - [x] Alternating card design
 - [x] Icons & years highlighted
@@ -211,10 +211,10 @@
 ## 💾 Data Persistence
 
 ### localStorage Keys ✅
-- [x] "cyberguard-theme" (boolean)
-- [x] "cyberguard-bookmarks" (array)
-- [x] "cyberguard-progress" (object)
-- [x] "cyberguard-quizzes" (array)
+- [x] "amicus-ipr-theme" (boolean)
+- [x] "amicus-ipr-bookmarks" (array)
+- [x] "amicus-ipr-progress" (object)
+- [x] "amicus-ipr-quizzes" (array)
 
 ### Data Flow ✅
 - [x] Auto-save on changes
@@ -409,7 +409,7 @@ Competition-winning quality.
 
 ```
 ┌─────────────────────────────────────────┐
-│  CyberGuard Pro v2.0                    │
+│  Amicus IPR v2.0                      │
 │  10 Features Implementation Complete    │
 │                                         │
 │  ✅ Dark Mode Toggle                    │

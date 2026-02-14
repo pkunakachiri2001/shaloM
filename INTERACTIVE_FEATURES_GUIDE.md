@@ -6,7 +6,7 @@
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ 📊 Your Learning Dashboard                              │
-│ Track your progress towards becoming a cyber law expert  │
+│ Track your progress towards becoming an IP expert     │
 └─────────────────────────────────────────────────────────┘
 
 ┌──────────────────┐    ┌──────────────────┐
@@ -20,7 +20,7 @@
 
 Module Progress Cards:
 ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│ ⚖️ Cyber Laws  │  │ 🔍 Crime ID    │  │ 🚨 Emergency   │
+│ ⚖️ IP Rights    │  │ 🔍 IPR Issues │  │ 🚨 Report       │
 │ 60% Complete   │  │ 75% Complete   │  │ 50% Complete   │
 │ In Progress    │  │ Almost Done    │  │ In Progress    │
 └─────────────────┘  └─────────────────┘  └─────────────────┘
@@ -173,7 +173,7 @@ Scenario Cards:
 ║ Attack prevented, organization alerted,               ║
 ║ security maintained                                    ║
 ║                                                        ║
-║ ⚖️ Cyber Law Insight:                                 ║
+║ ⚖️ IP Law Insight:                                   ║
 ║ Your decision aligns with cybersecurity best          ║
 ║ practices and legal requirements for incident          ║
 ║ response.                                              ║
@@ -228,7 +228,7 @@ Scenario Cards:
 │                                   │
 │ The Computer Fraud and Abuse Act  │
 │ amendments significantly expand   │
-│ definitions of cybercrime and     │
+│ definitions of IP infringement and │
 │ establish penalties for...        │
 │                                   │
 │ ▶ Read More                       │

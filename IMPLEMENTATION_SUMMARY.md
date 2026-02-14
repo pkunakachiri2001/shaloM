@@ -35,7 +35,7 @@
 - **Impact**: Gamification & engagement
 
 #### 4. **📝 Interactive Quizzes**
-- 5-question cyber law assessments
+- IPR course assessments with instant feedback
 - Instant feedback
 - Score tracking & history
 - Persistent storage
@@ -63,8 +63,8 @@
 - **Files**: IncidentSimulator.jsx + IncidentSimulator.css
 - **Impact**: Practical decision-making
 
-#### 7. **📅 Cyber Law Timeline**
-- 26 years of cyber law evolution (1998-2024)
+#### 7. **📅 IPR Timeline**
+- Evolution of global IP law (historical milestones)
 - 10 major milestones
 - Visual timeline with alternating cards
 - Regulatory & incident history
@@ -194,17 +194,17 @@ All data automatically saved to localStorage:
 
 ```javascript
 {
-  "cyberguard-theme": true/false,
-  "cyberguard-bookmarks": [
+  "amicus-ipr-theme": true/false,
+  "amicus-ipr-bookmarks": [
     { id, title, type, savedAt }
   ],
-  "cyberguard-progress": {
-    "Cyber Laws & Rights": 45,
+  "amicus-ipr-progress": {
+    "IP Fundamentals": 45,
     "Crime Identification": 60,
     "Emergency Response": 30,
     "Digital Safety": 75
   },
-  "cyberguard-quizzes": [
+  "amicus-ipr-quizzes": [
     { quizId, score, total, date }
   ]
 }
