@@ -235,6 +235,9 @@ export default function Layout({ children }) {
             <p className="creator-details">
               Intellectual Property Rights Guidance | Law & Innovation Initiative
             </p>
+            <p className="university-signature" style={{ marginTop: '12px', fontSize: '0.9em', color: 'var(--text-secondary, #666)', fontStyle: 'italic' }}>
+              🎓 Developed by a Law Student | Vishwakarma University Pune, Law Department
+            </p>
           </div>
           <div className="footer-copyright">
             <p>&copy; {new Date().getFullYear()} Amicus IPR. Educational Project.</p>
