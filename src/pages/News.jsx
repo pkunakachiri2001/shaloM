@@ -113,7 +113,7 @@ export default function News() {
         </div>
       )}
 
-      {/* Loading State */}
+      {/* Loading State - Skeleton Loaders */}
       {loading && (
         <div style={{
           display: 'grid',
@@ -122,16 +122,13 @@ export default function News() {
           padding: '20px'
         }}>
           {[1, 2, 3, 4, 5, 6].map(i => (
-            <div key={i} style={{
-              backgroundColor: '#f3f4f6',
-              borderRadius: '8px',
-              padding: '20px',
-              height: '300px',
-              animation: 'pulse 2s infinite'
-            }}>
-              <div style={{ height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', marginBottom: '12px', width: '60%' }} />
-              <div style={{ height: '12px', backgroundColor: '#d1d5db', borderRadius: '4px', marginBottom: '8px' }} />
-              <div style={{ height: '12px', backgroundColor: '#d1d5db', borderRadius: '4px', width: '80%' }} />
+            <div key={i} className="news-card" style={{ padding: '20px' }}>
+              <div className="skeleton skeleton-text" style={{ width: '60%', marginBottom: '12px' }} />
+              <div className="skeleton skeleton-title" style={{ marginBottom: '12px' }} />
+              <div className="skeleton skeleton-text" style={{ width: '80%', marginBottom: '8px' }} />
+              <div className="skeleton skeleton-text" style={{ width: '100%', marginBottom: '8px' }} />
+              <div className="skeleton skeleton-text" style={{ width: '90%', marginBottom: '12px' }} />
+              <div className="skeleton skeleton-text" style={{ width: '40%' }} />
             </div>
           ))}
         </div>

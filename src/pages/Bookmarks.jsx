@@ -22,11 +22,24 @@ export default function Bookmarks() {
       </div>
 
       {bookmarks.length === 0 ? (
-        <div className="empty-bookmarks">
-          <div className="empty-icon">📋</div>
-          <h2>No Bookmarks Yet</h2>
-          <p>Start bookmarking your favorite lessons and resources!</p>
-          <a href="/academy" className="browse-btn">Browse Lessons</a>
+        <div className="empty-state">
+          <div className="empty-state-icon">📋</div>
+          <h3>No Bookmarks Yet</h3>
+          <p>Start bookmarking your favorite lessons, resources, and important content to access them quickly!</p>
+          <a href="/academy" className="browse-btn" style={{
+            display: 'inline-block',
+            marginTop: '1rem',
+            padding: '0.75rem 1.5rem',
+            background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
+            color: 'white',
+            borderRadius: '8px',
+            textDecoration: 'none',
+            fontWeight: '600',
+            boxShadow: '0 4px 12px rgba(30, 64, 175, 0.3)',
+            transition: 'all 0.3s ease'
+          }}>
+            📚 Browse Academy
+          </a>
         </div>
       ) : (
         <div className="bookmarks-container">
